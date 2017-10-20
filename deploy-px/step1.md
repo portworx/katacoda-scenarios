@@ -13,25 +13,19 @@ In addition, PX relies on an external key value database (KVDB) like `etcd` or `
 ### Task
 Create an etcd instance via Docker.
 
-`IP=$(hostname -I | awk '{print $1}') && \
- docker run \
- -d \
- --net=host \
- -p 2379:2379 \
- --volume=/var/lib/etcd:/etcd-data \
- --name etcd quay.io/coreos/etcd \
- /usr/local/bin/etcd \
- --data-dir=/etcd-data --name node1 \
- --advertise-client-urls http://${IP}:2379 \
- --listen-client-urls http://${IP}:2379 \
- --initial-advertise-peer-urls http://${IP}:2380 \
- --listen-peer-urls http://${IP}:2380 \
- --initial-cluster node1=http://${IP}:2380`{{execute}}
+```
+IP=$(hostname -I | awk '{print $1}') && \
+   docker run -d --net=host -p 2379:2379 \
+   --volume=/var/lib/etcd:/etcd-data \
+   --name etcd quay.io/coreos/etcd /usr/local/bin/etcd \
+   --data-dir=/etcd-data --name node1 \
+   --advertise-client-urls http://${IP}:2379 \
+   --listen-client-urls http://${IP}:2379 \
+   --initial-advertise-peer-urls http://${IP}:2380 \
+   --listen-peer-urls http://${IP}:2380 \
+   --initial-cluster node1=http://${IP}:2380
+ ```
+{{execute}}
 
 Verify that etcd is functional:
 `curl -X GET http://${IP}:2379/version`{{execute}}
-
-### Note the IP address of this host
-`echo $IP`{{execute}}
-
-We will use this IP address when we start PX.

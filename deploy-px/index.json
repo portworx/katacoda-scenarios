@@ -28,7 +28,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal",
+    "uilayout": "terminal-terminal-terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nInstall the Portworx runC container image using the instructions on the left.\u001b[m\r\n"
   },
   "backend": {

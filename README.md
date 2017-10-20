@@ -1,3 +1,3 @@
-# Deploy a 3 node Portworx Cluster
+# Katacoda examples for illustrating Portworx installation and operation
 
 Visit http://docs.portworx.com for more documentation on installing and running Portworx.

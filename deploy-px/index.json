@@ -1,7 +1,7 @@
 {
   "title": "Deploy Portworx",
   "description": "Install Portworx",
-  "difficulty": "intermediate",
+  "difficulty": "Advanced DevOps",
   "time": "10 - 15 minutes",
   "details": {
     "steps": [{
@@ -32,6 +32,6 @@
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nInstall the Portworx runC container image using the instructions on the left.\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "kubernetes-cluster"
   }
 }

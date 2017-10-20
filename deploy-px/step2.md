@@ -8,8 +8,7 @@ PX runs as an OCI runC container.  In order to run PX, you must first install th
 ### Task
 You can install the bundle by running the following **command**
 
-`sudo docker run --entrypoint \
-   /runc-entry-point.sh \
+`sudo docker run --entrypoint /runc-entry-point.sh \
    --rm -i --privileged=true \
    -v /opt/pwx:/opt/pwx \
    -v /etc/pwx:/etc/pwx \

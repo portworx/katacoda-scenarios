@@ -1,0 +1,63 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Portworx on Kubernetes",
+    "description": "Install Portworx on Kubernetes",
+    "difficulty": "intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Prepare hosts with storage",
+                "text": "storage.md"
+            },
+            {
+                "title" : "Install etcd",
+                "text": "etcd.md"
+            },
+            {
+                "title" : "Wait for Kubernetes nodes to be ready",
+                "text": "wait-k8s.md"
+            },
+            {
+                "title" : "Install Portworx",
+                "text": "install-px.md"
+            },
+            {
+                "title" : "Create volume for mysql",
+                "text": "mysql-vol.md"
+            },
+            {
+                "title" : "Deploy mysql",
+                "text": "mysql-app.md"
+            },
+            {
+                "title" : "Verify data persistence",
+                "text": "mysql-persistence.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "courseBase.sh",
+            "code": "adddisk.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "host02": [ {"file": "*", "target": "/root", "chmod": "+x"} ]
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "port": 8080,
+        "imageid": "kubernetes-cluster2-running"
+    }
+}

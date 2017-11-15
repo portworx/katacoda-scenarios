@@ -1,6 +1,6 @@
 PX relies on an external key value database (KVDB) like `etcd` or `consul` to store it's cluster discovery and bootstrap information.
 
-### Create an etcd instance via Docker.
+### Step: Create an etcd instance via Docker.
 
 `IP=$(hostname -I | awk '{print $1}') && \
    docker run -d --net=host -p 4001:2379 \
@@ -13,6 +13,6 @@ PX relies on an external key value database (KVDB) like `etcd` or `consul` to st
    --listen-peer-urls http://${IP}:2380 \
    --initial-cluster node1=http://${IP}:2380`{{execute}}
 
-### Verify that etcd is functional
+### Step: Verify that etcd is functional
 
 `curl -w '\n' -X GET http://${IP}:4001/version`{{execute HOST1}}

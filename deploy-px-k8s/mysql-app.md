@@ -1,6 +1,6 @@
 In this step, we will deploy the mysql application using the `PersistentVolumeClaim` created before.
 
-### Deploy mysql
+### Step: Deploy mysql
 
 ```
 echo mysql123 > password.txt
@@ -11,19 +11,25 @@ kubectl create -f mysql-app.yaml
 ```{{execute HOST1}}
 
 
-### Verify mysql pod starts running
+### Step: Verify mysql pod is ready
 
 ```
-kubectl get pods -l app=mysql -o wide
+while true; do
+    NUM_READY=`kubectl get pods -l app=mysql -o wide | grep Running | grep 1/1 | wc -l`
+    if [ "${NUM_READY}" == "1" ]; then
+        echo "mysql is ready !"
+        break
+    else
+        echo "Waiting for mysql to be ready..."
+    fi
+    sleep 5
+done
 ```{{execute HOST1}}
 
-*Hit Control + C to stop the command once pods are in Running state*
-
-### Initialize a sample db
+### Step: Initialize a sample db
 
 ```
-POD=`kubectl get pods -l app=mysql | grep -v Running | awk '{print $1}'`
-sleep 10
+POD=`kubectl get pods -l app=mysql | grep Running | grep 1/1 | awk '{print $1}'`
 kubectl exec -it $POD bash
 
 mysql --user=root --password=mysql123

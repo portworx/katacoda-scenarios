@@ -1,23 +1,33 @@
 In this step, we will deploy a `PersistentVolumeClaim` which will be used by mysql to storage it's persistent database.
 
-### Deploy StorageClass
+### Step: Deploy StorageClass
 
 ```
 kubectl create -f mysql-sc.yaml
 ```{{execute HOST1}}
 
-### Deploy PersistentVolumeClaim
+### Step: Deploy PersistentVolumeClaim
 
 ```
 kubectl create -f mysql-pvc.yaml
 
-sleep 2
+echo "Checking if the PersistentVolumeClaim was created successfully..."
 
-kubectl get pvc px-mysql-pvc
+while true; do
+    PVC_STATUS=`kubectl get pvc px-mysql-pvc | grep -v NAME | awk '{print $2}'`
+    if [ "${PVC_STATUS}" == "Bound" ]; then
+        echo "px-mysql-pvc is ${PVC_STATUS} !"
+        kubectl get pvc px-mysql-pvc
+        break
+    else
+        echo "Waiting for px-mysql-pvc to be Bound..."
+    fi
+    sleep 2
+done
 ```{{execute HOST1}}
 
 
-### Inspect the portworx volume
+### Step: Inspect the portworx volume
 
 ```
 VOL=`kubectl get pvc | grep px-mysql-pvc | awk '{print $3}'`

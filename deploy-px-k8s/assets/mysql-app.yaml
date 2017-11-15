@@ -33,6 +33,18 @@ spec:
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
+        livenessProbe:
+          exec:
+            command: ["mysqladmin", "--user=root", "--password=mysql123", "ping"]
+          initialDelaySeconds: 5
+          periodSeconds: 2
+          timeoutSeconds: 1
+        readinessProbe:
+          exec:
+            command: ["mysqladmin", "--user=root", "--password=mysql123", "ping"]
+          initialDelaySeconds: 5
+          periodSeconds: 2
+          timeoutSeconds: 1
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:

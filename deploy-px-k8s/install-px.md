@@ -16,9 +16,22 @@ kubectl apply -f px-spec.yaml
 
 ### Step: Wait till PX pods are ready
 
-`watch kubectl get pods -n kube-system -l name=portworx -o wide`{{execute HOST1}}
+```
+kubectl get pods -n kube-system -l name=portworx -o wide
 
-*Hit Control + C to stop the command once pods are in Ready (1/1) state*
+while true; do
+    NUM_READY=`kubectl get pods -n kube-system -l name=portworx -o wide | grep Running | grep 1/1 | wc -l`
+    if [ "${NUM_READY}" == "2" ]; then
+        echo "All portworx nodes are ready !"
+        kubectl get pods -n kube-system -l name=portworx -o wide
+        break
+    else
+        echo "Waiting for portworx nodes to be ready. Current ready nodes: ${NUM_READY}"
+    fi
+    sleep 5
+done
+```{{execute HOST1}}
+
 
 ### Step: Fetch Portworx cluster status with pxctl
 

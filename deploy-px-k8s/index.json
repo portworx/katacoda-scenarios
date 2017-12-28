@@ -38,7 +38,6 @@
         "intro": {
             "text": "intro.md",
             "courseData": "courseBase.sh",
-            "code": "adddisk.sh",
             "credits": ""
         },
         "finish": {

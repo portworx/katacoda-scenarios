@@ -2,8 +2,9 @@ PX relies on an external key value database (KVDB) like `etcd` or `consul` to st
 
 ### Step: Create an etcd instance via Docker.
 
-`IP=$(hostname -I | awk '{print $1}') && \
-   docker run -d --net=host -p 4001:2379 \
+`export IP=$(hostname -I | awk '{print $1}')
+
+docker run -d --net=host -p 4001:2379 \
    --volume=/var/lib/px-etcd:/etcd-data \
    --name etcd quay.io/coreos/etcd /usr/local/bin/etcd \
    --data-dir=/etcd-data --name node1 \

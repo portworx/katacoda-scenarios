@@ -13,6 +13,6 @@ PX relies on an external key value database (KVDB) like `etcd` or `consul` to st
    --listen-peer-urls http://${IP}:2380 \
    --initial-cluster node1=http://${IP}:2380`{{execute}}
 
-### Step: Verify that etcd is functional
+### Step: Verify that etcd is functional and reachable from one of the minions
 
-`curl -w '\n' -X GET http://${IP}:4001/version`{{execute HOST1}}
+Click/Type: `curl -w '\n' -X GET http://${IP}:4001/version`{{execute node01}}

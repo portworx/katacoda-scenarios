@@ -3,9 +3,13 @@
     "icon": "fa-kubernetes",
     "title": "Portworx on Kubernetes",
     "description": "Install Portworx on Kubernetes",
-    "difficulty": "intermediate",
+    "difficulty": "Intermediate",
     "details": {
         "steps": [
+            {
+                "title" : "Wait for Kubernetes nodes to be ready",
+                "text": "wait-k8s.md"
+            },
             {
                 "title" : "Prepare hosts with storage",
                 "text": "storage.md"
@@ -13,10 +17,6 @@
             {
                 "title" : "Install etcd",
                 "text": "etcd.md"
-            },
-            {
-                "title" : "Wait for Kubernetes nodes to be ready",
-                "text": "wait-k8s.md"
             },
             {
                 "title" : "Install Portworx",

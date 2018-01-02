@@ -8,7 +8,7 @@ tr --delete '\n' <password.txt >.strippedpassword.txt && mv .strippedpassword.tx
 kubectl create secret generic mysql-pass --from-file=password.txt
 
 kubectl create -f mysql-app.yaml
-```{{execute HOST1}}
+```{{execute}}
 
 
 ### Step: Verify mysql pod is ready
@@ -24,7 +24,7 @@ while true; do
     fi
     sleep 5
 done
-```{{execute HOST1}}
+```{{execute}}
 
 ### Step: Initialize a sample db
 
@@ -40,5 +40,5 @@ show tables;
 quit;
 
 exit
-```{{execute HOST1}}
+```{{execute}}
 

@@ -24,14 +24,14 @@ while true; do
     fi
     sleep 2
 done
-```{{execute HOST1}}
+```{{interrupt execute}}
 
 
 ### Step: Inspect the portworx volume
 
 ```
 VOL=`kubectl get pvc | grep px-mysql-pvc | awk '{print $3}'`
-
-/opt/pwx/bin/pxctl volume inspect ${VOL}
-```{{execute HOST1}}
+PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
+kubectl exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl inspect ${VOL}
+```{{execute}}
 

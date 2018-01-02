@@ -1,12 +1,9 @@
-We will be using a 2-node Kubernetes cluster for this scenario. Before installing Portworx, let's ensure Kubernetes nodes are ready.
+Before installing Portworx, let's ensure Kubernetes nodes are ready.
 
 ### Step: Wait for Kubernetes nodes to be ready
 
-*It can take a few minutes for this*
+Let's till the console says `Kubernetes started`.
 
-```
-./k8s-wait-ready.sh
-
-```{{execute HOST1}}
+List kubernetes nodes: `kubectl get nodes`{{execute}}
 
 Let's proceed to the next step !

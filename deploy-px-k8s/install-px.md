@@ -3,16 +3,15 @@ PX can be deployed with a single command in Kubernetes as a DaemonSet.
 ### Step: Fetch the Portworx spec
 
 ```
-K8S_VERSION=`kubectl version --short | grep Server | awk '{print $3}'` &&
-IP=$(hostname -I | awk '{print $1}') &&
-curl -o px-spec.yaml "http://install.portworx.com?cluster=katacoda-demo&kvdb=etcd://${IP}:4001&k8sVersion=${K8S_VERSION}&master=true&drives=/dev/loop18"
-```{{execute HOST1}}
+K8S_VERSION=`kubectl version --short | grep Server | awk '{print $3}'` && 
+curl -o px-spec.yaml "http://install.portworx.com?c=katacoda-demo&k=etcd://master:4001&k8sVer=${K8S_VERSION}&drives=/dev/vdb"
+```{{execute}}
 
 ### Step: Apply the spec
 
 ```
 kubectl apply -f px-spec.yaml
-```{{execute HOST1}}
+```{{execute}}
 
 ### Step: Wait till PX pods are ready
 
@@ -30,11 +29,14 @@ while true; do
     fi
     sleep 5
 done
-```{{execute HOST1}}
+```{{interrupt execute}}
 
 
 ### Step: Fetch Portworx cluster status with pxctl
 
-`watch /opt/pwx/bin/pxctl status`{{execute HOST2}}
+```
+PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
+watch kubectl exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
+```{{interrupt execute}}
 
 *It can take a few seconds for Portworx to complete initialization*

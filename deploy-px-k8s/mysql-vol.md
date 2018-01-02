@@ -4,7 +4,7 @@ In this step, we will deploy a `PersistentVolumeClaim` which will be used by mys
 
 ```
 kubectl create -f mysql-sc.yaml
-```{{execute HOST1}}
+```{{execute T1}}
 
 ### Step: Deploy PersistentVolumeClaim
 
@@ -24,7 +24,7 @@ while true; do
     fi
     sleep 2
 done
-```{{interrupt execute}}
+```{{interrupt execute T1}}
 
 
 ### Step: Inspect the portworx volume
@@ -33,5 +33,5 @@ done
 VOL=`kubectl get pvc | grep px-mysql-pvc | awk '{print $3}'`
 PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
 kubectl exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl inspect ${VOL}
-```{{execute}}
+```{{execute T1}}
 

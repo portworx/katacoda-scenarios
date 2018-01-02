@@ -7,7 +7,7 @@ POD_TO_DELETE=`kubectl get pods -l app=mysql -o wide | grep -v NAME | awk '{prin
 echo "Deleting mysql pod: ${POD_TO_DELETE}"
 
 kubectl delete pod ${POD_TO_DELETE}
-```{{execute}}
+```{{execute T1}}
 
 ### Step: Verify replacement pod starts running
 
@@ -24,7 +24,7 @@ while true; do
     fi
     sleep 5
 done
-```{{execute}}
+```{{execute T1}}
 
 ### Step: Verify data
 
@@ -38,6 +38,6 @@ use pxdemo;
 show tables;
 quit;
 exit
-```{{execute}}
+```{{execute T1}}
 
 Observe that the database tables is persisted !

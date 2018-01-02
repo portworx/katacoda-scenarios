@@ -11,7 +11,7 @@ curl -o px-spec.yaml "http://install.portworx.com?c=katacoda-demo&k=etcd://maste
 
 ```
 kubectl apply -f px-spec.yaml
-```{{execute}}
+```{{execute T1}}
 
 ### Step: Wait till PX pods are ready
 
@@ -29,7 +29,7 @@ while true; do
     fi
     sleep 5
 done
-```{{interrupt execute}}
+```{{execute T1}}
 
 
 ### Step: Fetch Portworx cluster status with pxctl
@@ -37,6 +37,6 @@ done
 ```
 PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
 watch kubectl exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
-```{{interrupt execute}}
+```{{interrupt execute T1}}
 
 *It can take a few seconds for Portworx to complete initialization*

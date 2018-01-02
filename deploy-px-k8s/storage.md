@@ -2,9 +2,9 @@ Portworx (PX) requires at least some nodes in the cluster to have dedicated stor
 
 ### Step: List block devices on all nodes
 
-Click/Type `lsblk`{{execute node01}} to list the available devices on the node1.
+Click/Type `lsblk`{{execute NODE01}} to list the available devices on the node1.
 
-Click/Type `lsblk`{{execute node02}} to list the available devices on the node2.
+Click/Type `lsblk`{{execute NODE02}} to list the available devices on the node2.
 
 Click/Type `lsblk`{{execute node03}} to list the available devices on the node3.
 

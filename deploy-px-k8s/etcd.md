@@ -1,7 +1,8 @@
 PX relies on an external key value database (KVDB) like `etcd` or `consul` to store it's cluster discovery and bootstrap information.
 
-### Step: Create an etcd instance via Docker.
+### Step: Create an etcd instance
 
+Below, we are starting etcd via a docker container.
 ```
 export IP=$(hostname -I | awk '{print $1}')
 
@@ -16,7 +17,9 @@ docker run -d --net=host -p 4001:2379 \
    --initial-cluster node1=http://${IP}:2380
 ```{{execute T1}}
 
-### Step: Verify that etcd is functional and reachable from one of the minions
+For production setups, follow [this page](https://docs.portworx.com/maintain/etcd.html) for recommendations on etcd.
+
+### Step: Verify that etcd is functional and reachable
 
 Below command queries the etcd version endpoint from `node01`.
 

@@ -2,7 +2,8 @@ PX relies on an external key value database (KVDB) like `etcd` or `consul` to st
 
 ### Step: Create an etcd instance via Docker.
 
-`export IP=$(hostname -I | awk '{print $1}')
+```
+export IP=$(hostname -I | awk '{print $1}')
 
 docker run -d --net=host -p 4001:2379 \
    --volume=/var/lib/px-etcd:/etcd-data \
@@ -12,8 +13,9 @@ docker run -d --net=host -p 4001:2379 \
    --listen-client-urls http://${IP}:4001 \
    --initial-advertise-peer-urls http://${IP}:2380 \
    --listen-peer-urls http://${IP}:2380 \
-   --initial-cluster node1=http://${IP}:2380`{{execute T1}}
+   --initial-cluster node1=http://${IP}:2380
+```{{execute T1}}
 
 ### Step: Verify that etcd is functional and reachable from one of the minions
 
-Click/Type: `ssh root@node01 curl -w '\n' -X GET http://master:4001/version`{{execute T2}}
+Click: `ssh root@node01 curl -w '\n' -X GET http://master:4001/version`{{execute T2}}

@@ -12,6 +12,7 @@ docker run -d --net=host -p 4001:2379 \
    --listen-peer-urls http://${IP}:2380 \
    --initial-cluster node1=http://${IP}:2380
 
+VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}'`
 curl -s -o px-spec.yaml "http://install.portworx.com?c=px-demo&k=etcd://master:4001&kbVer=${VER}&s=/dev/vdb"
 
 kubectl apply -f px-spec.yaml

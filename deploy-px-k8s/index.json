@@ -12,7 +12,6 @@
             },
             {
                 "title" : "Prepare hosts with storage",
-                "courseData": "./hack-etc-hosts.sh",
                 "text": "storage.md"
             },
             {

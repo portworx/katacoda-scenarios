@@ -18,4 +18,6 @@ docker run -d --net=host -p 4001:2379 \
 
 ### Step: Verify that etcd is functional and reachable from one of the minions
 
-Click: `ssh root@node01 curl -w '\n' -X GET http://master:4001/version`{{execute T2}}
+Below command queries the etcd version endpoint from `node01`.
+
+Click: `ssh root@node01 curl -s http://master:4001/version`{{execute T2}}

@@ -7,7 +7,7 @@ VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}'`
 curl -s -o px-spec.yaml "http://install.portworx.com?c=px-demo&k=etcd://master:4001&kbVer=${VER}&s=/dev/vdb"
 ```{{execute}}
 
-Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec){:target="_blank"} in the curl command to customize our spec.
+Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec) in the curl command to customize our spec.
 
 ### Step: Apply the spec
 
@@ -36,7 +36,7 @@ done
 
 ### Step: Fetch Portworx cluster status
 
-Portworx ships with a fully features `pxctl` command line that you can use for cluster operations.
+Portworx ships with a `pxctl` command line that you can use for managing Portworx.
 
 Below command executes the `pxctl status` command in one of the Portworx pods to fetch the overall cluster status.
 

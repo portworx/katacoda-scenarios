@@ -1,26 +1,26 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Portworx on Kubernetes",
-    "description": "Install Portworx on Kubernetes",
+    "title": "Mysql on Kubernetes using Portworx",
+    "description": "Deploy Mysql on Kubernetes using Portworx volumes",
     "difficulty": "Intermediate",
     "details": {
         "steps": [
             {
                 "title" : "Wait for Kubernetes nodes to be ready",
-                "text": "wait-k8s.md"
+                "text": "wait-k8s-px.md"
             },
             {
-                "title" : "Prepare hosts with storage",
-                "text": "storage.md"
+                "title" : "Create volume for mysql",
+                "text": "mysql-vol.md"
             },
             {
-                "title" : "Install etcd",
-                "text": "etcd.md"
+                "title" : "Deploy mysql",
+                "text": "mysql-app.md"
             },
             {
-                "title" : "Install Portworx",
-                "text": "install-px.md"
+                "title" : "Verify data persistence",
+                "text": "mysql-persistence.md"
             }
         ],
         "intro": {

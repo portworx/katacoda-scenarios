@@ -1,11 +1,11 @@
-PX can be deployed with a single command in Kubernetes as a DaemonSet.
+PX can be deployed with a single command in Kubernetes as a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/).
 
 ### Step: Fetch the Portworx spec
 
 ```
 VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}'`
 curl -s -o px-spec.yaml "http://install.portworx.com?c=px-demo&k=etcd://master:4001&kbVer=${VER}&s=/dev/vdb"
-```{{execute}}
+```{{execute T1}}
 
 Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec) in the curl command to customize our spec.
 

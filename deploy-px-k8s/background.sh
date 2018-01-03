@@ -3,3 +3,7 @@ ssh root@[[HOST_IP]] 'echo "Host *" >> /root/.ssh/config && echo "    StrictHost
 ssh root@node01 'docker pull portworx/px-enterprise:1.2.12.0'
 ssh root@node02 'docker pull portworx/px-enterprise:1.2.12.0'
 ssh root@node03 'docker pull portworx/px-enterprise:1.2.12.0'
+
+ssh root@node01 "sed -i.bkp 's/127.0.0.1 node01/#127.0.0.1 node01/g' /etc/hosts"
+ssh root@node02 "sed -i.bkp 's/127.0.0.1 node01/#127.0.0.1 node01/g' /etc/hosts"
+ssh root@node03 "sed -i.bkp 's/127.0.0.1 node01/#127.0.0.1 node01/g' /etc/hosts"

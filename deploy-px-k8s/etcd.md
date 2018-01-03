@@ -20,4 +20,5 @@ docker run -d --net=host -p 4001:2379 \
 
 Below command queries the etcd version endpoint from `node01`.
 
-Click: `ssh root@node01 curl -s http://master:4001/version`{{execute T2}}
+Click: ```ssh root@node01 curl -s http://master:4001/version
+```{{execute T2}}

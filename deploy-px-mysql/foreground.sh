@@ -14,6 +14,8 @@ docker run -d --net=host -p 4001:2379 \
 
 curl -s -o px-spec.yaml "http://install.portworx.com?c=px-demo&k=etcd://master:4001&kbVer=${VER}&s=/dev/vdb"
 
+kubectl apply -f px-spec.yaml
+
 kubectl get pods -n kube-system -l name=portworx -o wide
 
 while true; do

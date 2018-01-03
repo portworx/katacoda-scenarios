@@ -42,7 +42,7 @@ Below command executes the `pxctl status` command in one of the Portworx pods to
 
 ```
 PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
-watch kubectl exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
+watch --color kubectl exec -it $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
 ```{{interrupt execute}}
 
 *It can take a few seconds for Portworx to complete initialization*

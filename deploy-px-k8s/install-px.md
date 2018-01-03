@@ -3,9 +3,11 @@ PX can be deployed with a single command in Kubernetes as a DaemonSet.
 ### Step: Fetch the Portworx spec
 
 ```
-K8S_VERSION=`kubectl version --short | grep Server | awk '{print $3}'` && 
-curl -s -o px-spec.yaml "http://install.portworx.com?c=katacoda-demo&k=etcd://master:4001&kbVer=${K8S_VERSION}&drives=/dev/vdb"
+VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}'`
+curl -s -o px-spec.yaml "http://install.portworx.com?c=px-demo&k=etcd://master:4001&kbVer=${VER}&s=/dev/vdb"
 ```{{execute}}
+
+Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec){:target="_blank"} in the curl command to customize our spec.
 
 ### Step: Apply the spec
 

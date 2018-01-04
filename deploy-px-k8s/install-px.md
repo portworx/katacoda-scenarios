@@ -43,10 +43,12 @@ Below command executes the `pxctl status` command in one of the Portworx pods to
 
 ```
 PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
+
 watch --color kubectl exec -it $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
 ```{{interrupt execute}}
 
-We now have a 3-node Portworx cluster up ! Let's dive into our cluster status.
-- Observe that Portworx clustered the 20GB block device from each node in a 60GB storage cluster.
-- Portworx detected the block device media type as magnetic. This is useful when you have hybrib classes of devices.
-- All 3 nodes are online and use Kubernetes node names as the Portworx node IDs.
+We now have a 3-node Portworx cluster up ! 
+
+Let's dive into our cluster status.
+- All 3 nodes are online and use Kubernetes node names as the Portworx node IDs.- Observe that Portworx clustered the 20GB block device from each node in a 60GB storage cluster.
+- Portworx detected the block device media type as magnetic and created a storage pool for this. If you have different types of devices, for example SSD, a different storage pool is created for the SSD type.

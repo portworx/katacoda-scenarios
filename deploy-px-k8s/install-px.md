@@ -9,6 +9,12 @@ curl -s -o px-spec.yaml "http://install.portworx.com?c=px-demo&k=etcd://master:4
 
 Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec) in the curl command to customize our spec.
 
+In our comamnd:
+- `c=px-demo` specifies the cluster name
+- `k=etcd://master:4001` specifies the etcd
+- `kbVer=${VER}` specifies the Kubernetes version
+- `s=/dev/vdb` specifies the block device to use
+
 ### Step: Apply the Portworx spec
 
 ```

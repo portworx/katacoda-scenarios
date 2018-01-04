@@ -8,4 +8,4 @@ Click `ssh root@node02 lsblk`{{execute T2}} to list the available devices on the
 
 Click `ssh root@node03 lsblk`{{execute T2}} to list the available devices on the node3.
 
-Note the storage device `/dev/vdb`, which will be passed into PX as one of it's raw block disks.
+Note the storage device `vdb`, which will be passed into PX as one of it's raw block disks.

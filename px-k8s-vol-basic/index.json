@@ -7,7 +7,7 @@
     "details": {
         "steps": [
             {
-                "title" : "Wait for Kubernetes & Portworx is ready",
+                "title" : "Wait for Kubernetes & Portworx to be ready",
                 "text": "wait-k8s-px.md"
             },
             {

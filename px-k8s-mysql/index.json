@@ -1,8 +1,8 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Persistent volumes on Kubernetes using Portworx",
-    "description": "Creating Persistent volumes on Kubernetes using Portworx",
+    "title": "Deploying a Stateful application on Kubernetes using Portworx",
+    "description": "Deploying a stateful mysql application on Kubernetes using Portworx",
     "difficulty": "Intermediate",
     "details": {
         "steps": [

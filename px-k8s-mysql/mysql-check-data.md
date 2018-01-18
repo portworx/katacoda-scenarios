@@ -13,7 +13,7 @@ show databases;
 use pxdemo;
 show tables;
 quit;
-exit
+
 ```{{execute T1}}
 
-Observe that the database tables is persisted !
+Observe that the database table is persisted !

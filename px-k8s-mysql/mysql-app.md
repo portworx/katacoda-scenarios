@@ -7,7 +7,7 @@ Below we are creating a Secret to store the mysql password.
 echo mysql123 > password.txt
 tr --delete '\n' <password.txt >.strippedpassword.txt && mv .strippedpassword.txt password.txt
 kubectl create secret generic mysql-pass --from-file=password.txt
-```
+```{{execute T1}}
 
 ### Step: Create secret for mysql
 Below we will create a mysql [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) that uses a Portworx PVC.

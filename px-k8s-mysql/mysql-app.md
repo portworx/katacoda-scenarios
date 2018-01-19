@@ -15,21 +15,7 @@ Below we will create a mysql [Deployment](https://kubernetes.io/docs/concepts/wo
 kubectl create -f mysql-app.yaml
 ```{{execute T1}}
 
-Feel free to ```cat mysql-app.yaml```{{execute T1}} and observe the section where we mount the PVC.
-```yaml
-        volumeMounts:
-        - name: mysql-persistent-storage
-          mountPath: /var/lib/mysql
- ```
- ...
-
- ```         
-      volumes:
-      - name: mysql-persistent-storage
-        persistentVolumeClaim:
-          claimName: px-mysql-pvc
-```
-
+Feel free to ```cat mysql-app.yaml```{{execute T1}} and observe the `volumeMounts` and `volumes` sections where we mount the PVC.
 
 ### Step: Verify mysql pod is ready
 

@@ -37,13 +37,14 @@ spec:
         livenessProbe:
           exec:
             command: ["mysqladmin", "--user=root", "--password=mysql123", "ping"]
-          initialDelaySeconds: 5
-          periodSeconds: 2
+          initialDelaySeconds: 10
+          periodSeconds: 3
           timeoutSeconds: 1
+          failureThreshold: 10
         readinessProbe:
           exec:
             command: ["mysqladmin", "--user=root", "--password=mysql123", "ping"]
-          initialDelaySeconds: 5
+          initialDelaySeconds: 10
           periodSeconds: 2
           timeoutSeconds: 1
       volumes:

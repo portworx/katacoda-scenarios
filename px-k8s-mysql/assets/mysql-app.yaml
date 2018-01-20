@@ -37,7 +37,7 @@ spec:
         livenessProbe:
           exec:
             command: ["mysqladmin", "--user=root", "--password=mysql123", "ping"]
-          initialDelaySeconds: 10
+          initialDelaySeconds: 60
           periodSeconds: 3
           timeoutSeconds: 1
           failureThreshold: 10

@@ -26,6 +26,7 @@ while true; do
         break
     else
         echo "Waiting for mysql to be ready..."
+        kubectl get pods -l app=mysql -o wide
     fi
     sleep 5
 done

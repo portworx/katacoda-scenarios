@@ -14,4 +14,5 @@ create database pxdemo;
 create table grapevine (counter int unsigned);
 \l
 \q
+exit
 ```{{execute T1}}

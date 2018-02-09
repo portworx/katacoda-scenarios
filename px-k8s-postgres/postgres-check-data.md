@@ -16,7 +16,7 @@ psql
 \l
 \c pxdemo
 \dt
-select count(\*) from pgbench_accounts;
+select count(*) from pgbench_accounts;
 \q
 exit
 ```{{execute T1}}

@@ -29,7 +29,7 @@ Take a look at the tables and exit out of the container.
 psql
 \c pxdemo
 \dt
-select count(\*) from pgbench_accounts;
+select count(*) from pgbench_accounts;
 \q
 exit
 ```{{execute T1}}

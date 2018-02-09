@@ -19,12 +19,16 @@ create database pxdemo;
 
 ### Step: Run pgbench init to create some tables
 
+Run pgbench 
 ```
 pgbench -i -s 50 pxdemo;
+```{{execute T1}}
+
+Take a look at the tables and exit out of the container.
+```
 psql
 \c pxdemo
 \dt
 \q
 exit
 ```{{execute T1}}
-

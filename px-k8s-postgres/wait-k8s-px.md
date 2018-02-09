@@ -4,8 +4,11 @@ Let's first wait for Kubernetes and Portworx to be ready.
 
 Click the below section which waits for all Kubernetes nodes to be ready.
 ```
-./k8s-wait-ready.sh
+watch kubectl get nodes
 ```{{execute T1}}
+
+When all the nodes show status Running then hit ```clear```{{execute interrupt}} to ctrl-c and clear the screen.
+
 
 ### Step: Wait for Portworx to be ready
 

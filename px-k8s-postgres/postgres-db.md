@@ -26,8 +26,7 @@ pgbench -i -s 50 pxdemo;
 
 Take a look at the tables and exit out of the container.
 ```
-psql
-\c pxdemo
+psql pxdemo
 \dt
 select count(*) from pgbench_accounts;
 \q

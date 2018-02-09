@@ -20,8 +20,6 @@ Below commands wait till the new postgres pod is ready.
 watch kubectl get pods -l app=postgres -o wide
 ```{{execute T1}}
 
-When the pod come back up it will be in the Running state. 
-
-Exit the watch by using the `CTRL`-`C` command.
+When the pod come back up it will be in the Running state. When it does hit ```clear```{{execute interrupt}} to ctrl-c and clear the screen.
 
 Now that we have the new postgres pod running, let's check if the database we previously created is still intact.

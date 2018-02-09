@@ -8,11 +8,10 @@ Below commands exec into the postgres pod and create a sample database.
 POD=`kubectl get pods -l app=postgres | grep Running | grep 1/1 | awk '{print $1}'`
 kubectl exec -it $POD bash
 
-postgres --user=root --password=postgres123
+psql
 create database pxdemo;
-use pxdemo;
+\c pxdemo
 create table grapevine (counter int unsigned);
-show tables;
-quit;
-
+\l+;
+\q
 ```{{execute T1}}

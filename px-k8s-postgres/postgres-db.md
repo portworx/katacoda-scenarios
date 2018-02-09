@@ -12,6 +12,7 @@ psql
 create database pxdemo;
 \c pxdemo
 create table grapevine (counter int unsigned);
-\l+;
+\l
 \q
+exit
 ```{{execute T1}}

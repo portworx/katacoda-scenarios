@@ -17,19 +17,12 @@ Once the postgres pod gets deleted, Kubernetes will start to create a new postgr
 
 Below commands wait till the new postgres pod is ready.
 ```
-kubectl get pods -l app=postgres -o wide
-
-while true; do
-    NUM_READY=`kubectl get pods -l app=postgres -o wide | grep Running | grep 1/1 | wc -l`
-    if [ "${NUM_READY}" == "1" ]; then
-        echo "postgres is ready !"
-        break
-    else
-        echo "Waiting for postgres to be ready..."
-        kubectl get pods -l app=postgres -o wide
-    fi
-    sleep 5
-done
+watch kubectl get pods -l app=postgres -o wide
 ```{{execute T1}}
 
+WHen the pod come back up it will be in the Running state. 
+
+Exit the watch command:
+
+```clear```{{interrupt-execute}}
 Now that we have the new postgres pod running, let's check if the database we previously created is still intact.

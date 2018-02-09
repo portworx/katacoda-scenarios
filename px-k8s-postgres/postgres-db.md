@@ -1,18 +1,30 @@
 In this step, we will initialize a sample database in our postgres instance.
 
-### Step: Initialize a sample db
+### Step: Open a shell inside the postgres container
 
-Below commands exec into the postgres pod and create a sample database.
+Below commands exec into the postgres pod:
 
 ```
 POD=`kubectl get pods -l app=postgres | grep Running | grep 1/1 | awk '{print $1}'`
 kubectl exec -it $POD bash
+```{{execute T1}}
 
+Next we can launch the psql utility and create a database
+```
 psql
 create database pxdemo;
-\c pxdemo
-create table grapevine (counter int unsigned);
 \l
+\q
+```{{execute T1}}
+
+### Step: Run pgbench init to create some tables
+
+```
+pgbench -i -s 50 pxdemo;
+psql
+\c pxdemo
+\dt
 \q
 exit
 ```{{execute T1}}
+

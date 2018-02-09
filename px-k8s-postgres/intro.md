@@ -5,7 +5,7 @@ In this tutorial, you will learn how to deploy PostgreSQL to Kubernetes and use 
 * Use a simple YAML file to deploy PostgreSQL using this storage class
 * How to validate data persistence by deleting the PostgreSQL pod
 
-![alt text](https://github.com/fmrtl73/katacoda-scenarios-1/px-k8s-postgres/images/image1.jpg "Logo Title Text 1")
+![alt text](https://github.com/fmrtl73/katacoda-scenarios-1/px-k8s-postgres/images/psql-image1.png "Logo Title Text 1")
 
 
 This scenario assumes you have already covered the following scenarios:

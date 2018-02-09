@@ -12,9 +12,7 @@ kubectl exec -it $POD bash
 
 Now use psql to make sure our data is still there.
 ```
-psql
-\l
-\c pxdemo
+psql pxdemo
 \dt
 select count(*) from pgbench_accounts;
 \q

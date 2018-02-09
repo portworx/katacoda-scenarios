@@ -9,22 +9,13 @@ Click the below section which waits for all Kubernetes nodes to be ready.
 
 ### Step: Wait for Portworx to be ready
 
-Run below script to wait for Portworx to be ready on all the nodes. This can take a few minutes since it involves pulling multiple docker images.
+Watch the Portworx pods and wait for them to be ready on all the nodes. This can take a few minutes since it involves pulling multiple docker images. 
 
 ```
-kubectl get pods -n kube-system -l name=portworx -o wide
-
-while true; do
-    NUM_READY=`kubectl get pods -n kube-system -l name=portworx -o wide | grep Running | grep 1/1 | wc -l`
-    if [ "${NUM_READY}" == "3" ]; then
-        echo "All portworx nodes are ready !"
-        kubectl get pods -n kube-system -l name=portworx -o wide
-        break
-    else
-        echo "Waiting for portworx nodes to be ready. Current ready nodes: ${NUM_READY}"
-    fi
-    sleep 5
-done
+watch kubectl get pods -n kube-system -l name=portworx -o wide
 ```{{execute T1}}
 
+When all the pods show status Running then you can exit and proceed.
+
+``clear``{{interrupt+execute}}
 Now that we have the Portworx cluster up, let's proceed to the next step !

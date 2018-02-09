@@ -15,7 +15,6 @@ Watch the Portworx pods and wait for them to be ready on all the nodes. This can
 watch kubectl get pods -n kube-system -l name=portworx -o wide
 ```{{execute T1}}
 
-When all the pods show status Running then you can exit and proceed.
+When all the pods show status Running then you can exit using `CTRL`-`C` and proceed.
 
-``clear``{{interrupt+execute}}
 Now that we have the Portworx cluster up, let's proceed to the next step !

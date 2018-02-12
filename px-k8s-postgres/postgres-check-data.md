@@ -4,16 +4,19 @@ In this step, we will check the state of our sample postgres database.
 
 Below commands exec into the running postgres pod and dump our sample database.
 
+First find the pod name and exec into th container.
 ```
 POD=`kubectl get pods -l app=postgres | grep Running | grep 1/1 | awk '{print $1}'`
 kubectl exec -it $POD bash
+```{{execute T1}}
 
-psql
-\l
-\c pxdemo
+Now use psql to make sure our data is still there.
+```
+psql pxdemo
 \dt
+select count(*) from pgbench_accounts;
 \q
 exit
 ```{{execute T1}}
 
-Observe that the database table is persisted !
+Observe that the database table is still there and all the content intact!

@@ -19,7 +19,7 @@ Take a look at the Persistent Volume Claim
 cat px-postgres-pvc.yaml
 ```{{execute T1}}
 
-This defines the maximum volume size. Portworx will thing provision the volume and let it grow to 10GB size.
+This defines the maximum volume size. Portworx will thing provision the volume and let it grow to 2GB size.
  
 Create the PersistentVolumeClaim using:
 ```

@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-   name: px-postgres-pvc
+   name: px-shared-pvc
    annotations:
      volume.beta.kubernetes.io/storage-class: px-shared-sc
 spec:

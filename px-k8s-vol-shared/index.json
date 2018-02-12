@@ -1,8 +1,8 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Deploying a PostgreSQL database on Kubernetes using Portworx",
-    "description": "Deploying a stateful PostgreSQL database on Kubernetes using Portworx",
+    "title": "Using Portworx Shared Volumes",
+    "description": "Using Portworx Shared Volumes",
     "difficulty": "Intermediate",
     "details": {
         "steps": [

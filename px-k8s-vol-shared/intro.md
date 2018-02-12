@@ -7,7 +7,7 @@ In this tutorial, you will learn how to deploy PostgreSQL to Kubernetes and use 
 
 ### Shared Volumes Overview
 
-To learn more about how shared volumes can be useful check out our [docs page.](https://docs.portworx.com/manage/shared-volumes.html).
+To learn more about how shared volumes can be useful check out our [docs page](https://docs.portworx.com/manage/shared-volumes.html).
 
 This scenario assumes you have already covered the following scenarios:
 * [How to install Portworx on Kubernetes](https://www.katacoda.com/portworx/scenarios/deploy-px-k8s)

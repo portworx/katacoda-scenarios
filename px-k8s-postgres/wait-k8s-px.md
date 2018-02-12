@@ -12,7 +12,7 @@ When all the nodes show status Running then hit ```clear```{{execute interrupt}}
 
 ### Step: Wait for Portworx to be ready
 
-Watch the Portworx pods and wait for them to be ready on all the nodes. This can take a few minutes since it involves pulling multiple docker images. 
+Watch the Portworx pods and wait for them to be ready on all the nodes. This can take a few minutes since it involves pulling multiple docker images. You will see 'No resources found' until all images are pulled. 
 
 ```
 watch kubectl get pods -n kube-system -l name=portworx -o wide

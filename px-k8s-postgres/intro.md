@@ -9,7 +9,7 @@ In this tutorial, you will learn how to deploy PostgreSQL to Kubernetes and use 
 
 First we will deploy PostgreSQL with replication factor of 3 and with io_profile=db. To learn more about io_profile settings please visit our [docs page](https://docs.portworx.com/maintain/performance/tuning.html#volume-granular-performance-tuning).
 
-![alt text](https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/psql-image1.png?raw=true "PostgreSQL using PX Volume")
+![alt text](https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/postgres-image1.png?raw=true "PostgreSQL using PX Volume")
 
 Then we're going run a benchmark to create 5,000,000 rows in the database. Before simulating a server failure by deleting the pod running PostgreSQL.
 

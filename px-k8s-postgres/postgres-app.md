@@ -9,8 +9,7 @@ tr --delete '\n' <password.txt >.strippedpassword.txt && mv .strippedpassword.tx
 kubectl create secret generic postgres-pass --from-file=password.txt
 ```{{execute T1}}
 
-### Step: Create secret for postgres
-Below we will create a postgres [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) that uses a Portworx PVC. 
+Below we will create a postgres [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) that uses a Portworx PVC.
 
 Take a look at the yaml:
 ```cat postgres-app.yaml```{{execute T1}}
@@ -26,7 +25,7 @@ kubectl create -f postgres-app.yaml
 
 Below commands wait till the postgres pods are in ready state.
 ```
-watch kubectl get pods -l app=postgres -o wide 
+watch kubectl get pods -l app=postgres -o wide
 ```{{execute T1}}
 
 When the pod is in Running state then then hit ```clear```{{execute interrupt}} to ctrl-c and clear the screen.

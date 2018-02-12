@@ -1,1 +1,1 @@
-launch.sh
+./k8s-wait-ready.sh

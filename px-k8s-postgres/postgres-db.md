@@ -19,7 +19,21 @@ create database pxdemo;
 
 ### Step: Run pgbench init to create some tables
 
-Run pgbench 
+Run pgbench to initialize the pxdemo database. What this means is that pgbench will create the following tables within the example database.
+
+| table        | # of rows         
+| ------------- |:-------------:|
+| pgbench_branches | 1        |
+| pgbench_tellers  | 10       |
+| pgbench_accounts | 100,000  |
+| pgbench_history  | 0        |
+
+By default, pgbench will create the tables above with the number of rows shown above. This creates a simple 16MB database.
+
+The -s option is used to multiply the number of rows entered into each table. In the command above, we entered a “scaling” option of 50. This told pgbench to create a database with 50 times the default size.
+
+What this means is our pgbench_accounts table now has 5,000,000 records. It also means our database size is now 800MB (50 x 16MB).
+
 ```
 pgbench -i -s 50 pxdemo;
 ```{{execute T1}}

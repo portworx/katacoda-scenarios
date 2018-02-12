@@ -10,7 +10,7 @@ spec:
         app: webapp1
     spec:
       containers:
-      - name: nginx
+      - name: webapp1
         image: nginx
         ports:
         - containerPort: 80
@@ -34,7 +34,7 @@ spec:
         app: webapp2
     spec:
       containers:
-      - name: nginx
+      - name: webapp2
         image: nginx
         ports:
         - containerPort: 80
@@ -58,7 +58,7 @@ spec:
         app: webapp3
     spec:
       containers:
-      - name: nginx
+      - name: webapp3
         image: nginx
         ports:
         - containerPort: 80

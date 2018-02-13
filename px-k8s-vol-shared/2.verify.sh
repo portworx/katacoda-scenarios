@@ -1,6 +1,1 @@
-#!/bin/bash
-count=`kubectl get pvc | grep shared  | wc | awk '{print $1}'`
-if [ $count -eq 1 ]
-then
-  echo "done"
-fi
+[ `kubectl get pvc | grep shared  | wc | awk '{print $1}'` -eq 1 ] && echo "done"

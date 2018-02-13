@@ -25,6 +25,10 @@
             {
                 "title" : "Validate",
                 "text": "5.validate.md"
+            },
+            {
+                "title" : "File Ping Pong",
+                "text": "6.have-some-fun.md"
             }
         ],
         "intro": {

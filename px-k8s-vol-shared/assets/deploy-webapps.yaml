@@ -8,6 +8,7 @@ spec:
     metadata:
       labels:
         app: webapp1
+        group: webapp
     spec:
       containers:
       - name: webapp1
@@ -32,6 +33,7 @@ spec:
     metadata:
       labels:
         app: webapp2
+        group: webapp
     spec:
       containers:
       - name: webapp2
@@ -56,6 +58,7 @@ spec:
     metadata:
       labels:
         app: webapp3
+        group: webapp
     spec:
       containers:
       - name: webapp3

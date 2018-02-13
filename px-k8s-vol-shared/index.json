@@ -12,7 +12,7 @@
             },
             {
                 "title" : "Create shared volume",
-                "text": "2.create-shared-vol.md",
+                "text": "2.create-shared-vol.md"
             },
             {
                 "title" : "Deploy nginx",

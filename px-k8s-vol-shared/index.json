@@ -15,12 +15,12 @@
                 "text": "2.create-shared-vol.md"
             },
             {
-                "title" : "Deploy busybox and Read/Write data",
-                "text": "3.deploy-busybox.md"
+                "title" : "Deploy nginx",
+                "text": "3.deploy-nginx.md"
             },
             {
-                "title" : "Expand the volume",
-                "text": "4.expand-volume.md"
+                "title" : "Inspect the volume",
+                "text": "4.inspect-volume.md"
             },
             {
                 "title" : "Validate",

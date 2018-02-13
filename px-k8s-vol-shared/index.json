@@ -13,8 +13,6 @@
             {
                 "title" : "Create shared volume",
                 "text": "2.create-shared-vol.md",
-                "verify": "2.verify.sh",
-                "answer": "2.answer.md"
             },
             {
                 "title" : "Deploy nginx",

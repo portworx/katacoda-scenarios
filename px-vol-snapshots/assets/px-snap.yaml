@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  namespace: prod
+  name: px-postgres-snap-pvc
+  annotations:
+    volume.beta.kubernetes.io/storage-class: px-postgres-sc
+    px/snapshot-source-pvc: postgres
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi

@@ -1,8 +1,8 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Expand PX Volumes with zero downtime",
-    "description": "Expand PX Volumes with zero downtime",
+    "title": "Using Snapshots with PostgreSQL",
+    "description": "See how snapshots can be used as a point in time recovery mechanism.",
     "difficulty": "Intermediate",
     "details": {
         "steps": [

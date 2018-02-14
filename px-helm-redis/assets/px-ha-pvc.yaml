@@ -1,9 +1,9 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-   name: px-basic-pvc
+   name: px-redis-pvc
    annotations:
-     volume.beta.kubernetes.io/storage-class: px-basic-sc
+     volume.beta.kubernetes.io/storage-class: px-ha-sc
 spec:
    accessModes:
      - ReadWriteOnce

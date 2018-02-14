@@ -1,8 +1,8 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Using Portworx Shared Volumes",
-    "description": "Using Portworx Shared Volumes",
+    "title": "Expand PX Volumes with zero downtime",
+    "description": "Expand PX Volumes with zero downtime",
     "difficulty": "Intermediate",
     "details": {
         "steps": [

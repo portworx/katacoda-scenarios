@@ -20,7 +20,7 @@ spec:
       volumes:
       - name: html-data
         persistentVolumeClaim:
-          claimName: px-html-pvc
+          claimName: px-basic-pvc
 ---
 apiVersion: v1
 kind: Service

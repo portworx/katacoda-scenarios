@@ -16,7 +16,7 @@
             },
             {
                 "title" : "Deploy psql",
-                "text": "3.deploy-nginx.md"
+                "text": "3.deploy-psql.md"
             },
             {
                 "title" : "Benchmark",

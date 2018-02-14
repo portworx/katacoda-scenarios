@@ -1,8 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  namespace: default
-  name: ns.px-postgres.pvc.px-postgres-snap-pvc
+  name: ns.default-name.px-postgres-snap-pvc
   annotations:
     volume.beta.kubernetes.io/storage-class: px-repl3-sc
     px/snapshot-source-pvc: px-postgres-pvc

@@ -13,7 +13,6 @@ spec:
     metadata:
       labels:
         app: postgres-snap
-        recovered: true
     spec:
       affinity:
         nodeAffinity:

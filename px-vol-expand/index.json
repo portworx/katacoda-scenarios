@@ -19,10 +19,6 @@
                 "text": "3.deploy-nginx.md"
             },
             {
-                "title" : "Inspect the volume",
-                "text": "4.inspect-volume.md"
-            },
-            {
                 "title" : "Validate",
                 "text": "5.validate.md"
             },

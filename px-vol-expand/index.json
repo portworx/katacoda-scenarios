@@ -11,8 +11,8 @@
                 "text": "1.wait-k8s-px.md"
             },
             {
-                "title" : "Create shared volume",
-                "text": "2.create-shared-vol.md"
+                "title" : "Create basic volume",
+                "text": "2.create-basic-vol.md"
             },
             {
                 "title" : "Deploy nginx",

@@ -29,6 +29,10 @@
             {
                 "title" : "Fun with Redis",
                 "text": "6.have-some-fun.md"
+            },
+            {
+                "title" : "Benchmark Redis on Portworx",
+                "text": "7.run-benchmark.md"
             }
         ],
         "intro": {

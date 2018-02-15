@@ -1,13 +1,7 @@
-kind: PersistentVolumeClaim
-apiVersion: v1
+apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
 metadata:
-  name: ns.default-name.px-postgres-snap-pvc
-  annotations:
-    volume.beta.kubernetes.io/storage-class: px-repl3-sc
-    px/snapshot-source-pvc: px-postgres-pvc
+  name: px-postgres-snapshot
+  namespace: default
 spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 2Gi
+  persistentVolumeClaimName: px-postgres-pvc

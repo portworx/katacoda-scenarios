@@ -35,10 +35,6 @@
                 "text": "7.postgres-check-data.md"
             },
             {
-                "title" : "Grow past size limit",
-                "text": "8.grow-past-limit.md"
-            },
-            {
                 "title" : "Expand the volume",
                 "text": "9.expand-volume.md"
             },

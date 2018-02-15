@@ -53,4 +53,4 @@ spec:
       volumes:
       - name: postgredb
         persistentVolumeClaim:
-          claimName: ns.default-name.px-postgres-snap-pvc
+          claimName: px-postgres-snap-clone

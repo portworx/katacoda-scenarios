@@ -27,6 +27,7 @@ spec:
                 operator: NotIn
                 values:
                 - "false"
+      scheduler: stork
       containers:
       - name: postgres
         image: postgres:9.5

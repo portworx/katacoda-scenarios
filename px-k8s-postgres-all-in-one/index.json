@@ -1,0 +1,78 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Deploying a PostgreSQL database on Kubernetes using Portworx",
+    "description": "Deploying a stateful PostgreSQL database on Kubernetes using Portworx",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "text": "1.wait-k8s-px.md"
+            },
+            {
+                "title" : "Create volume for PostgreSQL",
+                "text": "2.px-postgres-vol.md"
+            },
+            {
+                "title" : "Deploy postgres",
+                "text": "3.postgres-app.md"
+            },
+            {
+                "title" : "Inspect the volume",
+                "text": "4.px-vol-inspect.md"
+            },
+            {
+                "title" : "Create postgres database",
+                "text": "5.postgres-db.md"
+            },
+            {
+                "title" : "Delete postgres instance",
+                "text": "6.postgres-persistence.md"
+            },
+            {
+                "title" : "Validate postgres database",
+                "text": "7.postgres-check-data.md"
+            },
+            {
+                "title" : "Grow past size limit",
+                "text": "8.grow-past-limit.md"
+            },
+            {
+                "title" : "Expand the volume",
+                "text": "9.expand-volume.md"
+            },
+            {
+                "title" : "Snapshots",
+                "text": "10.snapshot.md"
+            },
+            {
+                "title" : "Validate",
+                "text": "11.snapshot-restore.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running"
+    }
+}

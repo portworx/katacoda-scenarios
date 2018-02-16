@@ -5,21 +5,6 @@
     "description": "Deploying a stateful PostgreSQL database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
     "difficulty": "Intermediate",
     "details": {
-        "intro": {
-            "text": "intro.md",
-            "courseData": "background.sh",
-            "code": "foreground.sh",
-            "credits": ""
-        },
-        "finish": {
-            "text": "finish.md"
-        },
-        "assets": {
-            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
-            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
-            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
-            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
-        },
         "steps": [
             {
                 "title" : "Wait for Kubernetes & Portworx to be ready",
@@ -62,7 +47,22 @@
                 "title" : "Validate",
                 "text": "11.snapshot-restore.md"
             }
-        ]
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
     },
     "environment": {
         "uilayout": "terminal",

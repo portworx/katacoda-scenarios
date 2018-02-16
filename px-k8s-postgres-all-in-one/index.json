@@ -11,9 +11,13 @@
                 "text": "1.wait-k8s-px.md"
             },
             {
+                "title" : "Install Stork",
+                "courseData": "background.sh",
+                "text": "1.1.install-stork.md"
+            },
+            {
                 "title" : "Create volume for PostgreSQL",
                 "courseData": "background.sh",
-                "code": "foreground.sh",
                 "text": "2.px-postgres-vol.md"
             },
             {
@@ -51,7 +55,6 @@
         ],
         "intro": {
             "text": "intro.md",
-            "courseData": "background.sh",
             "code": "foreground.sh",
             "credits": ""
         },

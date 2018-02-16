@@ -1,5 +1,5 @@
+#This initialization will only take a minute, once the screen clears you're ready to start.
 launch.sh
-echo "sytem coming online, this will take 20 seconds"
 sleep 15
 ssh-keyscan node01 >> ~/.ssh/known_hosts
 ssh-keyscan node02 >> ~/.ssh/known_hosts

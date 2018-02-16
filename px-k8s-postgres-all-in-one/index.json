@@ -8,8 +8,7 @@
         "steps": [
             {
                 "title" : "Wait for Kubernetes & Portworx to be ready",
-                "text": "1.wait-k8s-px.md",
-                "courseData": "background.sh"
+                "text": "1.wait-k8s-px.md"
             },
             {
                 "title" : "Create volume for PostgreSQL",
@@ -58,14 +57,8 @@
             "text": "finish.md"
         },
         "assets": {
-          "host01": [ {"file": "postgres-app-restore.yaml", "target": "/root", "chmod": "+x" } ],
-          "host01": [ {"file": "postgres-app.yaml", "target": "/root", "chmod": "+x" } ],
-          "host01": [ {"file": "px-postgres-pvc.yaml", "target": "/root", "chmod": "+x" } ],
-          "host01": [ {"file": "px-repl3-sc.yaml", "target": "/root", "chmod": "+x" } ],
-          "host01": [ {"file": "px-snap-pvc.yaml", "target": "/root", "chmod": "+x" } ],
-          "host01": [ {"file": "px-snap.yaml", "target": "/root", "chmod": "+x" } ],
-          "host01": [ {"file": "stork-scheduler.yaml", "target": "/root", "chmod": "+x" } ],
-          "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
             "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
             "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
         }

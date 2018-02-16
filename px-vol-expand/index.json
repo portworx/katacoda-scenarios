@@ -20,6 +20,7 @@
             },
             {
                 "title" : "Validate",
+                "courseData": "create-1gb-file.sh",
                 "text": "5.validate.md"
             }
         ],

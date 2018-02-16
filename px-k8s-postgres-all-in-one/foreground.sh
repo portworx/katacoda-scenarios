@@ -1,4 +1,4 @@
-#This initialization will only take a minute, once the screen clears you're ready to start.
+echo "This initialization will only take a minute, once the screen clears you're ready to start."
 launch.sh
 sleep 15
 ssh-keyscan node01 >> ~/.ssh/known_hosts

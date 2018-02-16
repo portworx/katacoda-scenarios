@@ -12,6 +12,7 @@
             },
             {
                 "title" : "Create shared volume",
+                "courseData": "background.sh",
                 "text": "2.create-shared-vol.md"
             },
             {
@@ -33,7 +34,6 @@
         ],
         "intro": {
             "text": "intro.md",
-            "courseData": "background.sh",
             "code": "foreground.sh",
             "credits": ""
         },

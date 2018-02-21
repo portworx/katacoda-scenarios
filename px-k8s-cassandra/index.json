@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Cassandra all in one demo with Portworx",
+    "title": "Cassandra Stateful Set on Portworx",
     "description": "Deploying a stateful Cassandra database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
     "difficulty": "Intermediate",
     "details": {
@@ -9,11 +9,6 @@
             {
                 "title" : "Wait for Kubernetes & Portworx to be ready",
                 "text": "1.wait-k8s-px.md"
-            },
-            {
-                "title" : "Install Stork",
-                "courseData": "background.sh",
-                "text": "1.1.install-stork.md"
             },
             {
                 "title" : "Create volume for Cassandra",

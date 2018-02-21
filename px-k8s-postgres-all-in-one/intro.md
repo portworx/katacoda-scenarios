@@ -7,19 +7,17 @@ In this tutorial, you will learn how to deploy PostgreSQL to Kubernetes and use 
 
 ### High Level Overview
 
-<img src="https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/postgres-image1.png?raw=true" alt="Drawing" style="width: 600px;"/>
-
 First we will deploy PostgreSQL with replication factor of 3 and with io_profile=db. To learn more about io_profile settings please visit our [docs page](https://docs.portworx.com/maintain/performance/tuning.html#volume-granular-performance-tuning).
 
-![alt text](https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/postgres-image1.png?raw=true "PostgreSQL using PX Volume")
+<img src="https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/postgres-image1.png?raw=true" alt="PostgreSQL using PX Volume" style="width: 600px;"/>
 
 Then we're going run a benchmark to create 5,000,000 rows in the database. Before simulating a server failure by deleting the pod running PostgreSQL.
 
-![alt text](https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/simulate-server-failure.png?raw=true "Simulate Server Failure")
+<img src="https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/simulate-server-failure.png?raw=true" alt="Simulate Server Failure" style="width: 600px;"/>
 
 Finally, when the pod come back up Portworx works with the Kubernetes scheduler to make sure it gets scheduled where the data is available.
 
-![alt text](https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/end-state.png?raw=true "Postgres Pod is reattached to it's data")
+<img src="https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/end-state.png?raw=true" alt="Postgres Pod is reattached to it's data" style="width: 600px;"/>
 
 
 ### Other things you should know

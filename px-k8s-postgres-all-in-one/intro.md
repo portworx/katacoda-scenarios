@@ -20,7 +20,13 @@ Finally, when the pod come back up Portworx works with the Kubernetes scheduler 
 ![alt text](https://github.com/fmrtl73/katacoda-scenarios-1/blob/master/px-k8s-postgres/images/end-state.png?raw=true "Postgres Pod is reattached to it's data")
 
 
-To learn more about how to drive hyper-convergence please take a look at our Intelligent Storage Orchestration for Kubernetes: [STORK open source project](https://portworx.com/stork-storage-orchestration-kubernetes/).
+### Other things you should know
+
+To learn more about how why running Redis on Portworx is a great idea take a look at the following links:
+* [Introduction to Portworx](https://portworx.com/products/introduction/)
+* [Customer Stories](https://portworx.com/customers/)
+* [STORK open source project](https://portworx.com/stork-storage-orchestration-kubernetes/).
+
 
 This scenario assumes you have already covered the following scenarios:
 * [How to install Portworx on Kubernetes](https://www.katacoda.com/portworx/scenarios/deploy-px-k8s)

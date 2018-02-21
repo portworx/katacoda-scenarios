@@ -1,0 +1,78 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Cassandra all in one demo with Portworx",
+    "description": "Deploying a stateful Cassandra database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "text": "1.wait-k8s-px.md"
+            },
+            {
+                "title" : "Install Stork",
+                "courseData": "background.sh",
+                "text": "1.1.install-stork.md"
+            },
+            {
+                "title" : "Create volume for Cassandra",
+                "courseData": "background.sh",
+                "text": "2.px-cassandra-vol.md"
+            },
+            {
+                "title" : "Deploy cassandra",
+                "text": "3.cassandra-app.md"
+            },
+            {
+                "title" : "Inspect the volume",
+                "text": "4.px-vol-inspect.md"
+            },
+            {
+                "title" : "Create cassandra database",
+                "text": "5.cassandra-db.md"
+            },
+            {
+                "title" : "Delete cassandra instance",
+                "text": "6.cassandra-persistence.md"
+            },
+            {
+                "title" : "Validate cassandra database",
+                "text": "7.cassandra-check-data.md"
+            },
+            {
+                "title" : "Expand the volume",
+                "text": "9.expand-volume.md"
+            },
+            {
+                "title" : "Snapshots",
+                "text": "10.snapshots.md"
+            },
+            {
+                "title" : "Validate",
+                "text": "11.snapshot-restore.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running"
+    }
+}

@@ -11,12 +11,8 @@
                 "text": "1.wait-k8s-px.md"
             },
             {
-                "title" : "Create volume for Cassandra",
-                "courseData": "background.sh",
-                "text": "2.px-cassandra-vol.md"
-            },
-            {
                 "title" : "Deploy cassandra",
+                "courseData": "background.sh",
                 "text": "3.cassandra-app.md"
             },
             {

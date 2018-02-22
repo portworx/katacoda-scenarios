@@ -12,7 +12,6 @@ spec:
     app: cassandra
 
 ---
-
 apiVersion: "apps/v1beta1"
 kind: StatefulSet
 metadata:
@@ -40,7 +39,7 @@ spec:
                 - "false"
       containers:
       - name: cassandra
-        image: gcr.io/google_containers/cassandra:v4
+        image: gcr.io/google-samples/cassandra:v12
         imagePullPolicy: Always
         ports:
         - containerPort: 7000

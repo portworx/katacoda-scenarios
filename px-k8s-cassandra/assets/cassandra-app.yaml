@@ -39,7 +39,7 @@ spec:
                 - "false"
       containers:
       - name: cassandra
-        image: gcr.io/google_containers/cassandra:v4
+        image: cassandra:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 7000

@@ -4,8 +4,11 @@
 
 In this tutorial, you will learn how to deploy Mongo to Kubernetes using Helm and Portworx:
 * Deploy Helm to our Kubernetes cluster
-* Deploy Mongo using Helm with the Portworx Storage Class
-* Use the Mongo command line to have some fun!
+* Deploy MongoDB using Helm with the Portworx Storage Class
+* Perform a failover test
+* Use the MongoDB command line to have some fun!
+* Expand the volume used by MongoDB
+* Take a snapshot and restore it
 
 ### Other things you should know
 

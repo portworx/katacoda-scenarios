@@ -45,8 +45,7 @@
             {
                 "title" : "Restore From Snapshot",
                 "text": "11.snapshot-restore.md"
-            },
-
+            }
         ],
         "intro": {
             "text": "intro.md",

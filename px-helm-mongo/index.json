@@ -19,17 +19,34 @@
                 "text": "3.create-volume.md"
             },
             {
-                "title" : "Deploy Mongo Chart",
+                "title" : "Deploy MongoDB Chart",
                 "text": "4.deploy-mongo.md"
             },
             {
-                "title" : "Fun with Mongo",
+                "title" : "Fun with MongoDB",
                 "text": "6.have-some-fun.md"
             },
             {
-                "title" : "Benchmark Mongo on Portworx",
-                "text": "7.run-benchmark.md"
-            }
+                "title" : "HA Failover",
+                "text": "7.failover.md"
+            },
+            {
+                "title" : "Verify data integrity",
+                "text": "8.check-data.md"
+            },
+            {
+                "title" : "Expand Volume",
+                "text": "9.expand-volume.md"
+            },
+            {
+                "title" : "Take Snapshot",
+                "text": "10.snapshots.md"
+            },
+            {
+                "title" : "Restore From Snapshot",
+                "text": "11.snapshot-restore.md"
+            },
+
         ],
         "intro": {
             "text": "intro.md",

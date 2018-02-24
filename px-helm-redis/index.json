@@ -27,8 +27,24 @@
                 "text": "6.have-some-fun.md"
             },
             {
-                "title" : "Benchmark Redis on Portworx",
-                "text": "7.run-benchmark.md"
+                "title" : "HA Failover",
+                "text": "6.failover.md"
+            },
+            {
+                "title" : "Verify data integrity",
+                "text": "7.check-data.md"
+            },
+            {
+                "title" : "Expand Volume",
+                "text": "8.expand-volume.md"
+            },
+            {
+                "title" : "Take Snapshot",
+                "text": "9.snapshots.md"
+            },
+            {
+                "title" : "Restore From Snapshot",
+                "text": "10.snapshot-restore.md"
             }
         ],
         "intro": {

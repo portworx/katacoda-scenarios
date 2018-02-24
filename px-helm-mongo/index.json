@@ -24,27 +24,27 @@
             },
             {
                 "title" : "Fun with MongoDB",
-                "text": "6.have-some-fun.md"
+                "text": "5.have-some-fun.md"
             },
             {
                 "title" : "HA Failover",
-                "text": "7.failover.md"
+                "text": "6.failover.md"
             },
             {
                 "title" : "Verify data integrity",
-                "text": "8.check-data.md"
+                "text": "7.check-data.md"
             },
             {
                 "title" : "Expand Volume",
-                "text": "9.expand-volume.md"
+                "text": "8.expand-volume.md"
             },
             {
                 "title" : "Take Snapshot",
-                "text": "10.snapshots.md"
+                "text": "9.snapshots.md"
             },
             {
                 "title" : "Restore From Snapshot",
-                "text": "11.snapshot-restore.md"
+                "text": "10.snapshot-restore.md"
             }
         ],
         "intro": {

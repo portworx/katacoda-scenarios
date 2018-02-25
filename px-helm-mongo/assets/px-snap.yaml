@@ -4,4 +4,4 @@ metadata:
   name: px-mongo-snapshot
   namespace: default
 spec:
-  persistentVolumeClaimName: px-mongo-mongodb
+  persistentVolumeClaimName: px-mongo-pvc

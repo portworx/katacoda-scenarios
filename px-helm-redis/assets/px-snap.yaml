@@ -4,4 +4,4 @@ metadata:
   name: px-redis-snapshot
   namespace: default
 spec:
-  persistentVolumeClaimName: px-redis-redisdb
+  persistentVolumeClaimName: px-redis-pvc

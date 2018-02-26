@@ -7,10 +7,23 @@ metadata:
 spec:
   clusterIP: None
   ports:
-    - port: 9042
+  -  name: intra
+    port: 7000
+    targetPort: 7000
+  - name: tls
+    port: 7001
+    targetPort: 7001
+  - name: jmx
+    port: 7199
+    targetPort: 7199
+  - name: cql
+    port: 9042
+    targetPort: 9042
+  - name: thrift
+    port: 9160
+    targetPort: 9160
   selector:
     app: cassandra
-
 ---
 apiVersion: "apps/v1beta1"
 kind: StatefulSet
@@ -41,6 +54,11 @@ spec:
       - name: cassandra
         image: cassandra:latest
         imagePullPolicy: Always
+        readinessProbe:
+          exec:
+            command: [ "/bin/sh", "-c", "nodetool status | grep -E \"^UN\\s+${POD_IP}\"" ]
+          initialDelaySeconds: 90
+          periodSeconds: 30
         ports:
         - containerPort: 7000
           name: intra-node

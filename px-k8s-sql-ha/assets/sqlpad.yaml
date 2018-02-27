@@ -1,0 +1,33 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sqlpad
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sqlpad
+    spec:
+      hostNetwork: true
+      containers:
+      - name: sqlpad
+        image: jsilberm/jspx-sqlpad-kata
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sqlpad
+  labels:
+    app: sqlpad
+spec:
+  ports:
+    - port: 3000
+      nodePort: 30300
+  selector:
+    app: sqlpad
+  type: NodePort

@@ -4,8 +4,4 @@ Portworx (PX) requires at least some nodes in the cluster to have dedicated stor
 
 Click `ssh root@node01 lsblk`{{execute T2}} to list the available devices on the node1.
 
-Click `ssh root@node02 lsblk`{{execute T2}} to list the available devices on the node2.
-
-Click `ssh root@node03 lsblk`{{execute T2}} to list the available devices on the node3.
-
-Note the storage device `vdb`, which will be passed into PX as one of it's raw block disks.
+Note the storage device `vdb`, which will be used by PX as one of it's raw block disks. All the nodes in this setup have the `vdb` device.

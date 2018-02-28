@@ -2,7 +2,6 @@
 
 In this tutorial, you will learn:
 * How to deploy SQL Server on Kubernetes with multi-node High-Availability
-* How to inspect details of a Portworx Volume
 * How Kubernetes and Portworx together provide High-Availabilty (Service and Data) for SQL Server 
 
 If you are interested in learning how to install Portworx on Kubernetes, visit [this scenario](https://www.katacoda.com/portworx/scenarios/deploy-px-k8s)

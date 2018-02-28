@@ -4,7 +4,8 @@ In this step, we will deploy SQL Server.
 Portworx doesn't run on the K8s master, so we'll check from one of the minions.
 
 ```
-ssh node01 /opt/pwx/bin/pxctl status
+PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
+kubectl exec -it $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
 ```{{execute T1}}
 
 ### Step: Deploy SQL Server with Storage on-demand
@@ -19,7 +20,7 @@ kubectl get pods
 ### Step:  Observe the Portworx Volume
 
 ```
-ssh node01 /opt/pwx/bin/pxctl volume list
+kubectl get pvc
 ```{{execute T1}}
 
 Note that the `HA` for the volume is `3`, meaning that the volume is replicated 

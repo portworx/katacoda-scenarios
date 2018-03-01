@@ -7,3 +7,4 @@ parameters:
    repl: "3"
    io_profile: "db"
    io_priority: "high"
+   fs: "xfs"

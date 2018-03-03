@@ -8,7 +8,9 @@
         "steps": [
             {
                 "title" : "Wait for Kubernetes & Portworx to be ready",
-                "text": "1.wait-k8s-px.md"
+                "text": "1.wait-k8s-px.md",
+                "verify": "1.wait-k8s-px-verify.sh"
+
             },
             {
                 "title" : "Deploy Helm",

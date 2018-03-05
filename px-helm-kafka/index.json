@@ -1,0 +1,79 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Deploy Mongo on Portworx volumes using Helm",
+    "description": "Deploy Mongo on Portworx volumes using Helm",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "text": "1.wait-k8s-px.md",
+                "verify": "1.wait-k8s-px-verify.sh"
+            },
+            {
+                "title" : "Deploy Helm",
+                "text": "2.deploy-helm.md"
+            },
+            {
+                "title" : "Create PX Volume",
+                "text": "3.create-volume.md"
+            },
+            {
+                "title" : "Deploy MongoDB Chart",
+                "text": "4.deploy-mongo.md"
+            },
+            {
+                "title" : "Fun with MongoDB",
+                "text": "5.have-some-fun.md"
+            },
+            {
+                "title" : "HA Failover",
+                "text": "6.failover.md"
+            },
+            {
+                "title" : "Verify data integrity",
+                "text": "7.check-data.md"
+            },
+            {
+                "title" : "Expand Volume",
+                "text": "8.expand-volume.md"
+            },
+            {
+                "title" : "Take Snapshot",
+                "text": "9.snapshots.md"
+            },
+            {
+                "title" : "Restore From Snapshot",
+                "text": "10.snapshot-restore.md"
+            },
+            {
+                "title" : "Replica Sets",
+                "text": "11.replica-set.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running"
+    }
+}

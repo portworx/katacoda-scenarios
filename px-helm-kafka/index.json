@@ -1,15 +1,14 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Deploy Mongo on Portworx volumes using Helm",
-    "description": "Deploy Mongo on Portworx volumes using Helm",
+    "title": "Deploy kafka on Portworx volumes using Helm",
+    "description": "Deploy kafka on Portworx volumes using Helm",
     "difficulty": "Intermediate",
     "details": {
         "steps": [
             {
                 "title" : "Wait for Kubernetes & Portworx to be ready",
                 "text": "1.wait-k8s-px.md",
-                "verify": "1.wait-k8s-px-verify.sh"
             },
             {
                 "title" : "Deploy Helm",
@@ -20,11 +19,11 @@
                 "text": "3.create-volume.md"
             },
             {
-                "title" : "Deploy MongoDB Chart",
-                "text": "4.deploy-mongo.md"
+                "title" : "Deploy kafkaDB Chart",
+                "text": "4.deploy-kafka.md"
             },
             {
-                "title" : "Fun with MongoDB",
+                "title" : "Fun with kafkaDB",
                 "text": "5.have-some-fun.md"
             },
             {

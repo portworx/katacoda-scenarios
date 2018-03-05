@@ -7,16 +7,8 @@
     "details": {
         "steps": [
             {
-                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "title" : "Install Helm and wait for Kubernetes & Portworx to be ready",
                 "text": "1.wait-k8s-px.md"
-            },
-            {
-                "title" : "Deploy Helm",
-                "text": "2.deploy-helm.md"
-            },
-            {
-                "title" : "Create PX Volume",
-                "text": "3.create-volume.md"
             },
             {
                 "title" : "Deploy Kafka Chart",

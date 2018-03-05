@@ -19,11 +19,11 @@
                 "text": "3.create-volume.md"
             },
             {
-                "title" : "Deploy kafkaDB Chart",
+                "title" : "Deploy Kafka Chart",
                 "text": "4.deploy-kafka.md"
             },
             {
-                "title" : "Fun with kafkaDB",
+                "title" : "Fun with Kafka",
                 "text": "5.have-some-fun.md"
             },
             {

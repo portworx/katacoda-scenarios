@@ -22,7 +22,7 @@ Finally, when the pod come back up Portworx works with the Kubernetes scheduler 
 
 ### Other things you should know
 
-To learn more about how why running Redis on Portworx is a great idea take a look at the following links:
+To learn more about how why running PostgreSQL on Portworx is a great idea take a look at the following links:
 * [Introduction to Portworx](https://portworx.com/products/introduction/)
 * [Customer Stories](https://portworx.com/customers/)
 * [STORK open source project](https://portworx.com/stork-storage-orchestration-kubernetes/).

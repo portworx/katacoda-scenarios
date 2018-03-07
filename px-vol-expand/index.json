@@ -1,0 +1,51 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Expand PX Volumes with zero downtime",
+    "description": "Expand PX Volumes with zero downtime",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "text": "1.wait-k8s-px.md"
+            },
+            {
+                "title" : "Create basic volume",
+                "text": "2.create-basic-vol.md"
+            },
+            {
+                "title" : "Deploy nginx",
+                "text": "3.deploy-nginx.md"
+            },
+            {
+                "title" : "Validate",
+                "courseData": "create-1gb-file.sh",
+                "text": "5.validate.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running"
+    }
+}

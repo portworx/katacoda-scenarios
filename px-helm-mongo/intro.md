@@ -12,7 +12,7 @@ Once Helm is deployed we will use it to deploy the [MongoDB chart](https://githu
 
 This diagram illustrates the configuration:
 
-<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vSvx983Y0q1B6gZY-4BzFNKQ_u7hdIAw25hDDQpbVaobR9ny17ZsbWgsGFTsMehrKXVxFSqaSTfzpvv/pub?w=574&h=316" alt="MongoDB using PX Volume" style="width: 600px;"/>
+<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vRZSNHELVPsgfYcJvm8rKgfEAM8cdNJt2hT9gkgqRhWbCTjVDcdaUsG4kPokf2rVXOM67Gcp3omlkFz/pub?w=858&h=401" alt="MongoDB using PX Volume" style="width: 600px;"/>
 
 ### Step: Perform a failover test
 
@@ -20,7 +20,7 @@ In this step we will simulate a node failure to show how Kubernetes can reschedu
 
 This diagram illustrates the failover scenario:
 
-<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vR-5wReBuEcREJSqx56YPljRMcfcrh9DVmKf-au5O8nxMo8gTTD9r7kDrT7H8fJdzIWmaLMYdo4yv_f/pub?w=574&h=316" alt="MongoDB failover test" style="width: 600px;"/>
+<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vRsekufq2iAPuoDuobQmlAJ5MrMMCFgmHo2aL_q_9Ndc0k_W0mnb9UqKUIHAPosBA-ThKdK1UkvkpBJ/pub?w=858&h=401" alt="MongoDB failover test" style="width: 600px;"/>
 
 ### Step: Expand the volume used by MongoDB
 
@@ -28,16 +28,25 @@ In this step we will show how Portworx volumes can be dynamically expanded with 
 
 This diagram illustrates the expansion of your volume:
 
-<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vRj5Zem3GryHT4CaNTSygPXzGxiSF8I3zXwA_FMIsQqKMV_urgGmbiq0rTCLU3zR32fnrWTz15dXClg/pub?w=574&h=316" alt="Expanding volumes" style="width: 600px;"/>
+<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vRPO8qz5a9w1dyINm1hOQTuhUg-iBQ-3uXXvAbCURykW8lRsogH1RvUMZwctcGYUAToQmaXIQXjBlR3/pub?w=858&h=401" alt="Expanding volumes" style="width: 600px;"/>
 
 
 ### Step: Take a snapshot and restore it
 
-In this final step we will show how snapshots can be used with MongoDB volumes. Snapshots are efficient point-in-time copies of volumes that can be either read-write or read-only. Each snapshot is a volume in its own right and can be used freely by applications. They are implemented using a copy-on-write technique, so that they only use space in places where they differ from their parent volume.
+In this step we will show how snapshots can be used with MongoDB volumes. Snapshots are efficient point-in-time copies of volumes that can be either read-write or read-only. Each snapshot is a volume in its own right and can be used freely by applications. They are implemented using a copy-on-write technique, so that they only use space in places where they differ from their parent volume.
 
 This diagram illustrates the expansion of your volume:
 
-<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vTkypXWifFiO8ToBpNardHsM5W-qrVbMJ4XFlSPbdUId6eg8NzjWlOO9DM0M6O1myk1DA7I2VoPj785/pub?w=574&h=316" alt="Expanding volumes" style="width: 600px;"/>
+<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vQJvui6RrEAPX8m8aOg99MpFG5kW3RkpInFEA8-X3KBjaun8uAlNG2OSLat0qrUkQyxYMboJAR1pzAJ/pub?w=858&h=401" alt="Expanding volumes" style="width: 600px;"/>
+
+
+### Step: Deploying MongoDB Replica Set
+
+In this final step we will show how to deploy a MongoDB replica set using Portworx Volumes. Replica Sets are easy to deploy using helm and each member of the cluster will get it's own Portworx volume dynamically created. By using a replication factor of 2 for these Portworx volumes you will get extra data protection and faster recovery of lost nodes as the data will not have to be rehydrated from the other nodes, minimizing network traffic and recovery times.
+
+This diagram illustrates the MongoDB replica set deployed with Portworx volumes:
+
+<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vTZcVad6xT3WPsle1OC1qmRpsIK0qeM5nJnMPMc6l_AzCpo08toUKwGKyOy_1ACgJq7Txl0qjdSXdt2/pub?w=858&h=401" alt="MongoDB Replica Set" style="width: 600px;"/>
 
 ### Other things you should know
 

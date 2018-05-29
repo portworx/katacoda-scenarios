@@ -1,8 +1,8 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "PostgreSQL all in one demo with Portworx",
-    "description": "Deploying a stateful PostgreSQL database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
+    "title": "HA PostgreSQL on Kubernets with Portworx",
+    "description": "Deploying a PostgreSQL database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
     "difficulty": "Intermediate",
     "details": {
         "steps": [

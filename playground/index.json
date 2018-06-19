@@ -1,0 +1,39 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Portworx Playground",
+    "description": "Access Portworx on Kubernetes with via the Playground",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "",
+                "text": "links.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],            
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "trainingid": "portworx-kubernetes-running",
+        "imageid": "portworx-kubernetes-running"
+    }
+}

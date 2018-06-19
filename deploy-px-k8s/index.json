@@ -45,6 +45,7 @@
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
     },
     "backend": {
+        "trainingid": "portworx-kubernetes-running",
         "imageid": "portworx-kubernetes"
     }
 }

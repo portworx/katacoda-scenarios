@@ -1,26 +1,14 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Portworx on Kubernetes",
-    "description": "Install Portworx on Kubernetes",
+    "title": "Portworx Playground",
+    "description": "Access Portworx on Kubernetes with via the Playground",
     "difficulty": "Intermediate",
     "details": {
         "steps": [
             {
-                "title" : "Wait for Kubernetes nodes to be ready",
-                "text": "wait-k8s.md"
-            },
-            {
-                "title" : "Prepare hosts with storage",
-                "text": "storage.md"
-            },
-            {
-                "title" : "Install etcd",
-                "text": "etcd.md"
-            },
-            {
-                "title" : "Install Portworx",
-                "text": "install-px.md"
+                "title" : "",
+                "text": "links.md"
             }
         ],
         "intro": {
@@ -46,6 +34,6 @@
     },
     "backend": {
         "trainingid": "portworx-kubernetes-running",
-        "imageid": "portworx-kubernetes"
+        "imageid": "portworx-kubernetes-running"
     }
 }

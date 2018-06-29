@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "HA PostgreSQL on Kubernets with Portworx",
+    "title": "HA PostgreSQL on Kubernetes with Portworx",
     "description": "Deploying a PostgreSQL database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
     "difficulty": "Intermediate",
     "details": {

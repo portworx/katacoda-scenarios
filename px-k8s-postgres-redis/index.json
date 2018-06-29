@@ -1,8 +1,8 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "HA PostgreSQL and Redis on Kubernetes with Portworx",
-    "description": "Deploying Redis and a PostgreSQL database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
+    "title": "HA Redis on Kubernetes with Portworx",
+    "description": "Deploying a Redis database on Kubernetes using Portworx, showing HA failover scenario",
     "difficulty": "Intermediate",
     "details": {
         "steps": [
@@ -11,41 +11,29 @@
                 "text": "1.wait-k8s-px.md"
             },
             {
-                "title" : "Create volume for PostgreSQL",
+                "title" : "Create volume for Redis",
                 "courseData": "background.sh",
-                "text": "2.px-postgres-vol.md"
+                "text": "2.px-redis-vol.md"
             },
             {
-                "title" : "Deploy postgres",
-                "text": "3.postgres-app.md"
+                "title" : "Deploy redis",
+                "text": "3.redis-app.md"
             },
             {
                 "title" : "Inspect the volume",
                 "text": "4.px-vol-inspect.md"
             },
             {
-                "title" : "Create postgres database",
-                "text": "5.postgres-db.md"
+                "title" : "Create redis database",
+                "text": "5.redis-db.md"
             },
             {
                 "title" : "Delete postgres instance",
-                "text": "6.postgres-persistence.md"
+                "text": "6.redis-persistence.md"
             },
             {
                 "title" : "Validate postgres database",
-                "text": "7.postgres-check-data.md"
-            },
-            {
-                "title" : "Expand the volume",
-                "text": "9.expand-volume.md"
-            },
-            {
-                "title" : "Snapshots",
-                "text": "10.snapshots.md"
-            },
-            {
-                "title" : "Validate",
-                "text": "11.snapshot-restore.md"
+                "text": "7.redis-check-data.md"
             }
         ],
         "intro": {

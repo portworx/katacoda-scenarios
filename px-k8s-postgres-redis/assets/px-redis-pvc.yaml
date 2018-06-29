@@ -1,0 +1,26 @@
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+   name: px-redis-data
+   annotations:
+     volume.beta.kubernetes.io/storage-class: px-repl3-sc
+spec:
+   accessModes:
+     - ReadWriteOnce
+   resources:
+     requests:
+       storage: 1Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+   name: px-redis-conf
+   annotations:
+     volume.beta.kubernetes.io/storage-class: px-repl3-sc
+spec:
+   accessModes:
+     - ReadWriteOnce
+   resources:
+     requests:
+       storage: 1Gi

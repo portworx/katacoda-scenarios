@@ -28,11 +28,11 @@
                 "text": "5.redis-db.md"
             },
             {
-                "title" : "Delete postgres instance",
+                "title" : "Delete redis instance",
                 "text": "6.redis-persistence.md"
             },
             {
-                "title" : "Validate postgres database",
+                "title" : "Validate redis database",
                 "text": "7.redis-check-data.md"
             }
         ],

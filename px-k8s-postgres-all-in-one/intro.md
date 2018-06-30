@@ -19,7 +19,7 @@ Finally, when the pod come back up Portworx works with the Kubernetes scheduler 
 To learn more about how why running PostgreSQL on Portworx is a great idea take a look at the following links:
 * [Introduction to Portworx](https://portworx.com/products/introduction/)
 * [Customer Stories](https://portworx.com/customers/)
-* [STORK open source project](https://portworx.com/stork-storage-orchestration-kubernetes/).
+* [STORK open source project](https://portworx.com/stork-storage-orchestration-kubernetes/)
 
 
 This scenario assumes you have already covered the following scenarios:

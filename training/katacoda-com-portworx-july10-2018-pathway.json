@@ -4,8 +4,8 @@
   "courses": [
     {
       "pathway_id": "portworx",
-      "course_id": "katacoda-com-portworx-july10-2018-pathway.json",
-      "id": "katacoda-com-portworx-july10-2018-pathway.json",
+      "course_id": "px-k8s-postgres-all-in-one",
+      "id": "px-k8s-postgres-all-in-one",
       "title": "Portworx on Kubernetes",
       "description": "Access Portworx on Kubernetes scenario"
     }

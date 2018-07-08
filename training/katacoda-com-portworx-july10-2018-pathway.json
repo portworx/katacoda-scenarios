@@ -1,0 +1,13 @@
+{
+  "title": "Portworx",
+  "description": "Training session",
+  "courses": [
+    {
+      "pathway_id": "portworx",
+      "course_id": "katacoda-com-portworx-july10-2018-pathway.json",
+      "id": "katacoda-com-portworx-july10-2018-pathway.json",
+      "title": "Portworx on Kubernetes",
+      "description": "Access Portworx on Kubernetes scenario"
+    }
+  ]
+}

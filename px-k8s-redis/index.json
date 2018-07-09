@@ -1,0 +1,56 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "HA Redis on Kubernetes with Portworx",
+    "description": "Deploying a Redis database on Kubernetes using Portworx, showing HA failover scenario",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "text": "1.wait-k8s-px.md"
+            },
+            {
+                "title" : "Create volume for Redis",
+                "courseData": "background.sh",
+                "text": "2.px-redis-vol.md"
+            },
+            {
+                "title" : "Deploy redis",
+                "text": "3.redis-app.md"
+            },
+            {
+                "title" : "Inspect the volume",
+                "text": "4.px-vol-inspect.md"
+            },
+            {
+                "title" : "Create redis database",
+                "text": "5.redis-db.md"
+            },
+            {
+                "title" : "Delete redis instance",
+                "text": "6.redis-persistence.md"
+            },
+            {
+                "title" : "Validate redis database",
+                "text": "7.redis-check-data.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": { "host01": [ {"file": "*", "target": "/root" } ] }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running"
+    }
+}

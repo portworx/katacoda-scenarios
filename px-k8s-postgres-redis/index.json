@@ -4,6 +4,7 @@
     "title": "HA Redis on Kubernetes with Portworx",
     "description": "Deploying a Redis database on Kubernetes using Portworx, showing HA failover scenario",
     "difficulty": "Intermediate",
+    "assets": { "host01": [ {"file": "*", "target": "/root" } ] },
     "details": {
         "steps": [
             {

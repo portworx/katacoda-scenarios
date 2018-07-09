@@ -44,12 +44,7 @@
         "finish": {
             "text": "finish.md"
         },
-        "assets": {
-            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
-            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
-            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
-            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
-        }
+        "assets": { "host01": [ {"file": "*", "target": "/root" } ] }
     },
     "environment": {
         "uilayout": "terminal",

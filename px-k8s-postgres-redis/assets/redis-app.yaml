@@ -32,7 +32,7 @@ spec:
             - name: "redis-conf"
               mountPath: "/etc/redis"
             - name: "redis-data"
-              mountPath: "/var/lib/redis"
+              mountPath: "/data"
       volumes:
         - name: "redis-data"
           persistentVolumeClaim:

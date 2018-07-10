@@ -1,0 +1,13 @@
+{
+  "title": "Portworx",
+  "description": "Training session",
+  "courses": [
+    {
+      "pathway_id": "portworx",
+      "course_id": "all-in-one-pathway.json",
+      "id": "all-in-one-pathway.json",
+      "title": "Portworx on Kubernetes",
+      "description": "Access Portworx on Kubernetes scenario"
+    }
+  ]
+}

@@ -4,10 +4,31 @@
   "courses": [
     {
       "pathway_id": "portworx",
+      "course_id": "px-k8s-vol-basic",
+      "id": "px-k8s-vol-basic",
+      "title": "Portworx on Kubernetes",
+      "description": "Portworx Kubernetes basics"
+    },
+    {
+      "pathway_id": "portworx",
       "course_id": "px-k8s-postgres-all-in-one",
       "id": "px-k8s-postgres-all-in-one",
-      "title": "Portworx on Kubernetes",
-      "description": "Access Portworx on Kubernetes scenario"
+      "title": "Postgres on Portworx on Kubernetes",
+      "description": "Access Postgres on Portworx on Kubernetes scenario"
+    },
+    {
+      "pathway_id": "portworx",
+      "course_id": "px-helm-mongo",
+      "id": "px-helm-mongo",
+      "title": "Portworx and Mongo on Kubernetes through Helm",
+      "description": "Deploy Mongo on Portworx through Helm"
+    },
+    {
+      "pathway_id": "portworx",
+      "course_id": "px-k8s-redis",
+      "id": "px-k8s-redis",
+      "title": "HA Redis on Portworx on Kubernetes",
+      "description": "HA Redis on Portworx"
     }
   ]
 }

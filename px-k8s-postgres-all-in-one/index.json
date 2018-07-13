@@ -37,12 +37,12 @@
             },
             {
                 "title" : "Expand the volume",
-                "text": "9.expand-volume.md"
+                "text": "9.expand-volume.md",
+                "verify": "10.verify.sh"
             },
             {
                 "title" : "Snapshots",
-                "text": "10.snapshots.md",
-                "verify": "10.verify.sh"
+                "text": "10.snapshots.md"
             },
             {
                 "title" : "Validate",

@@ -42,6 +42,7 @@
             {
                 "title" : "Snapshots",
                 "text": "10.snapshots.md"
+                "verify": "10.verify.sh"
             },
             {
                 "title" : "Validate",

@@ -7,12 +7,16 @@
     "details": {
         "steps": [
             {
-                "title" : "Install Helm and wait for Kubernetes & Portworx to be ready",
+                "title" : "Wait for Kubernetes & Portworx to be ready",
                 "text": "1.wait-k8s-px.md"
             },
             {
-                "title" : "Deploy Kafka Chart",
-                "text": "4.deploy-kafka.md"
+                "title" : "Create Storage Classes and PVCs",
+                "text": "2.create-volumes.md"
+            },
+            {
+                "title" : "Deploy Zookeeper",
+                "text": "3.deploy-zookeeper.md"
             },
             {
                 "title" : "Fun with Kafka",

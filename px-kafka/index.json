@@ -1,8 +1,8 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Deploy Kafka on Portworx volumes using Helm",
-    "description": "Deploy Kafka on Portworx volumes using Helm",
+    "title": "Deploy Kafka on Portworx volumes",
+    "description": "Deploy Kafka on Portworx volumes",
     "difficulty": "Intermediate",
     "details": {
         "steps": [

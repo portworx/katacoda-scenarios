@@ -32,15 +32,7 @@
             },
             {
                 "title" : "Take Snapshot",
-                "text": "9.snapshots.md"
-            },
-            {
-                "title" : "Restore From Snapshot",
-                "text": "10.snapshot-restore.md"
-            },
-            {
-                "title" : "Replica Sets",
-                "text": "11.replica-set.md"
+                "text": "9.scale.md"
             }
         ],
         "intro": {

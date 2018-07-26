@@ -19,6 +19,10 @@
                 "text": "3.deploy-zookeeper.md"
             },
             {
+                "title" : "Deploy Kafka",
+                "text": "4.deploy-kafka.md"
+            },
+            {
                 "title" : "Fun with Kafka",
                 "text": "5.have-some-fun.md"
             },

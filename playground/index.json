@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Portworx Training - Kubernetes Playground",
+    "title": "Instructor Training Environment",
     "description": "Base Kubernetes Install Used For Portworx Training Only",
     "difficulty": "Intermediate",
     "details": {

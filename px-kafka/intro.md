@@ -2,28 +2,24 @@
 
 In this tutorial, you will learn how to deploy kafkaDB to Kubernetes using Helm and Portworx:
 
-### Step: Deploy Helm to our Kubernetes cluster
+### Step: Deploy Zookeeper and Kafka
 
-In this step we will show you how to deploy Helm to your Kubernetes cluster. [Helm](https://helm.sh/) helps you manage Kubernetes applications — Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application. Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste madness.
-
-### Step: Deploy kafka using Helm with the Portworx Storage Class
-
-Once Helm is deployed we will use it to deploy the [kafkaDB chart](https://github.com/kubernetes/charts/tree/master/stable/kafkadb). In order to provide for a highly available kafkaDB instance, we will configure the chart to use a Portworx volume that we will create to ensure 3 replicas of the data. Portworx will perform synchronous replication of the volume so that the kafkaDB data is well protected. Once kafkaDB is deployed we will use the kafkaDB client to create some data.
+As of v0.8 Kafka uses zookeeper for storing variety of configurations as K,V in the ZK data tree and use them across the cluster in a distributed fashion. So our first task will be deploy a 3 node ZK cluster using a StatefulSet and have each node use a Portworx volume to ensure high availability. We will then deploy a Kafka StatefulSet which uses our ZK cluster and also has Portworx volumes, this time with 2 replicas so we can have fast failover of the Kafka nodes.
 
 
 ### Step: Perform a failover test
 
-In this step we will simulate a node failure to show how Kubernetes can reschedule your kafkaDB pod to run on another node in your cluster. Portworx is able to ensure that the rescheduled pod connects to it data from anywhere in the cluster but goes a step further by ensuring that the pod will be scheduled on a node which has a local copy of the data so that you get the best level of performance. This advanced orchestration of stateful workloads is handled by the [STorage ORchestrator for Kubernetes (STORK)](https://github.com/libopenstorage/stork/).
+In this step we will simulate a node failure to show how Kubernetes can reschedule your Kafka pod to run on another node in your cluster. Portworx is able to ensure that the rescheduled pod connects to it data from anywhere in the cluster but goes a step further by ensuring that the pod will be scheduled on a node which has a local copy of the data so that you get the best level of performance. This advanced orchestration of stateful workloads is handled by the [STorage ORchestrator for Kubernetes (STORK)](https://github.com/libopenstorage/stork/).
 
 
-### Step: Expand the volume used by kafkaDB
+### Step: Expand the volume and Kafka cluster
 
-In this step we will show how Portworx volumes can be dynamically expanded with zero downtime. Portworx are thinly provisioned and the size of the PVC is used as a maximum size. Once you reach this upper limit on the size of your kafkaDB database you can easily perform this operation to add more capacity to your volume.
+In this step we will show how Portworx volumes can be dynamically expanded with zero downtime. Portworx are thinly provisioned and the size of the PVC is used as a maximum size. Once you reach this upper limit on the size of your Kafka database you can easily perform this operation to add more capacity to your volume. We will also expand our Kafka cluster from one to three nodes so that we can show how to snapshot entire clusters in the next and final step.
 
 
 ### Step: Take a snapshot and restore it
 
-In this final step we will show how snapshots can be used with kafkaDB volumes. Snapshots are efficient point-in-time copies of volumes that can be either read-write or read-only. Each snapshot is a volume in its own right and can be used freely by applications. They are implemented using a copy-on-write technique, so that they only use space in places where they differ from their parent volume.
+In this final step we will show how snapshots can be used with groups of Kafka volumes. Snapshots are efficient point-in-time copies of volumes that can be either read-write or read-only. Each snapshot is a volume in its own right and can be used freely by applications. They are implemented using a copy-on-write technique, so that they only use space in places where they differ from their parent volume.
 
 
 ### Other things you should know

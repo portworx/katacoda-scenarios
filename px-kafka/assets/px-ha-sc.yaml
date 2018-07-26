@@ -17,6 +17,3 @@ parameters:
   repl: "2"
   priority_io: "high"
   group: "kafka_vg"
----
-
-kubectl apply -f portworx-sc.yaml

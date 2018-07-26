@@ -6,7 +6,7 @@ In this tutorial, you will learn how to deploy kafkaDB to Kubernetes using Helm 
 
 In this step we will show you how to deploy Helm to your Kubernetes cluster. [Helm](https://helm.sh/) helps you manage Kubernetes applications — Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application. Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste madness.
 
-### Step: Deploy kafkaDB using Helm with the Portworx Storage Class
+### Step: Deploy kafka using Helm with the Portworx Storage Class
 
 Once Helm is deployed we will use it to deploy the [kafkaDB chart](https://github.com/kubernetes/charts/tree/master/stable/kafkadb). In order to provide for a highly available kafkaDB instance, we will configure the chart to use a Portworx volume that we will create to ensure 3 replicas of the data. Portworx will perform synchronous replication of the volume so that the kafkaDB data is well protected. Once kafkaDB is deployed we will use the kafkaDB client to create some data.
 

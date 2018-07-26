@@ -1,8 +1,8 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Portworx Playground",
-    "description": "Access Portworx on Kubernetes with via the Playground",
+    "title": "Portworx Training - Kubernetes Playground",
+    "description": "Base Kubernetes Install Used For Portworx Training Only",
     "difficulty": "Intermediate",
     "details": {
         "steps": [

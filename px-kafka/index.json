@@ -39,8 +39,12 @@
                 "text": "8.expand-volume.md"
             },
             {
+                "title" : "Scale Replicaset",
+                "text": "9.scale.md"
+            },
+            {
                 "title" : "Take Snapshot",
-                "text": "9.snapshot.md"
+                "text": "10.snapshot.md"
             }
         ],
         "intro": {

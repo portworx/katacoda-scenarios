@@ -5,6 +5,6 @@ metadata:
   namespace: default
   annotations:
     portworx/snapshot-type: local
-    portworx.selector/group-id: kafka-vg
+    portworx.selector/group-id: kafka_vg
 spec:
   persistentVolumeClaimName: data-kafka-0

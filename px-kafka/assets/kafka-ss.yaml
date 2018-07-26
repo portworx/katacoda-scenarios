@@ -2,9 +2,9 @@ apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
   name: kafka
-  namespace: kafka
+  namespace: default
 spec:
-  serviceName: "broker"
+  serviceName: "kafka-broker"
   replicas: 3
   template:
     metadata:

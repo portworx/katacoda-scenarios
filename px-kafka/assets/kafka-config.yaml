@@ -1,14 +1,9 @@
 
 ---
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: kafka
----
 kind: ConfigMap
 metadata:
   name: broker-config
-  namespace: kafka
+  namespace: default
 apiVersion: v1
 data:
   init.sh: |-
@@ -126,8 +121,8 @@ data:
 apiVersion: v1
 kind: Service
 metadata:
-  name: broker
-  namespace: kafka
+  name: kafka-broker
+  namespace: default
 spec:
   ports:
   - port: 9092

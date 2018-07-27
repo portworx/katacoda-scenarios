@@ -33,18 +33,18 @@
             {
                 "title" : "Verify data integrity",
                 "text": "7.check-data.md"
-            },
-            {
-                "title" : "Expand Volume",
-                "text": "8.expand-volume.md"
-            },
+            }
             {
                 "title" : "Scale Replicaset",
-                "text": "9.scale.md"
+                "text": "8.scale.md"
             },
             {
                 "title" : "Take Snapshot",
-                "text": "10.snapshot.md"
+                "text": "9.snapshot.md"
+            },
+            {
+                "title" : "Take Snapshot",
+                "text": "10.restore-snapshot.md"
             }
         ],
         "intro": {

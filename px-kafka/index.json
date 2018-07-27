@@ -43,7 +43,7 @@
                 "text": "9.snapshot.md"
             },
             {
-                "title" : "Take Snapshot",
+                "title" : "Restore Snapshot",
                 "text": "10.restore-snapshot.md"
             }
         ],

@@ -33,7 +33,7 @@
             {
                 "title" : "Verify data integrity",
                 "text": "7.check-data.md"
-            }
+            },
             {
                 "title" : "Scale Replicaset",
                 "text": "8.scale.md"

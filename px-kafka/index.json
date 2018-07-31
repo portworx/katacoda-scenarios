@@ -1,9 +1,9 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Deploy Kafka on Portworx volumes",
-    "description": "Deploy Kafka on Portworx volumes",
-    "difficulty": "Intermediate",
+    "title": "Deploy Kafka and Zookeeper on Kubernetes using Portworx volumes",
+    "description": "Deploy Kafka and Zookeeper on Kubernetes using Portworx volumes",
+    "difficulty": "Advanced",
     "details": {
         "steps": [
             {

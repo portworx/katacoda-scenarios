@@ -17,10 +17,6 @@ In this step we will simulate a node failure to show how Kubernetes can reschedu
 In this step we will show how Portworx volumes can be dynamically expanded with zero downtime. Portworx are thinly provisioned and the size of the PVC is used as a maximum size. Once you reach this upper limit on the size of your Kafka database you can easily perform this operation to add more capacity to your volume. We will also expand our Kafka cluster from one to three nodes so that we can show how to snapshot entire clusters in the next and final step.
 
 
-### Step: Take a snapshot and restore it
-
-In this final step we will show how snapshots can be used with groups of Kafka volumes. Snapshots are efficient point-in-time copies of volumes that can be either read-write or read-only. Each snapshot is a volume in its own right and can be used freely by applications. They are implemented using a copy-on-write technique, so that they only use space in places where they differ from their parent volume.
-
 
 ### Other things you should know
 

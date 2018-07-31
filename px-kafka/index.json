@@ -37,14 +37,6 @@
             {
                 "title" : "Scale Replicaset",
                 "text": "8.scale.md"
-            },
-            {
-                "title" : "Take Snapshot",
-                "text": "9.snapshot.md"
-            },
-            {
-                "title" : "Restore Snapshot",
-                "text": "10.restore-snapshot.md"
             }
         ],
         "intro": {

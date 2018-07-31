@@ -1,0 +1,66 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Deploy Kafka and Zookeeper on Kubernetes using Portworx volumes",
+    "description": "Deploy Kafka and Zookeeper on Kubernetes using Portworx volumes",
+    "difficulty": "Advanced",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "text": "1.wait-k8s-px.md"
+            },
+            {
+                "title" : "Create Storage Classes and PVCs",
+                "text": "2.create-volumes.md"
+            },
+            {
+                "title" : "Deploy Zookeeper",
+                "text": "3.deploy-zookeeper.md"
+            },
+            {
+                "title" : "Deploy Kafka",
+                "text": "4.deploy-kafka.md"
+            },
+            {
+                "title" : "Fun with Kafka",
+                "text": "5.have-some-fun.md"
+            },
+            {
+                "title" : "HA Failover",
+                "text": "6.failover.md"
+            },
+            {
+                "title" : "Verify data integrity",
+                "text": "7.check-data.md"
+            },
+            {
+                "title" : "Scale Replicaset",
+                "text": "8.scale.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running"
+    }
+}

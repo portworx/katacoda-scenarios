@@ -1,0 +1,10 @@
+apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: kafka-group-snapshot
+  namespace: default
+  annotations:
+    portworx/snapshot-type: local
+    portworx.selector/group-id: kafka_vg
+spec:
+  persistentVolumeClaimName: data-kafka-0

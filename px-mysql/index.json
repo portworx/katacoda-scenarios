@@ -1,0 +1,73 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "HA MySQL on Kubernets with Portworx",
+    "description": "Deploying a MySQL database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "text": "1.wait-k8s-px.md"
+            },
+            {
+                "title" : "Create volume for MySQL",
+                "courseData": "background.sh",
+                "text": "2.px-mysql-vol.md"
+            },
+            {
+                "title" : "Deploy MySQL",
+                "text": "3.mysql-app.md"
+            },
+            {
+                "title" : "Inspect the volume",
+                "text": "4.px-vol-inspect.md"
+            },
+            {
+                "title" : "Create MySQL database",
+                "text": "5.mysql-db.md"
+            },
+            {
+                "title" : "Delete MySQL instance",
+                "text": "6.mysql-persistence.md"
+            },
+            {
+                "title" : "Validate MySQL database",
+                "text": "7.mysql-check-data.md"
+            },
+            {
+                "title" : "Expand the volume",
+                "text": "9.expand-volume.md"
+            },
+            {
+                "title" : "Snapshots",
+                "text": "10.snapshots.md"
+            },
+            {
+                "title" : "Validate",
+                "text": "11.snapshot-restore.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running"
+    }
+}

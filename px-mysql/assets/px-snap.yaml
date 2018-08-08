@@ -1,0 +1,7 @@
+apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: px-mysql-snapshot
+  namespace: default
+spec:
+  persistentVolumeClaimName: px-mysql-pvc

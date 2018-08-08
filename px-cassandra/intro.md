@@ -11,10 +11,6 @@ First we will deploy Cassandra in a stateful set with only a single node (replic
 
 Then, we're going to show how we can scale the cluster to 3 nodes and dynamically create volumes for each.
 
-Finally, we're going to show how we can take a consistent snapshot of the three node Cassandra cluster and restore the cluster after a database table drop operation, recovering the data. 
-
-
-
 
 ### Other things you should know
 

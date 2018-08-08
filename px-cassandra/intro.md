@@ -7,11 +7,13 @@ In this tutorial, you will learn how to deploy Cassandra to Kubernetes and use P
 
 ### High Level Overview
 
-First we will deploy Cassandra with replication factor of 3 and with io_profile=db. To learn more about io_profile settings please visit our [docs page](https://docs.portworx.com/maintain/performance/tuning.html#volume-granular-performance-tuning).
+First we will deploy Cassandra in a stateful set with only a single node (replicas=1) to show the basics of node failover. We will create some data, force Cassandra to flush the data to disk, and then failover the Cassandra pod and show how it comes back up with it's data intact.
 
-Then we're going run a benchmark to create 5,000,000 rows in the database. Before simulating a server failure by deleting the pod running Cassandra.
+Then, we're going to show how we can scale the cluster to 3 nodes and dynamically create volumes for each.
 
-Finally, when the pod come back up Portworx works with the Kubernetes scheduler to make sure it gets scheduled where the data is available.
+Finally, we're going to show how we can take a consistent snapshot of the three node Cassandra cluster and restore the cluster after a database table drop operation, recovering the data. 
+
+
 
 
 ### Other things you should know

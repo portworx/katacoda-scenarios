@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "HA MySQL on Kubernets with Portworx",
+    "title": "HA MySQL on Kubernetes with Portworx",
     "description": "Deploying a MySQL database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
     "difficulty": "Intermediate",
     "details": {

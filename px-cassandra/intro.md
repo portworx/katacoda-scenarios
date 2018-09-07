@@ -19,7 +19,7 @@ Then, we're going to show how we can scale the cluster to 3 nodes and dynamicall
 
 To learn more about how why running Redis on Portworx is a great idea take a look at the following links:
 * Guide to run [Cassandra in Docker] containers(https://portworx.com/use-case/cassandra-docker-container/)
-* Guide to [Kubernetes and cassandra](https://docs.portworx.com/applications/cassandra.html)
+* Guide to [Kubernetes and Cassandra](https://docs.portworx.com/applications/cassandra.html)
 * [Introduction to Portworx](https://portworx.com/products/introduction/)
 * [Customer Stories](https://portworx.com/customers/)
 * [STORK open source project](https://portworx.com/stork-storage-orchestration-kubernetes/).

@@ -1,4 +1,6 @@
-[Portworx](https://portworx.com/) is a software defined persistent storage solution designed and purpose built for applications deployed as containers, via container orchestrators such as Kubernetes, Marathon and Swarm. It is a clustered block storage solution and provides a Cloud-Native layer from which containerized stateful applications programmatically consume block, file and object storage services directly through the scheduler.
+[Portworx](https://portworx.com/) is the [cloud native storage](https://portworx.com/cloud-native-storage/) company that enterprises depend on to reduce the cost and complexity of rapidly deploying containerized applications across multiple clouds and on-prem environments. With Portworx, you can manage any database or stateful service on any infrastructure using any container scheduler. You get a single data management layer for all of your stateful services, no matter where they run. 
+
+A popular [Kubernetes storage](https://portworx.com/use-case/kubernetes-storage/) and [persistent storage for Docker](https://portworx.com/use-case/docker-persistent-storage/) solution, Portworx is a clustered block storage solution and provides a Cloud-Native layer from which containerized stateful applications programmatically consume block, file and object storage services directly through the scheduler.
 
 In this tutorial, you will learn how to deploy MySQL to Kubernetes and use Portworx Volumes to provide HA capability:
 * Use the Portworx Storage Class to create a PVC with 3 replicas of the data
@@ -24,6 +26,13 @@ In this step we will create a snapshot of the database, drop all of our tables, 
 ### Other things you should know
 
 To learn more about how why running MySQL on Portworx is a great idea take a look at the following links:
+To learn more about how why running Mongo on Portworx is a great idea take a look at the following links:
+* [Kubernetes MySQL](https://portworx.com/mysql-kubernetes/) tutorial
+* [HA MySQL on GKE](https://portworx.com/run-ha-mysql-google-kubernetes-engine/)
+* [HA MySQL on EKS](https://portworx.com/ha-mysql-amazon-eks/)
+* [HA MySQL on AKS](https://portworx.com/run-ha-mysql-azure-kubernetes-service/)
+* [HA MySQL on OpenShift](https://portworx.com/ha-mysql-openshift/)
+* [How to backup and restore MySQL on Red Hat OpenShift](https://portworx.com/backup-restore-mysql-red-hat-openshift/)
 * [Introduction to Portworx](https://portworx.com/products/introduction/)
 * [Customer Stories](https://portworx.com/customers/)
 * [STORK open source project](https://portworx.com/stork-storage-orchestration-kubernetes/).

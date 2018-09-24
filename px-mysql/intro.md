@@ -25,7 +25,6 @@ In this step we will create a snapshot of the database, drop all of our tables, 
 
 ### Other things you should know
 
-To learn more about how why running MySQL on Portworx is a great idea take a look at the following links:
 To learn more about how why running Mongo on Portworx is a great idea take a look at the following links:
 * [Kubernetes MySQL](https://portworx.com/mysql-kubernetes/) tutorial
 * [HA MySQL on GKE](https://portworx.com/run-ha-mysql-google-kubernetes-engine/)

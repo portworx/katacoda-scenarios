@@ -1,0 +1,15 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: secure-pvc-2
+  annotations:
+    px/secret-name: volume-secrets
+    px/secret-namespace: portworx
+    px/secret-key: secure-pvc
+spec:
+  storageClassName: px-sc
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi

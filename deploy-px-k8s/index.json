@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Portworx on Kubernetes",
+    "title": "Install Portworx on Kubernetes",
     "description": "Install Portworx on Kubernetes",
     "difficulty": "Intermediate",
     "details": {

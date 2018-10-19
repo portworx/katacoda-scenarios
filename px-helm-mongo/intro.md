@@ -14,7 +14,7 @@ Once Helm is deployed we will use it to deploy the [MongoDB chart](https://githu
 
 This diagram illustrates the configuration:
 
-<img src="images/MongoDB_using_PX_Volume.png" alt="MongoDB using PX Volume" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/portworx/katacoda-scenarios/master/px-helm-mongo/images/MongoDB_using_PX_Volume.png" alt="MongoDB using PX Volume" style="width: 600px;"/>
 
 ### Step: Perform a failover test
 
@@ -22,7 +22,7 @@ In this step we will simulate a node failure to show how Kubernetes can reschedu
 
 This diagram illustrates the failover scenario:
 
-<img src="images/mongo_failover.png" alt="MongoDB failover test" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/portworx/katacoda-scenarios/master/px-helm-mongo/images/mongo_failover.png" alt="MongoDB failover test" style="width: 600px;"/>
 
 ### Step: Expand the volume used by MongoDB
 
@@ -30,7 +30,7 @@ In this step we will show how Portworx volumes can be dynamically expanded with 
 
 This diagram illustrates the expansion of your volume:
 
-<img src="images/expanding_volume.png" alt="Expanding volumes" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/portworx/katacoda-scenarios/master/px-helm-mongo/images/expanding_volume.png" alt="Expanding volumes" style="width: 600px;"/>
 
 
 ### Step: Take a snapshot and restore it
@@ -39,7 +39,7 @@ In this final step we will show how snapshots can be used with MongoDB volumes. 
 
 This diagram illustrates the snapshot of your volume:
 
-<img src="images/mongo_snapshot.png" alt="Expanding volumes" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/portworx/katacoda-scenarios/master/px-helm-mongo/images/mongo_snapshot.png" alt="Expanding volumes" style="width: 600px;"/>
 
 ### Other things you should know
 

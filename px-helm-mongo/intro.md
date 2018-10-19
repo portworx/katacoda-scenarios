@@ -14,7 +14,7 @@ Once Helm is deployed we will use it to deploy the [MongoDB chart](https://githu
 
 This diagram illustrates the configuration:
 
-<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vSvx983Y0q1B6gZY-4BzFNKQ_u7hdIAw25hDDQpbVaobR9ny17ZsbWgsGFTsMehrKXVxFSqaSTfzpvv/pub?w=574&h=316" alt="MongoDB using PX Volume" style="width: 600px;"/>
+<img src="images/MongoDB_using_PX_Volume.png" alt="MongoDB using PX Volume" style="width: 600px;"/>
 
 ### Step: Perform a failover test
 
@@ -22,7 +22,7 @@ In this step we will simulate a node failure to show how Kubernetes can reschedu
 
 This diagram illustrates the failover scenario:
 
-<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vR-5wReBuEcREJSqx56YPljRMcfcrh9DVmKf-au5O8nxMo8gTTD9r7kDrT7H8fJdzIWmaLMYdo4yv_f/pub?w=574&h=316" alt="MongoDB failover test" style="width: 600px;"/>
+<img src="images/mongo_failover.png" alt="MongoDB failover test" style="width: 600px;"/>
 
 ### Step: Expand the volume used by MongoDB
 
@@ -30,16 +30,16 @@ In this step we will show how Portworx volumes can be dynamically expanded with 
 
 This diagram illustrates the expansion of your volume:
 
-<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vRj5Zem3GryHT4CaNTSygPXzGxiSF8I3zXwA_FMIsQqKMV_urgGmbiq0rTCLU3zR32fnrWTz15dXClg/pub?w=574&h=316" alt="Expanding volumes" style="width: 600px;"/>
+<img src="images/expanding_volume.png" alt="Expanding volumes" style="width: 600px;"/>
 
 
 ### Step: Take a snapshot and restore it
 
 In this final step we will show how snapshots can be used with MongoDB volumes. Snapshots are efficient point-in-time copies of volumes that can be either read-write or read-only. Each snapshot is a volume in its own right and can be used freely by applications. They are implemented using a copy-on-write technique, so that they only use space in places where they differ from their parent volume.
 
-This diagram illustrates the expansion of your volume:
+This diagram illustrates the snapshot of your volume:
 
-<img src="https://docs.google.com/a/portworx.com/drawings/d/e/2PACX-1vTkypXWifFiO8ToBpNardHsM5W-qrVbMJ4XFlSPbdUId6eg8NzjWlOO9DM0M6O1myk1DA7I2VoPj785/pub?w=574&h=316" alt="Expanding volumes" style="width: 600px;"/>
+<img src="images/mongo_snapshot.png" alt="Expanding volumes" style="width: 600px;"/>
 
 ### Other things you should know
 

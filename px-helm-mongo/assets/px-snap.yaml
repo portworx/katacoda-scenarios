@@ -1,7 +1,32 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: Rule
+metadata:
+  name: px-mongodb-presnap-rule
+spec:
+  - podSelector:
+      app: px-mongo-mongodb
+    actions:
+    - type: command
+      value: mongo --eval "printjson(db.fsyncLock())"
+---
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: Rule
+metadata:
+  name: px-mongodb-postsnap-rule
+spec:
+  - podSelector:
+      app: px-mongo-mongodb
+    actions:
+    - type: command
+      value: mongo --eval "printjson(db.fsyncUnlock())"
+---
 apiVersion: volumesnapshot.external-storage.k8s.io/v1
 kind: VolumeSnapshot
 metadata:
   name: px-mongo-snapshot
   namespace: default
+  annotations:
+    stork.rule/pre-snapshot: px-mongodb-presnap-rule
+    stork.rule/post-snapshot: px-mongodb-postsnap-rule
 spec:
   persistentVolumeClaimName: px-mongo-pvc

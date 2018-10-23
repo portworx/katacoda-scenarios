@@ -8,3 +8,4 @@ parameters:
    io_profile: "db"
    io_priority: "high"
    fs: "xfs"
+allowVolumeExpansion: true

@@ -1,0 +1,54 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Resize Kubernetes volumes using kubectl",
+    "description": "Using Kubernetes cli kubectl to resize a volume on the fly.",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "text": "1.wait-k8s-px.md"
+            },
+            {
+                "title" : "Create volume for PostgreSQL",
+                "courseData": "background.sh",
+                "text": "2.px-postgres-vol.md"
+            },
+            {
+                "title" : "Deploy postgres",
+                "text": "3.postgres-app.md"
+            },
+            {
+                "title" : "Inspect the volume",
+                "text": "4.px-vol-inspect.md"
+            },
+            {
+                "title" : "Create postgres database and expand the volume",
+                "text": "5.expand-volume.md",
+                "verify": "5.verify.sh"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "foreground.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running"
+    }
+}

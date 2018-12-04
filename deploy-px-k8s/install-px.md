@@ -7,7 +7,7 @@ VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}'`
 curl -L -s -o px-spec.yaml "http://install.portworx.com/1.4?c=px-demo&k=etcd://master:4001&kbVer=${VER}&s=/dev/vdb"
 ```{{execute T1}}
 
-Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec) in the curl command to customize our spec.
+Observe how we used [query parameters](https://docs.portworx.com/portworx-install-with-kubernetes/on-premise/other/#) in the curl command to customize our spec.
 
 In our comamnd:
 - `c=px-demo` specifies the cluster name

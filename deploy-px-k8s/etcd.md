@@ -17,7 +17,7 @@ docker run -d --net=host -p 4001:2379 \
    --initial-cluster node1=http://${IP}:2380
 ```{{execute T1}}
 
-For production setups, follow [Portworx docs](https://docs.portworx.com/) for the recommendations on etcd. As of Version 2.0 you have the option to use a built in etcd.
+For production setups, follow [Portworx docs](https://docs.portworx.com/reference/knowledge-base/etcd/#requirements) for the recommendations on etcd. As of Version 2.0 you have the option to use a built in etcd.
 
 ### Step: Verify that etcd is functional and reachable
 

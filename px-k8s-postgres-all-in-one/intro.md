@@ -1,6 +1,6 @@
 [Portworx](https://portworx.com/) is the [cloud native storage](https://portworx.com/cloud-native-storage/) company that enterprises depend on to reduce the cost and complexity of rapidly deploying containerized applications across multiple clouds and on-prem environments. With Portworx, you can manage any database or stateful service on any infrastructure using any container scheduler. You get a single data management layer for all of your stateful services, no matter where they run. 
 
-A popular [Kubernetes storage](https://portworx.com/use-case/kubernetes-storage/) and [Docker persistent storage](https://portworx.com/use-case/docker-persistent-storage/) solution, Portworx is a clustered block storage solution and provides a Cloud-Native layer from which containerized stateful applications programmatically consume block, file and object storage services directly through the scheduler.
+A popular [Kubernetes storage](https://portworx.com/use-case/kubernetes-storage/) and [Docker persistent storage](https://docs.portworx.com/install-with-other/operate-and-maintain/performance-and-tuning/tuning/#global-performance-tuning) solution, Portworx is a clustered block storage solution and provides a Cloud-Native layer from which containerized stateful applications programmatically consume block, file and object storage services directly through the scheduler.
 
 In this tutorial, you will learn how to deploy PostgreSQL to Kubernetes and use Portworx Volumes to provide HA capability:
 * Use the Portworx Storage Class to create a PVC with 3 replicas of the data

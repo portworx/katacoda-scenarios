@@ -10,8 +10,8 @@ In this tutorial, you will learn how to create encrypted volumes using Portworx.
 
 First we will validate that we can use Kubernetes secrets to store our keys. Then we will create a cluster wide secret key. Next we will deploy Postgres to validate our encrypted volumes are being created. Finally we will do the same but with per volume encryption.
 
-You can read about secure StorageClasses here: [Encryption using StorageClass](https://docs.portworx.com/scheduler/kubernetes/storage-class-encryption.html)
-You can read about secure PVCs here: [Encryption using PVC](https://docs.portworx.com/scheduler/kubernetes/pvc-encryption.html)
+You can read about secure StorageClasses here: [Encryption using StorageClass](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/storage-class-encryption/)
+You can read about secure PVCs here: [Encryption using PVC](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/pvc-encryption)
 
 
 ### Other things you should know

@@ -1,6 +1,8 @@
-[Portworx](https://portworx.com/) is a software defined persistent storage solution designed and purpose built for applications deployed as containers, via container orchestrators such as Kubernetes, Marathon and Swarm. It is a clustered block storage solution and provides a Cloud-Native layer from which containerized stateful applications programmatically consume block, file and object storage services directly through the scheduler.
+[Portworx](https://portworx.com/) is the [cloud native storage](https://portworx.com/cloud-native-storage/) company that enterprises depend on to reduce the cost and complexity of rapidly deploying containerized applications across multiple clouds and on-prem environments. With Portworx, you can manage any database or stateful service on any infrastructure using any container scheduler. You get a single data management layer for all of your stateful services, no matter where they run. 
 
-In this tutorial, you will learn how to deploy kafkaDB to Kubernetes using Helm and Portworx:
+A popular [Kubernetes storage](https://portworx.com/use-case/kubernetes-storage/) and [persistent storage for Docker](https://portworx.com/use-case/docker-persistent-storage/) solution, Portworx is a clustered block storage solution and provides a Cloud-Native layer from which containerized stateful applications programmatically consume block, file and object storage services directly through the scheduler.
+
+In this tutorial, you will learn how to deploy Kafka to Kubernetes using Helm and Portworx:
 
 ### Step: Deploy Zookeeper and Kafka
 
@@ -21,6 +23,10 @@ In this step we will show how Portworx volumes can be dynamically expanded with 
 ### Other things you should know
 
 To learn more about how why running kafka on Portworx is a great idea take a look at the following links:
+* [HA Kafka on GKE](https://portworx.com/run-ha-kafka-google-kubernetes-engine/)
+* [HA Kafka on EKS](https://portworx.com/run-ha-kafka-amazon-elastic-container-service-kubernetes/)
+* [HA Kafka on AKS](https://portworx.com/run-ha-kafka-azure-kubernetes-service/)
+* [HA Kafka on Red Hat OpenShift](https://portworx.com/run-ha-kafka-red-hat-openshift/)
 * [Introduction to Portworx](https://portworx.com/products/introduction/)
 * [Customer Stories](https://portworx.com/customers/)
 

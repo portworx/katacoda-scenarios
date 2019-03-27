@@ -1,0 +1,13 @@
+{
+  "title": "Portworx",
+  "description": "Training session",
+  "courses": [
+    {
+      "pathway_id": "portworx",
+      "course_id": "px-k8s-redis",
+      "id": "px-k8s-redis",
+      "title": "HA Redis on Kubernetes with Portworx",
+      "description": "Deploying a Redis database on Kubernetes using Portworx, showing HA failover scenario"
+    }
+  ]
+}

@@ -1,1 +1,0 @@
-This is a vanilla Kubernetes environment used purely for instructor led Portworx training. If you want to follow Portworx tutorials, take a look at our other Katacoda content - [katacoda.com/portworx](http://katacoda.com/portworx)

@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "HA PostgreSQL on Kubernetes with Portworx",
+    "title": "PostgreSQL Failover, Volume Resize and Snapshots",
     "description": "Deploy a PostgreSQL database on Kubernetes using Portworx, test HA failover scenario, resize volume, and take/restore snapshots.",
     "difficulty": "Intermediate",
     "details": {

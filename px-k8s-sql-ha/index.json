@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "SQL Server with HA on Kubernetes and Portworx",
     "icon": "fa-kubernetes",
-    "title": "SQL Server High-Availabilty with Portworx on Kubernetes",
+    "title": "SQL Server High-Availability with Portworx on Kubernetes",
     "description": "without app-level clustering",
     "difficulty": "Intermediate",
     "details": {

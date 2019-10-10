@@ -17,7 +17,7 @@ spec:
       schedulerName: stork
       containers:
       - name: mariadb
-        image: mariadb:5.6.32
+        image: mariadb
         imagePullPolicy: "IfNotPresent"
         ports:
         - containerPort: 5432

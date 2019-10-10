@@ -1,0 +1,45 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mariadb
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mariadb
+    spec:
+      schedulerName: stork
+      containers:
+      - name: mariadb
+        image: mariadb:5.6.32
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 5432
+        env:
+        - name: MYSQL_USER
+          value: mariadb
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-pass
+              key: password.txt
+        - name: MYSQL_DATABASE
+          value: pxdemo
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-pass
+              key: password.txt
+        volumeMounts:
+        - mountPath: /var/lib/mariadb
+          name: mariadb
+      volumes:
+      - name: mariadb
+        persistentVolumeClaim:
+          claimName: px-mariadb-pvc

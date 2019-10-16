@@ -28,13 +28,13 @@
                 "text": "5.px-setup-autopilot.md"
             },
             {
-                "title" : "Generate Load and Watch Autopilot do its thing", TODO
-                "text": "6.fill-and-resize-volume.md", TODO
-                "verify": "6.verify.sh" TODO
+                "title" : "Generate Load and Watch Autopilot do its thing",
+                "text": "6.fill-and-resize-volume.md",
+                "verify": "6.verify.sh"
             }
         ],
         "intro": {
-            "text": "intro.md",
+            "text": "intro.md"
         },
         "finish": {
             "text": "finish.md"

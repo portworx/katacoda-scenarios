@@ -10,3 +10,4 @@ data:
          type: prometheus
          params: url=http://prometheus:9090
     min_poll_interval: 2
+

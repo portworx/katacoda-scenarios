@@ -2,7 +2,7 @@
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
     "title": "Automatically Resize Kubernetes volumes using AutoPilot",
-    "description": "Using AutoPilot, automatically resize PVCs based on metrics.",
+    "description": "Install AutoPilot and use AutoPilot to automatically resize PVCs based on metrics.",
     "difficulty": "Intermediate",
     "details": {
         "steps": [
@@ -12,25 +12,29 @@
                 "text": "1.wait-k8s-px.md"
             },
             {
+                "title" : "Configure AutoPilot and Promtheus",
+                "text": "2.px-setup-autopilot.md"
+            },
+            {
                 "title" : "Create Postgres StorageClass and Volume",
-                "text": "2.px-postgres-vol.md"
+                "text": "3.px-postgres-vol.md"
             },
             {
                 "title" : "Deploy Postgres",
-                "text": "3.postgres-app.md" 
+                "text": "4.postgres-app.md" 
             },
             {
                 "title" : "Inspect the Postgres Volume",
-                "text": "4.px-vol-inspect.md"
+                "text": "5.px-vol-inspect.md"
             },
             {
                 "title" : "Configure Autopilot Rule",
-                "text": "5.px-setup-autopilot.md"
+                "text": "6.px-setup-autopilot-rule.md"
             },
             {
                 "title" : "Generate Load and Watch Autopilot do its thing",
-                "text": "6.fill-and-resize-volume.md",
-                "verify": "6.verify.sh"
+                "text": "7.fill-and-resize-volume.md",
+                "verify": "7.verify.sh"
             }
         ],
         "intro": {

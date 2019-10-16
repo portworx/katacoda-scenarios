@@ -2,18 +2,21 @@
 
 A popular [Kubernetes storage](https://portworx.com/use-case/kubernetes-storage/) and [Docker persistent storage](https://portworx.com/use-case/docker-persistent-storage/) solution, Portworx is a clustered block storage solution and provides a Cloud-Native layer from which containerized stateful applications programmatically consume block, file and object storage services directly through the scheduler.
 
-In this tutorial, you will learn how to resize a volume using Kubernetes "kubectl" cli:
+In this tutorial, you will learn how to let Portworx AutoPilot automatically resize PVCs based on Prometheus Metrics
 * Use the Portworx Storage Class to create a PVC with 3 replicas of the data
 * Use a simple YAML file to deploy PostgreSQL using this storage class
+* Create an AutoPilot Rule that will scale the PVC by 200% once a PVC is greater than 20% filled.
 * Use pgbench to fill up the volume and use kubectl to resize the volume
 
 ### High Level Overview
 
-First we will deploy PostgreSQL with replication factor of 3 and with io_profile=db. To learn more about io_profile settings please visit our [docs page](https://docs.portworx.com/install-with-other/operate-and-maintain/performance-and-tuning/tuning/#global-performance-tuning).
+- First we will deploy PostgreSQL with replication factor of 3 and with io_profile=db. To learn more about io_profile settings please visit our [docs page](https://docs.portworx.com/install-with-other/operate-and-maintain/performance-and-tuning/tuning/#global-performance-tuning).
 
-Then we're going run a benchmark to fill up the database.
+- Then we're going create an AutoPilot Rule that will scale the PVC by 200% once a PVC is greater than 20% filled.
 
-Finally, we will use kubectl to expand the size of the volume and re-run the benchmark.
+- Then we're going run a benchmark to fill up the database to more than 20%
+
+- Finally, we verify AutoPilot successfully triggered the automated resize of our PVC from 1GB to 3GB
 
 
 ### Other things you should know

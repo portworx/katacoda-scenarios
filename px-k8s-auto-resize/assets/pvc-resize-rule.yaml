@@ -7,7 +7,7 @@ spec:
     matchLabels:
       app: postgres
   conditions:
-    # volume usage should be less than 40%
+    # volume usage should be less than 20%
     expressions:
     - key: "100 * (px_volume_usage_bytes / px_volume_capacity_bytes)"
       operator: Gt
@@ -17,9 +17,9 @@ spec:
     - key: "px_volume_capacity_bytes / 1000000000"
       operator: Lt
       values:
-       - "10"
+       - "20"
   actions:
   - name: openstorage.io.action.volume/resize
     params:
       # resize volume by scalepercentage of current size
-      scalepercentage: "150"
+      scalepercentage: "200"

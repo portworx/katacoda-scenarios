@@ -17,7 +17,7 @@ create database pxdemo;
 \q
 ```{{execute T1}}
 
-Use pgbench to run a baseline transaction benchmark which will try to grow the volume to more than 1 Gib and fail.
+Use pgbench to run a baseline transaction benchmark which will try to grow the volume to more than 1 Gib, normally this would fail, but autopilot should resize the volume.
 
 ```
 pgbench -i -s 150 pxdemo
@@ -25,16 +25,13 @@ pgbench -i -s 150 pxdemo
 
 * You will see a lot of error messages, if you look at the first one it will say "No space left on device". The pod is going to fail but that's ok, we'll let STORK reschedule it. If the pod doesn't faile you will have to ```exit```{{execute T1}} from the pod shell before proceeding.
 
-### Step: Expand the volume and run benchmark again
-
-Since we added the ```allowVolumeExpansion: true``` attribute to our storage class you can expand the PVC by editing the px-mongo-pvc.yaml file and then re-applying this file using kubectl.
+### Step: Check to see if the rule was triggered
 
 ```
-sed -i 's/1Gi/10Gi/g' px-postgres-pvc.yaml
-kubectl apply -f px-postgres-pvc.yaml
+kubectl get events --field-selector involvedObject.kind=AutopilotRule,involvedObject.name=auto-volume-resize --all-namespaces
 ```{{execute T1}}
 
-Inspect the volume and verify that it now has 10Gi capacity:
+Inspect the volume and verify that it now has grown but 150% capacity:
 ```
 kubectl get pvc px-postgres-pvc
 ```{{execute T1}}
@@ -43,5 +40,3 @@ As you can see the volume is now  expanded and our MongoDB database didn't requi
 ```
 kubectl get pods
 ```{{execute T1}}
-
-Now that you have expanded the volume you can go back to the step above and run the benchmark again.

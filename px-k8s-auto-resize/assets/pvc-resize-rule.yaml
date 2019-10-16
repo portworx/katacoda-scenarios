@@ -1,0 +1,25 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: AutopilotRule
+metadata:
+ name: auto-volume-resize
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  conditions:
+    # volume usage should be less than 40%
+    expressions:
+    - key: "100 * (px_volume_usage_bytes / px_volume_capacity_bytes)"
+      operator: Gt
+      values:
+        - "20"
+    # volume capacity should not exceed 400GiB
+    - key: "px_volume_capacity_bytes / 1000000000"
+      operator: Lt
+      values:
+       - "10"
+  actions:
+  - name: openstorage.io.action.volume/resize
+    params:
+      # resize volume by scalepercentage of current size
+      scalepercentage: "150"

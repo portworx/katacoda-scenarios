@@ -8,31 +8,33 @@
         "steps": [
             {
                 "title" : "Wait for Kubernetes & Portworx to be ready",
+                "courseData": "background.sh", 
                 "text": "1.wait-k8s-px.md"
             },
             {
-                "title" : "Create volume for PostgreSQL",
-                "courseData": "background.sh",
+                "title" : "Create Postgres StorageClass and Volume",
                 "text": "2.px-postgres-vol.md"
             },
             {
-                "title" : "Deploy postgres",
-                "text": "3.postgres-app.md"
+                "title" : "Deploy Postgres",
+                "text": "3.postgres-app.md" 
             },
             {
-                "title" : "Inspect the volume",
+                "title" : "Inspect the Postgres Volume",
                 "text": "4.px-vol-inspect.md"
             },
             {
-                "title" : "Create postgres database and expand the volume",
-                "text": "5.expand-volume.md",
-                "verify": "5.verify.sh"
+                "title" : "Configure Autopilot Rule",
+                "text": "5.px-setup-autopilot.md"
+            },
+            {
+                "title" : "Generate Load and Watch Autopilot do its thing", TODO
+                "text": "6.fill-and-resize-volume.md", TODO
+                "verify": "6.verify.sh" TODO
             }
         ],
         "intro": {
             "text": "intro.md",
-            "code": "foreground.sh",
-            "credits": ""
         },
         "finish": {
             "text": "finish.md"

@@ -13,7 +13,7 @@
             },
             {
                 "title" : "Configure AutoPilot and Promtheus",
-                "text": "2.px-setup-autopilot.md"
+                "text": "2.setup-autopilot.md"
             },
             {
                 "title" : "Create Postgres StorageClass and Volume",

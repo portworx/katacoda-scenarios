@@ -9,7 +9,8 @@
             {
                 "title" : "Wait for Kubernetes & Portworx to be ready",
                 "courseData": "background.sh", 
-                "text": "1.wait-k8s-px.md"
+                "text": "1.wait-k8s-px.md",
+                "verify": "1.verify.sh"
             },
             {
                 "title" : "Create Postgres StorageClass and Volume",

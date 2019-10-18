@@ -1,0 +1,1 @@
+(( $(kubectl get pods -n kube-system -l name=autopilot 2>/dev/null | grep Running | grep 1/1 | awk '{print $2}' | wc -l) == 1)) && echo \"done\"

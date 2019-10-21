@@ -26,7 +26,8 @@
             },
             {
                 "title" : "Configure Autopilot Rule",
-                "text": "5.px-setup-autopilot-rule.md"
+                "text": "5.px-setup-autopilot-rule.md",
+                "verify": "5.verify.sh"
             },
             {
                 "title" : "Generate Load and Watch Autopilot do its thing",

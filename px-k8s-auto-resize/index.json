@@ -1,0 +1,58 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Automatically Resize Kubernetes volumes using AutoPilot",
+    "description": "Use Portworx AutoPilot to dynamically resize PVCs based on metrics without downtime.",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes & Portworx to be ready",
+                "courseData": "background.sh", 
+                "text": "1.wait-k8s-px.md",
+                "verify": "1.verify.sh"
+            },
+            {
+                "title" : "Create Postgres StorageClass and Volume",
+                "text": "2.px-postgres-vol.md"
+            },
+            {
+                "title" : "Deploy Postgres",
+                "text": "3.postgres-app.md" 
+            },
+            {
+                "title" : "Inspect the Postgres Volume",
+                "text": "4.px-vol-inspect.md"
+            },
+            {
+                "title" : "Configure Autopilot Rule",
+                "text": "5.px-setup-autopilot-rule.md",
+                "verify": "5.verify.sh"
+            },
+            {
+                "title" : "Generate Load and Watch Autopilot do its thing",
+                "text": "6.fill-and-resize-volume.md",
+                "verify": "6.verify.sh"
+            }
+        ],
+        "intro": {
+            "text": "intro.md"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

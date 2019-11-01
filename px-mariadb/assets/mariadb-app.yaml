@@ -37,7 +37,7 @@ spec:
               name: mariadb-pass
               key: password.txt
         volumeMounts:
-        - mountPath: /var/lib/mariadb
+        - mountPath: /var/lib/mysql
           name: mariadb
       volumes:
       - name: mariadb

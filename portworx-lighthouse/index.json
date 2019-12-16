@@ -1,0 +1,49 @@
+{
+  "title": "Portworx Lighthouse Practice Lab",
+  "description": "In this lab, we will get to explore the Portworx Lighthouse",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Introduction",
+        "text": "step1.md"
+      },
+      {
+        "title": "Explore Lighthouse",
+        "text": "step2.md"
+      },
+      {
+        "title": "Explore Lighthouse - 2",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "create-vols.sh",
+      "code": "ssh-node01.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "create-vols.sh", "target": "/tmp/", "chmod": "+x"}
+      ],
+      "host02": [
+	 {"file": "check_lighthouse.sh", "target": "/tmp/", "chmod": "+x"}
+     ]	 
+    }
+    },
+    "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Lighthouse Dashboard", "href": "https://[[HOST2_SUBDOMAIN]]-7080-[[KATACODA_HOST]].environments.katacoda.com"},
+	    {"name": "Lighthouse Documentation", "href": "https://docs.portworx.com/reference/lighthouse/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

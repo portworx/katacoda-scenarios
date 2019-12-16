@@ -1,0 +1,57 @@
+{
+  "title": "install-portworx",
+  "description": "Lab to set up portworx cluster on an existing K8s cluster",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Explore the Lab Environment",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md",
+	"verify": "step-2-verify.sh"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "px-etcd.yaml", "target": "/root/", "chmod": "+x"},
+	 {"file": "px-spec.yaml", "target": "/root/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "hidefinish": true,
+    "hideintro": true,
+    "backend": {
+    "imageid": "kubernetes-cluster-4node-running"
+    }
+}

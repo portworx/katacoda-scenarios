@@ -1,0 +1,63 @@
+{
+  "title": "Mounting Portworx Persistent Volume on K8",
+  "description": "In this lab, we will get hands on with the Portworx Storage Class, PV and PVC's",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Storage Class",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "PVC",
+        "text": "step2.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Mount Volume in a Pod",
+        "text": "step3.md",
+	"verify": "step3-verify.sh"
+      },
+      {
+        "title": "Scale Deployment",
+        "text": "step4.md"
+      },
+      {
+        "title": "Pod Status",
+        "text": "step5.md"
+      },
+      {
+        "title": "Shared PVC",
+        "text": "step6.md",
+	"verify": "step6-verify.sh"
+      },
+      {
+        "title": "Create a deployment",
+        "text": "step7.md",
+        "verify": "step7-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "create-k8-objects.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/root/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Portworx Volumes on Docker Practice Lab",
+  "description": "In this lab, we will learn more about mounting PX volumes on Docker",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "code": "ssh-node01.sh",
+      "courseData": "create-vols.sh"
+    },
+    "steps": [
+      {
+        "title": "Inspect existing Docker Volumes",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create New Volume",
+        "text": "step2.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Mount the volume on host node01 on an nginx container",
+        "text": "step3.md",
+        "verify": "step3-verify.sh"
+      },
+      {
+        "title": "Combine Step 2 and 3 in to a single command",
+        "text": "step4.md",
+        "verify": "step7-verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "create-vols.sh", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

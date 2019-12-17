@@ -1,7 +1,7 @@
 >>Install the PX OCI Bundle on node01<<
 Install the Bundle:
 
-Image: portworx/px-enterprise:2.1.5
+Image: portworx/px-enterprise:2.2.0.4
 
 ##### Click on the below command to ssh to node01
 `ssh -o strictHostKeyChecking=no node01`{{execute}}

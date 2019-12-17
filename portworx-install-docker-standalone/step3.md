@@ -1,7 +1,7 @@
 >>Install the PX OCI Bundle<<
 Install the Bundle:
 
-`export REL="/2.1"`{{execute}}
+`export REL="/2.2"`{{execute}}
 
 `latest_stable=$(curl -fsSL "https://install.portworx.com$REL/?type=dock&stork=false" | awk '/image: / {print $2}')`{{execute node01}}
 

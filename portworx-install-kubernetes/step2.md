@@ -6,6 +6,8 @@ Note: A sample etcd pod definition file called px-spec.yaml is created for you i
 
 Update the YAML file with the ip address of node03 and create the deployment.
 
+**Warning:** Do not change anything else in the px-spec.yaml file provided other than what has been mentioned below.
+
 # Name: px-etcd
 # Status: Running
 # Node: node03

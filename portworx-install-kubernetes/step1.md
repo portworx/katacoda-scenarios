@@ -1,5 +1,3 @@
-Welcome to the very first Lab!
-
 We will begin with a quick tour of the lab environment. This lab consists of a multi-node kubernetes cluster which has been deployed exclusively for you. This is a sandbox environment. Feel free to play around. The lab session will expire in 60 minutes.
 
 

@@ -1,9 +1,6 @@
 Pre-Requisites for Installation on a Stand Alone Docker Host
 
 
-```All the pre-requisites have already been completed in this lab with the exception of KVDB.```
-
-
 `SYSTEMD: The installation below assumes the systemd package is installed on your system (i.e. systemctl command works).`
 
 `FIREWALL: Ensure ports 9001-9022 are open between the cluster nodes that will run Portworx.`

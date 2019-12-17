@@ -1,3 +1,5 @@
+Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
+
 >>Q1: What is the aggregation level set for the volume vol_a?<< 
 === 1
 

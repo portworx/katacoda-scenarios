@@ -11,3 +11,8 @@ Note: It can take a few minutes for the cluster to be Ready! Check that Portworx
 
 Check the installation logs:
 `PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}'); kubectl -n kube-system logs -f $PX_POD`{{execute}}
+
+
+Warning: If the Portworx cluster is set up with an incorrect px-spec.yaml file, a cleanup would be needed before you attempt to re-install!
+
+Refer: [Uninstall Portworx on K8s](/https://docs.portworx.com/portworx-install-with-kubernetes/operate-and-maintain-on-kubernetes/uninstall/uninstall/)

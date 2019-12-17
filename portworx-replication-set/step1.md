@@ -1,3 +1,6 @@
+Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
+
+
 >>Q1: What is the replication level set for the volume vol_d?<< 
 === 1
 

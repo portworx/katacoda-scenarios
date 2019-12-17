@@ -1,6 +1,6 @@
 {
-  "title": "Portworx Installation Docker Cluster",
-  "description": "In this lab, we will get hands on with the Portworx installation on a Cluster",
+  "title": "Portworx Cluster Installation on Docker",
+  "description": "In this lab, we will get hands on with the Portworx Cluster installation on Docker",
   "difficulty": "Beginner",
   "time": "60",
   "details": {
@@ -12,7 +12,8 @@
       },
       {
         "title": "Install the PX OCI bundle on node01",
-        "text": "step3.md"
+        "text": "step3.md",
+	"verify": "step3-verify.sh"
       },
       {
         "title": "Configure PX under runC",

@@ -8,9 +8,12 @@ Once the installation is complete, click on the tab **Lighthouse Dashboard** to 
 
 <p>Access the UI with the credentials **admin/Password1**</p>
 
-#### Add a Cluster
-To add a PX cluster to Lighthouse, you will need the IP address of any one of the nodes in that cluster. Lighthouse will connect to that node and configure itself to monitor that cluster.
+#### Configure Lighthouse
+* To add a PX cluster to Lighthouse, you will need the IP address of any one of the nodes in that cluster. Lighthouse will connect to that node and configure itself to monitor that cluster.
 
-After your first login, go to ‘click here to add a Cluster to Light House’ -> Add cluster endpoint -> Verify. This should automatically fill in the cluster name and UUID. Once verified, click on attach.
+ You can get the IP address of a storage node by running the below command. Look for IP address of the node (example node01), copy and paste it in the Lighthouse add cluster screen.
 
-Reference: [Add Cluster to Lighthouse](https://docs.portworx.com/reference/lighthouse/#adding-a-px-cluster/)
+`pxctl status`{{execute}}
+
+
+* After your first login, go to ‘click here to add a Cluster to Light House’ -> Add cluster endpoint (Add the IP address of the Storage Node Here) -> Verify. This should automatically fill in the cluster name and UUID. Once verified, click on attach.

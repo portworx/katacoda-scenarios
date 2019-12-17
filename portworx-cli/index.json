@@ -1,6 +1,6 @@
 {
   "title": "Portworx CLI Hand-On Lab",
-  "description": "In this lab, we will get hands on with the PXCTL Utility",
+  "description": "In this lab, we will get hands on with the pxctl utility",
   "difficulty": "Beginner",
   "time": "60",
   "details": {

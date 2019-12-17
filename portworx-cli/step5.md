@@ -1,5 +1,7 @@
 PXCTL Cluster Commands
 
+Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
+
 
 >>Q1: Which of the following are valid pxctl cluster commands << 
 [] decommision

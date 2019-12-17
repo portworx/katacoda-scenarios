@@ -1,3 +1,6 @@
+Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
+
+
 We have created a few volumes for you to explore.
 
 >>Q1: How many volumes are created in this cluster?<< 

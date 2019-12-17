@@ -1,4 +1,4 @@
-We have also created a few containers. Gather details about the containers from the Lighthouse and answer the follwing Quiz.
+We have also created a few containers. Gather details about the containers from the Lighthouse and answer the following Quiz.
 >>Q8:What is the name of the volume used for the 'nginx' container?<< 
 () testvol
 (*) px_vol1

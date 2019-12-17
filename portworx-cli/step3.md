@@ -1,5 +1,7 @@
 PXCTL Service Commands
 
+Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
+
 
 >>Q1: Which of the below are valid PXCTL service command?<< 
 [*] pool

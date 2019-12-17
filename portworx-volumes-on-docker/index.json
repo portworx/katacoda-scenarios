@@ -28,7 +28,7 @@
       {
         "title": "Combine Step 2 and 3 in to a single command",
         "text": "step4.md",
-        "verify": "step7-verify.sh"
+        "verify": "step4-verify.sh"
       }
     ],
     "finish": {

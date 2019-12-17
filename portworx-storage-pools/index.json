@@ -20,10 +20,6 @@
         "title": "Add Labels to the Pool",
         "text": "step5.md",
 	"verify": "step5-verify.sh"
-      },
-       {
-        "title": "Identify the RAID Level",
-        "text": "step4.md"
       }
     ],
     "intro": {

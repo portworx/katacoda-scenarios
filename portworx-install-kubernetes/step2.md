@@ -2,11 +2,11 @@ Now that we are familiar with the environment, lets install portworx! The first 
 
 The KVDB can be built-in / portworx managed for small clusters OR we can set up our own.  For this lab, lets set up a single node ETCD Cluster in this k8s environment.
 
-Note: A sample etcd pod definition file called px-spec.yaml is created for you in the root home directory on the master node. 
+Note: A sample etcd pod definition file called px-etcd.yaml is created for you in the root home directory on the master node. 
 
 Update the YAML file with the ip address of node03 and create the deployment.
 
-**Warning:** Do not change anything else in the px-spec.yaml file provided other than what has been mentioned below.
+**Warning:** Do not change anything else in the px-etcd.yaml file provided other than what has been mentioned below.
 
 # Name: px-etcd
 # Status: Running

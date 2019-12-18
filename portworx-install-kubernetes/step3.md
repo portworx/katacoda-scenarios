@@ -12,6 +12,8 @@ Note: It can take a few minutes for the cluster to be Ready! Check that Portworx
 Check the installation logs:
 `PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}'); kubectl -n kube-system logs -f $PX_POD`{{execute}}
 
+To exit out of the logs, press (CTRL+C)
+
 
 Warning: If the Portworx cluster is set up with an incorrect px-spec.yaml file, a cleanup would be needed before you attempt to re-install!
 

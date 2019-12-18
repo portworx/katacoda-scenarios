@@ -6,6 +6,11 @@ Update the YML file located at /root/px-spec.yaml with the etcd details and driv
 # 2. KVDB: Use the ETCD endpoint from the previous step.
 # 3. Create the Portworx cluster. 
 
+
+Once the YAML file is updated, run the below command to install:
+
+`kubectl create -f px-spec.yaml`{{execute}}
+
 Note: It can take a few minutes for the cluster to be Ready! Check that Portworx pods are running before you proceed to the next question.
 `kubectl get pods -o wide -n kube-system -l name=portworx`{{execute}}
 

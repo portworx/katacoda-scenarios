@@ -6,6 +6,10 @@ Note: A sample etcd pod definition file called px-etcd.yaml is created for you i
 
 Update the YAML file with the ip address of node03 and create the deployment.
 
+Once done, run the below command to install etcd.
+
+`kubectl create -f px-etcd.yaml`{{execute}}
+
 **Warning:** Do not change anything else in the px-etcd.yaml file provided other than what has been mentioned below.
 
 # Name: px-etcd

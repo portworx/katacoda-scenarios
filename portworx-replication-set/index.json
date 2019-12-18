@@ -1,0 +1,49 @@
+{
+  "title": "Portworx Replication Sets Practice Lab",
+  "description": "In this lab, we will learn more about Replication Sets",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "code": "ssh-node01.sh",
+      "courseData": "create-vols.sh"
+    },
+    "steps": [
+      {
+        "title": "Inspect existing Volume",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create a new volume",
+        "text": "step2.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Replicated Volume Quiz 1",
+        "text": "step3.md"
+      },
+      {
+        "title": "Replicated Volume Quiz 2",
+        "text": "step4.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "create-vols.sh", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

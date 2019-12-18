@@ -42,8 +42,6 @@
     "hidefinish": false,
     "hideintro": true
     },
-    "hidefinish": true,
-    "hideintro": true,
     "backend": {
     "imageid": "kubernetes-cluster-4node-running"
     }

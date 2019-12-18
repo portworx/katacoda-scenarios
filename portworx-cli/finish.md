@@ -1,1 +1,1 @@
-Congratulations! You have successfully completed this Lab!
+Click on "Complete and continue" to proceed to the next lecture. 

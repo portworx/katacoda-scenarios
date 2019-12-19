@@ -1,4 +1,4 @@
-ssh -o strictHostKeyChecking=no node01 "sudo docker run --restart=always  --name px-lighthouse -d  -p 7080:80 -p 7443:443  -v /etc/pwxlh:/config portworx/px-lighthouse:1.4.0"
+ssh -o strictHostKeyChecking=no node01 "sudo docker run --restart=always  --name px-lighthouse -d  -p 7080:80 -p 7443:443  -v /etc/pwxlh:/config portworx/px-lighthouse"
 ssh -o strictHostKeyChecking=no node01 "pxctl volume create testvol --size 3"
 ssh -o strictHostKeyChecking=no node02 "pxctl volume create local_volume --nodes=LocalNode"
 ssh -o strictHostKeyChecking=no node03 "pxctl volume create ha_volume --nodes=LocalNode --repl=3"

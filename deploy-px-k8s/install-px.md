@@ -4,14 +4,14 @@ PX can be deployed with a single command in Kubernetes as a [DaemonSet](https://
 
 ```
 VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}'`
-curl -L -s -o px-spec.yaml "http://install.portworx.com/2.0?c=px-demo&k=etcd://master:4001&kbVer=${VER}&s=/dev/vdb"
+curl -L -s -o px-spec.yaml "https://install.portworx.com/2.3?mc=false&kbver=${VER}&b=true&s=%2Fdev%2Fvdb&c=px-demo&stork=true&st=k8s"
 ```{{execute T1}}
 
 Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec) in the curl command to customize our spec.
 
 In our comamnd:
 - `c=px-demo` specifies the cluster name
-- `k=etcd://master:4001` specifies the etcd
+- `b=true` specifies to use internal etcd
 - `kbVer=${VER}` specifies the Kubernetes version
 - `s=/dev/vdb` specifies the block device to use
 

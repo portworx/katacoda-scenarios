@@ -5,7 +5,6 @@ echo Waiting for Kubernetes to start...
   do
     sleep 1
   done
-echo Kubernetes started
 if [ -f /root/.kube/start ]; then
   /root/.kube/start
 fi
@@ -19,5 +18,5 @@ while true; do
         echo "Waiting for all Kubernetes nodes to be ready. Current ready nodes: ${NUM_READY}"
         kubectl get nodes
     fi
-    sleep 5
+    sleep 10
 done

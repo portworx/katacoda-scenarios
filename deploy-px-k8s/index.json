@@ -22,7 +22,6 @@
         "intro": {
             "text": "intro.md",
             "courseData": "background.sh",
-            "code": "k8s-wait-ready.sh",
             "credits": ""
         },
         "finish": {

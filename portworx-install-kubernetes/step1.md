@@ -16,7 +16,7 @@ Hint:
 # Check the k8s version
 >>Q2: What is the version of Kubernetes installed in this environment? << 
 () 1.13.0 
-(*) 1.11.3
+(*) 1.14
 () 1.16.2
 
 Hint:

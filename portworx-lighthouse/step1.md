@@ -16,4 +16,11 @@ Once the installation is complete, click on the tab **Lighthouse Dashboard** to 
 `pxctl status`{{execute}}
 
 
-* After your first login, go to ‘click here to add a Cluster to Light House’ -> Add cluster endpoint (Add the IP address of the Storage Node Here) -> Verify. This should automatically fill in the cluster name and UUID. Once verified, click on attach.
+* After your first login, go to ‘click here to add a Cluster to Light House’ -> Add cluster endpoint (Add the IP address of the Storage Node Here) -> Verify. This should automatically fill in the cluster name and UUID. 
+
+* Once verified, you would also need to copy and paste the kubeconfig file to the Lighhouse UI. To do this, run the below command:
+
+`kubectl config view --flatten`{{execute}}
+
+
+###### The Lighthouse should now be set up and ready for use.

@@ -1,4 +1,14 @@
-#!/bin/bash -e
+#!/bin/bash
+
+echo Waiting for Kubernetes to start...
+  while [ ! -f /root/.kube/config ]
+  do
+    sleep 1
+  done
+echo Kubernetes started
+if [ -f /root/.kube/start ]; then
+  /root/.kube/start
+fi
 
 while true; do
     NUM_READY=`kubectl get nodes 2> /dev/null | grep -v NAME | awk '{print $2}' | grep -e ^Ready | wc -l`

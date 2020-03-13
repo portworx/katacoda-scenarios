@@ -10,6 +10,4 @@ Click the below section which waits for all Kubernetes nodes to be ready.
 
 ### Step: List Kubernetes nodes
 
-Once all Kubernetes Nodes at "Ready" click ```clear```{{execute interrupt}}
-
-Let's proceed to the next step !
+Once all Kubernetes Nodes at "Ready" click ```clear```{{execute interrupt}} then proceed to the next step !

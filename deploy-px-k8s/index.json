@@ -15,10 +15,6 @@
                 "text": "storage.md"
             },
             {
-                "title" : "Install etcd",
-                "text": "etcd.md"
-            },
-            {
                 "title" : "Install Portworx",
                 "text": "install-px.md"
             }
@@ -26,7 +22,6 @@
         "intro": {
             "text": "intro.md",
             "courseData": "background.sh",
-            "code": "foreground.sh",
             "credits": ""
         },
         "finish": {
@@ -45,7 +40,6 @@
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
     },
     "backend": {
-        "trainingid": "portworx-kubernetes-running",
-        "imageid": "portworx-kubernetes"
+        "imageid": "kubernetes-cluster-4node-running"
     }
 }

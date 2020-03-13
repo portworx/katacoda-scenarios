@@ -4,14 +4,14 @@ PX can be deployed with a single command in Kubernetes as a [DaemonSet](https://
 
 ```
 VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}'`
-curl -L -s -o px-spec.yaml "http://install.portworx.com/2.0?c=px-demo&k=etcd://master:4001&kbVer=${VER}&s=/dev/vdb"
+curl -L -s -o px-spec.yaml "https://install.portworx.com/2.3?mc=false&kbver=${VER}&b=true&s=%2Fdev%2Fvdb&c=px-demo&stork=true&st=k8s"
 ```{{execute T1}}
 
 Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec) in the curl command to customize our spec.
 
 In our comamnd:
 - `c=px-demo` specifies the cluster name
-- `k=etcd://master:4001` specifies the etcd
+- `b=true` specifies to use internal etcd
 - `kbVer=${VER}` specifies the Kubernetes version
 - `s=/dev/vdb` specifies the block device to use
 
@@ -24,34 +24,28 @@ kubectl apply -f px-spec.yaml
 ### Step: Wait till Portworx pods are ready
 
 ```
-kubectl get pods -n kube-system -l name=portworx -o wide
-
-while true; do
-    NUM_READY=`kubectl get pods -n kube-system -l name=portworx -o wide | grep Running | grep 1/1 | wc -l`
-    if [ "${NUM_READY}" == "3" ]; then
-        echo "All portworx nodes are ready !"
-        kubectl get pods -n kube-system -l name=portworx -o wide
-        break
-    else
-        echo "Waiting for portworx nodes to be ready. Current ready nodes: ${NUM_READY}"
-    fi
-    sleep 5
-done
+watch kubectl get pods -n kube-system -l name=portworx -o wide
 ```{{execute T1}}
 
-*It can take a few seconds for Portworx to complete initialization*
+*It can take a few minutes for Portworx to complete initialization*
+
+When all nodes are `Ready 1/1` click ```clear```{{execute interrupt}}
 
 ### Step: Fetch Portworx cluster status
 
 Portworx ships with a `pxctl` command line that you can use for managing Portworx.
 
-Below command executes the `pxctl status` command in one of the Portworx pods to fetch the overall cluster status.
+Below command executes the `pxctl status` command using `kubectl` in one of the Portworx pods to fetch the overall cluster status.
 
+First, setup the `PX_POD` environment variable.
 ```
 PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
-
-watch --color kubectl exec -it $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
 ```{{interrupt execute}}
+
+Next, use `kubectl` to execute `pxctl status` on the cluster.
+```
+kubectl exec -it $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
+```{{execute T1}}
 
 We now have a 3-node Portworx cluster up ! 
 

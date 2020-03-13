@@ -8,8 +8,7 @@
         "steps": [
             {
                 "title" : "Wait for Kubernetes nodes to be ready",
-                "text": "wait-k8s.md",
-                "courseData": "k8s-ready.sh"
+                "text": "wait-k8s.md"
             },
             {
                 "title" : "Prepare hosts with storage",

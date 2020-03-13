@@ -1,15 +1,17 @@
 #!/bin/bash
 
 echo
-echo "Please wait while a script running in the background to setup the lab..."
-echco
-echo "...You should shortly see Kubernetes nodes before moving on."
+echo "Please wait while a script sets up the lab..."
+
 
 # Running script.
 while [ ! -f /root/.kube/config ]
   do
     sleep 1
   done
+
+echo
+echo "...Please wait until all Kubernetes nodes are 'Ready'"
 
 watch kubectl get nodes
 

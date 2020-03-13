@@ -35,13 +35,17 @@ When all nodes are `Ready 1/1` click ```clear```{{execute interrupt}}
 
 Portworx ships with a `pxctl` command line that you can use for managing Portworx.
 
-Below command executes the `pxctl status` command in one of the Portworx pods to fetch the overall cluster status.
+Below command executes the `pxctl status` command using `kubectl` in one of the Portworx pods to fetch the overall cluster status.
 
+First, setup the `PX_POD` environment variable.
 ```
 PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
-
-watch --color kubectl exec -it $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
 ```{{interrupt execute}}
+
+Next, use `kubectl` to execute `pxctl status` on the cluster.
+```
+kubectl exec -it $PX_POD -n kube-system -- /opt/pwx/bin/pxctl status
+```{{execute T1}}
 
 We now have a 3-node Portworx cluster up ! 
 

@@ -12,6 +12,7 @@ while [ ! -f /root/.kube/config ]
 
 echo
 echo "...Please wait until all Kubernetes nodes are 'Ready'"
+sleep 5
 
 watch kubectl get nodes
 

@@ -1,13 +1,20 @@
-Before installing Portworx, let's ensure Kubernetes is setup.
+irst we need to wait for Kubernetes and Portworx to be ready. Be patient, this is not a very high performance environment, just a place to learn something :-
 
 ### Step: Wait for Kubernetes to be ready
 
 Click the below section which waits for all Kubernetes nodes to be ready.
 ```
-./k8s-ready.sh
+watch kubectl get nodes
 ```{{execute T1}}
 
+When all 4 nodes show status Running then hit ```clear```{{execute interrupt}} to ctrl-c and clear the screen.
 
-### Step: List Kubernetes nodes
+### Step: Wait for Portworx to be ready
 
-Once all Kubernetes Nodes at "Ready" click ```clear```{{execute interrupt}} then proceed to the next step !
+Watch the Portworx pods and wait for them to be ready on all the nodes. This can take a few minutes since it involves pulling multiple docker images. You will see 'No resources found' until all images are pulled.
+
+```
+watch kubectl get pods -n kube-system -l name=portworx -o wide
+```{{execute T1}}
+
+When all the pods show STATUS Running and READY 1/1 then hit ```clear```{{execute interrupt}} to ctrl-c and clear the screen.

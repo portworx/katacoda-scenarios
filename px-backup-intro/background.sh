@@ -8,5 +8,21 @@ if [ -f /root/.kube/start ]; then
   /root/.kube/start
 fi
 
-# Install PX-Central
-bash <(curl -s https://raw.githubusercontent.com/portworx/px-central-onprem/1.0.2/install.sh) --px-store --px-backup --admin-password 'Password$1' --oidc --pxcentral-namespace portworx --px-license-server --license-password 'Password$1' --px-backup-organization myorg --cluster-name pxcentral --admin-email admin@example.com --admin-user admin
+# Setup PX-Backup
+curl -o helm.tar.gz https://get.helm.sh/helm-v3.3.0-rc.1-linux-amd64.tar.gz
+tar -zxvf helm.tar.gz
+mv linux-amd64/helm /usr/local/bin/helm
+helm repo add portworx https://raw.githubusercontent.com/portworx/helm/master/stable && helm repo update
+
+# Wait for k8s?
+sleep 5
+
+ip=$(kubectl get nodes --selector=kubernetes.io/role!=master -o jsonpath={.items[*].status.addresses[?\(@.type==\"InternalIP\"\)].address} | awk '{print $1}')
+
+helm install px-backup portworx/px-backup --namespace px-backup --create-namespace --set ingressControllerSetup=false,centralEndpoint="$ip"
+
+until (kubectl get po --namespace px-backup -ljob-name=pxcentral-post-install-hook  -o wide | awk '{print $1, $2, $3}' |grep "Running" | grep "1/1"); do echo "Waiting for post install hook";sleep 3; done
+
+until (kubectl get po --namespace px-backup -lapp=px-backup  -o wide | awk '{print $1, $2, $3}' | grep "Running" | grep "1/1"); do echo "Waiting for post install hook";sleep 3; done
+
+kubectl patch svc px-backup-ui -n px-backup --type='json' -p '[{"op":"replace","path":"/spec/type","value":"NodePort"}]'

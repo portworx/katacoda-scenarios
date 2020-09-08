@@ -8,4 +8,4 @@ Name of the docker container is 'etcd', exposed on host port '4001'. Make a note
 
 `echo $IP`{{execute}}
 
-`docker ps --filter names=etcd`{{execute}}
+`docker ps --filter name=etcd`{{execute}}

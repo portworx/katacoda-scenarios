@@ -1,4 +1,4 @@
->>An ETCD instance has already been created for you on the master node<<
+An ETCD instance has already been created for you on the master node
 
 Inspect the ETCD container on master.
 

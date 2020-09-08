@@ -1,4 +1,4 @@
->>Install the PX OCI Bundle on node01<<
+Install the PX OCI Bundle on node01
 
 First, SSH to node01:
 
@@ -16,7 +16,4 @@ Using the latest stable release, let's install the bundle using the reference li
 
 You can check the above link for more information or to confirm the command.
 
-`sudo docker run --entrypoint /runc-entry-point.sh \
-    --rm -i --privileged=true \
-    -v /opt/pwx:/opt/pwx -v /etc/pwx:/etc/pwx \
-    $latest_stable`{{execute}}
+`sudo docker run --entrypoint /runc-entry-point.sh --rm -i --privileged=true -v /opt/pwx:/opt/pwx -v /etc/pwx:/etc/pwx $latest_stable`{{execute}}

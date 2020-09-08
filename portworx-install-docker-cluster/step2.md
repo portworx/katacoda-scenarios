@@ -7,3 +7,5 @@ Name of the docker container is 'etcd', exposed on host port '4001'. Make a note
 `export IP=$(hostname -I | awk '{print $1}')`{{execute}} 
 
 `echo $IP`{{execute}}
+
+`docker ps --filter names=etcd`{{execute}}

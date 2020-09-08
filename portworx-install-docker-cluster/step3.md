@@ -1,8 +1,9 @@
 >>Install the PX OCI Bundle on node01<<
 
+First, SSH to node01:
+
 ssh to node01
 `ssh -o strictHostKeyChecking=no node01`{{execute}}
-
 
 Make use of the latest stable image:
 `latest_stable=$(curl -fsSL "https://install.portworx.com/?type=dock&stork=false" | awk '/image: / {print $2}')`{{execute}}

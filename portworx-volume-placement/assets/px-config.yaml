@@ -1,0 +1,8 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+    name: px-config
+provisioner: kubernetes.io/portworx-volume
+parameters:
+   repl: "1"
+   placement_strategy: "statefulset-config"

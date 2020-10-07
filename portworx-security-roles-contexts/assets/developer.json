@@ -1,0 +1,15 @@
+{
+     "name": "developer.user",
+     "rules": [
+       {
+         "services": [
+           "volumes"
+         ],
+         "apis": [
+           "*enumerate*",
+	   "create",
+	   "inspect"
+         ]
+       }
+     ]
+  }

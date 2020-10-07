@@ -1,0 +1,5 @@
+name: Kubernetes
+email: kubernetes@local.net
+sub: kubernetes@local.net/kubernetes
+roles: ["system.user"]
+groups: ["kubernetes"]

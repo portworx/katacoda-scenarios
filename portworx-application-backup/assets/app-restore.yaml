@@ -1,0 +1,11 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: ApplicationRestore
+metadata:
+  name: <name of the object>
+  namespace: <source namespace>
+spec:
+  backupName: <application backup name>
+  backupLocation: <backup loaction>
+  namespaceMapping:
+    mysql-app: <source namespace>
+  replacePolicy: Delete

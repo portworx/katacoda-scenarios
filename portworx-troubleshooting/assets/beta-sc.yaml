@@ -1,0 +1,12 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: px-beta-sc
+parameters:
+  io_priority: "high"
+  repl: "1"  
+  openstorage.io/auth-secret-name: px-k8s-user
+  openstorage.io/auth-secret-namespace: portworx
+provisioner: kubernetes.io/portworx-volume
+reclaimPolicy: Delete
+volumeBindingMode: Immediate

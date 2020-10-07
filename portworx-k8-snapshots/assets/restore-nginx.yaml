@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: web-clone-0
+  annotations:
+    snapshot.alpha.kubernetes.io/snapshot: nginx-group-snap-www-web-0-<snapshot_id>
+spec:
+  accessModes:
+     - ReadWriteOnce
+  storageClassName: stork-snapshot-sc
+  resources:
+    requests:
+      storage: 1Gi

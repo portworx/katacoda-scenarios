@@ -1,0 +1,11 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: GroupVolumeSnapshot
+metadata:  
+  name: mongodb-3d-snapshot
+  annotations:
+    stork.rule/pre-snapshot: mongodb-presnap-rule
+    stork.rule/post-snapshot: mongodb-postsnap-rule
+spec:
+  pvcSelector:
+    matchLabels:
+      role : mongo

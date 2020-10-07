@@ -1,0 +1,103 @@
+{
+  "title": "Portworx Troubleshooting lab",
+  "description": "In this lab, we will troubleshoot issues with the Portworx ckusters",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Lab Info",
+        "text": "info.md",
+	"verify": "info-check.sh"
+      },
+      {
+        "title": "Inspect PVC in Alpha Namespace",
+        "text": "step1.md",
+	"courseData": "alpha.sh"
+      },
+      {
+        "title": "Why is the Deployment pending?",
+        "text": "step2.md",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Fix the issues",
+        "text": "step3.md",
+	"verify": "step3-verify.sh",
+	"answer": "step3-answer.md"
+      },
+      {
+        "title": "Inspect Application in Beta Namespace",
+        "text": "step4.md"
+      },
+      {
+        "title": "Why is the Deployment pending?",
+        "text": "step5.md",
+	"answer": "step5-answer.md"
+      },
+      {
+        "title": "Fix the issues",
+        "text": "step6.md",
+        "verify": "step6-verify.sh",
+	"answer": "step6-answer.md"
+      },
+      {
+        "title": "Inspect Application in Gamma Namespace",
+        "text": "step7.md"
+      },
+      {
+        "title": "Why is the PVC pending?",
+        "text": "step8.md",
+	"answer": "step8-answer.md"
+      },
+      {
+        "title": "Update the Storage Class",
+        "text": "step9.md",
+	"verify": "step9-verify.sh",
+	"answer": "step9-answer.md"
+      },
+      {
+        "title": "Why is Deployment still failing?",
+        "text": "step10.md",
+	"answer": "step10-answer.md"
+      },
+      {
+        "title": "Troubleshoot",
+        "text": "step11.md",
+	"answer": "step11-answer.md"
+      },
+      {
+        "title": "Validate",
+        "text": "step12.md",
+	"verify": "step12-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+	 {"file": "alpha-pvc.yaml", "target": "/root", "chmod": "+x"},
+	 {"file": "beta-sc.yaml", "target": "/root", "chmod": "+x"},
+	 {"file": "gamma-sc.yaml", "target": "/root", "chmod": "+x"},
+	 {"file": "*", "target": "/tmp", "chmod": "+x"}
+      ],
+      "host02": [
+         {"file": "admin-authconfig.yaml", "target": "/tmp", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

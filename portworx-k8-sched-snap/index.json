@@ -1,0 +1,61 @@
+{
+  "title": "Portworx Kubernetes Scheduled Snapshots Practice Lab",
+  "description": "In this lab, we will get hands on with the scheduled snapshots in Kubernetes",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Lab Information",
+        "text": "info.md",
+	"verify": "k8-check.sh"
+      },
+      {
+        "title": "Inspect existing schedule policies",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create a new schedule policy",
+        "text": "step2.md",
+	"answer": "step2-answer.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Create a new storage class",
+        "text": "step3.md",
+	"answer": "step3-answer.md",
+	"verify": "step3-verify.sh"
+      },
+      {
+        "title": "Create a new PVC",
+        "text": "step4.md",
+	"answer": "step4-answer.md",
+        "verify": "step4-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Scheduled Snapshots", "href": "https://2.3.docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-snapshots/scheduled/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

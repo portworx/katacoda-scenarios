@@ -1,0 +1,72 @@
+{
+  "title": "Portworx Kubernetes Snapshots Practice Lab",
+  "description": "In this lab, we will get hands on with the creating volume snapshots and  restore operations in Kubernetes ",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Lab Information",
+        "text": "info.md",
+	"verify": "k8-check.sh"
+      },
+      {
+        "title": "Inspect existing deployments",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create a new volume snapshot",
+        "text": "step2.md",
+	"answer": "step2-answer.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Restore snapshot to same PVC",
+        "text": "step3.md",
+	"answer": "step3-answer.md",
+	"verify": "step3-verify.sh"
+      },
+      {
+        "title": "Inspect existing StatefulSets",
+        "text": "step4.md",
+	"verify": "step4-verify.sh"
+      },
+      {
+        "title": "Create a group volume snapshot",
+        "text": "step5.md",
+        "answer": "step5-answer.md",
+        "verify": "step5-verify.sh"
+      },
+      {
+        "title": "Clone snapshots to new PVC's",
+        "text": "step6.md",
+        "answer": "step6-answer.md",
+        "verify": "step6-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Snapshots on K8", "href": "https://2.3.docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-snapshots/on-demand/snaps-local/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

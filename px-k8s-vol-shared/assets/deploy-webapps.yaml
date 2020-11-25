@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: webapp1
-        image: nginx
+        image: k8s.gcr.io/nginx-slim:0.8
         ports:
         - containerPort: 80
         volumeMounts:
@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
       - name: webapp2
-        image: nginx
+        image: k8s.gcr.io/nginx-slim:0.8
         ports:
         - containerPort: 80
         volumeMounts:
@@ -62,7 +62,7 @@ spec:
     spec:
       containers:
       - name: webapp3
-        image: nginx
+        image: k8s.gcr.io/nginx-slim:0.8
         ports:
         - containerPort: 80
         volumeMounts:

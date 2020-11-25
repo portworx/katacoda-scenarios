@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: redis
-          image: "redis:5-alpine"
+          image: "k8s.gcr.io/redis"
           command:
             - "redis-server"
           args:

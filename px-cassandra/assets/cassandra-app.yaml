@@ -52,7 +52,7 @@ spec:
                 - "false"
       containers:
       - name: cassandra
-        image: cassandra:latest
+        image:  gcr.io/google-samples/cassandra:v13
         imagePullPolicy: Always
         readinessProbe:
           exec:

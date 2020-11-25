@@ -20,8 +20,6 @@ spec:
           command:
             - "redis-server"
           args:
-            - "--protected-mode"
-            - "no"
             - "--appendonly"
             - "yes"
           resources:

@@ -34,7 +34,7 @@
         },
 
         "assets": {
-            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],            
+            "master": [ {"file": "*", "target": "/root", "chmod": "+x" } ],            
             "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
             "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
             "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]

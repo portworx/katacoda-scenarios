@@ -44,7 +44,7 @@
         "finish": {
             "text": "finish.md"
         },
-        "assets": { "host01": [ {"file": "*", "target": "/root" } ] }
+        "assets": { "master": [ {"file": "*", "target": "/root" } ] }
     },
     "environment": {
         "uilayout": "terminal",

@@ -51,14 +51,13 @@
         ],
         "intro": {
             "text": "intro.md",
-            "code": "foreground.sh",
             "credits": ""
         },
         "finish": {
             "text": "finish.md"
         },
         "assets": {
-            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "master": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
             "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
             "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
             "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
@@ -69,6 +68,6 @@
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
     },
     "backend": {
-        "imageid": "portworx-kubernetes-running"
+        "imageid": "portworx-kubernetes-running:1.13"
     }
 }

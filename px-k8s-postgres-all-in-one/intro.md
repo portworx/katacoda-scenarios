@@ -29,6 +29,6 @@ To learn more about how why running PostgreSQL on Portworx is a great idea take 
 * [STORK open source project](https://portworx.com/stork-storage-orchestration-kubernetes/)
 
 
-This scenario assumes you have already covered the following scenarios:
+We Recommend completing the following scenarios:
 * [How to install Portworx on Kubernetes](https://www.katacoda.com/portworx/scenarios/deploy-px-k8s)
 * [How to create Portworx volumes on Kubernetes](https://www.katacoda.com/portworx/scenarios/px-k8s-vol-basic)

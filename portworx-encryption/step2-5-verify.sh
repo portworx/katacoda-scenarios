@@ -1,0 +1,1 @@
+PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}') && kubectl logs  $PX_POD -n kube-system  | grep -i "Authentication with Kubernetes Secrets succeeded" && echo "done"

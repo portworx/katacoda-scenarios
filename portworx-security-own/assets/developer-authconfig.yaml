@@ -1,0 +1,5 @@
+name: Aaron Ramsey
+sub: aramsey@kodekloud.com/nramsey
+email: aramsey@kodekloud.com
+roles: ["system.user"]
+groups: ["developer"]

@@ -1,0 +1,64 @@
+{
+  "title": "Portworx Encrypted Volumes Practice Lab",
+  "description": "In this lab, we will set up encryted volumes in Portworx",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Inspect the Environment",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create a new secret key",
+        "text": "step2.md",
+	"verify": "step2-verify.sh",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Provide secret to PX cluster",
+        "text": "step2-5.md",
+        "verify": "step2-5-verify.sh"
+      },
+      {
+        "title": "Create a storage class",
+        "text": "step3.md",
+	"verify": "step3-verify.sh",
+	"answer": "step3-answer.md"
+      },
+      {
+        "title": "Create a PVC",
+        "text": "step4.md",
+	"verify": "step4-verify.sh",
+	"answer": "step4-answer.md"
+      },
+      {
+        "title": "Verify the Encryption",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "create-vols.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Reference: Encryption", "href": "https://2.3.docs.portworx.com/key-management/kubernetes-secrets/pvc-encryption-using-storageclass/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

@@ -1,0 +1,13 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: ApplicationBackupSchedule
+metadata:
+  name: <object_name>
+  namespace: <source namespace>
+spec:
+  schedulePolicyName: <schedulepolicy name>
+  template:
+    spec:
+      backupLocation: <name of backuplocation>
+      namespaces:
+      - <source namespace>
+      reclaimPolicy: <policy>

@@ -1,0 +1,68 @@
+{
+  "title": "Portworx 3D Snapshots Practice Lab",
+  "description": "In this lab, we will explore pre and post snapshot rules with 3D snapshots",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Inspect the current Deployments",
+        "text": "step1.md"
+      },
+      {
+        "title": "Create a MYSQL pre-snapshot rule",
+        "text": "step2.md",
+	"verify": "step2-verify.sh",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Create a local volume snapshot for MySQL",
+        "text": "step3.md",
+	"verify": "step3-verify.sh",
+	"answer": "step3-answer.md"
+      },
+      {
+        "title": "Create a MongoDB pre snapshot rule",
+        "text": "step4.md",
+        "verify": "step4-verify.sh",
+	"answer": "step4-answer.md"
+      },
+      {
+        "title": "Create a MongoDB post snapshot rule",
+        "text": "step5.md",
+        "verify": "step5-verify.sh",
+	"answer": "step5-answer.md"
+      },
+      {
+        "title": "Create a local group volume snapshot for MongoDB",
+        "text": "step6.md",
+        "verify": "step6-verify.sh",
+	"answer": "step6-answer.md"
+      }
+
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: 3D Snapshots", "href": "https://2.3.docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-snapshots/snaps-3d/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

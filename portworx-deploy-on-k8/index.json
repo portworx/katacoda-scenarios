@@ -1,0 +1,58 @@
+{
+  "title": "Deploy  a Cassandra StatefulSet using PX",
+  "description": "In this lab, we will get hands on with the Portworx Storage Class, PV and PVC's",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Storage Class",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create a Cassandra StatefulSet",
+        "text": "step3.md",
+	"verify": "step3-verify.sh"
+      },
+      {
+        "title": "Inspect Volumes",
+        "text": "step4.md"
+      },
+      {
+        "title": "Pod Status",
+        "text": "step5.md"
+      },
+      {
+        "title": "Shared PVC",
+        "text": "step6.md",
+	"verify": "step6-verify.sh"
+      },
+      {
+        "title": "Create a deployment",
+        "text": "step7.md",
+        "verify": "step7-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "create-k8-objects.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Portworx Tokens and Contexts Practice Lab",
+  "description": "In this lab, we will get hands on with creating new auth tokens and contexts",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Inspect Existing Tokens and Contexts",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create a new token",
+        "text": "step2.md",
+	"verify": "step2-verify.sh",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Create a new Context",
+        "text": "step3.md",
+	"verify": "step3-verify.sh",
+	"answer": "step3-answer.md"
+      },
+      {
+        "title": "Use Context",
+        "text": "step4.md",
+        "verify": "step4-verify.sh",
+	"answer": "step4-answer.md"
+      },
+      {
+        "title": "Switch Context",
+        "text": "step5.md",
+        "verify": "step5-verify.sh",
+	"answer": "step5-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "ssh-node01.sh",
+      "courseData": "create-tokens.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host02": [
+         {"file": "*", "target": "/tmp", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Auth Tokens", "href": "https://2.3.docs.portworx.com/reference/cli/self-signed-tokens/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.13"
+    }
+}

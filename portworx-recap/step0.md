@@ -7,7 +7,7 @@
 #### Lab Question Formats:
 
 ###### Multiple Choice (Single Correct Answer)
-A circular check box preceeding the options imples a single correct answer.
+A circular check box preceeding the options implies a single correct answer.
 
 ###### Multiple Choice (Multiple Correct Answers)
 A square check box preceeding the options implies multiple correct answers. All correct answers must be selected for the test to be marked correct.

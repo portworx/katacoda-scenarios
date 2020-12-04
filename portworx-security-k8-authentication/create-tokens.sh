@@ -1,4 +1,4 @@
-scp /tmp/*authconfig.yaml node01:/tmp
+scp -o StrictHostKeyChecking=no /tmp/*yaml node01:/tmp
 ssh node01 "pxctl auth token generate  --auth-config /tmp/finance-authconfig.yaml --issuer example-domain.com  --shared-secret Sup3rs3cr3t --output /tmp/finance-self-signed-token.txt "
 
 ssh node01 "pxctl auth token generate  --auth-config /tmp/engineering-authconfig.yaml --issuer example-domain.com  --shared-secret Sup3rs3cr3t --output /tmp/engineering-self-signed-token.txt "

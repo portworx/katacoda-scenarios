@@ -42,7 +42,7 @@ echo $MINIO_ENDPOINT
 
 echo "setting up minio object store..."
 
-mc config host add px http://$MINIO_ENDPOINT ZZYYXXWWVVUU 0ldSup3rS3cr3t S3v4
+mc config host add px http://$MINIO_ENDPOINT ZZYYXXWWVVUU 0ldSup3rS3cr3t --api S3v4
 
 
 echo "Setting up a cloud credential"

@@ -1,6 +1,6 @@
 {
   "title": "Portworx Kubernetes PVC Resize Practice Lab",
-  "description": "Hand-on lab to learn how to resize PVC",
+  "description": "Hand-on lab to learn how to resize a PVC",
   "difficulty": "Beginner",
   "time": "60",
   "details": {

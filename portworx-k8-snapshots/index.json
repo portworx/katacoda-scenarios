@@ -1,6 +1,6 @@
 {
   "title": "Portworx Kubernetes Snapshots Practice Lab",
-  "description": "In this lab, we will get hands on with the creating volume snapshots and  restore operations in Kubernetes ",
+  "description": "In this lab, we will get hands on with the creating volume snapshots and restore operations in Kubernetes ",
   "difficulty": "Beginner",
   "time": "60",
   "details": {

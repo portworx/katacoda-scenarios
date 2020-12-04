@@ -8,9 +8,9 @@ MINIO_ENDPOINT=$(kubectl describe svc px-minio | grep Endpoints | awk '{print $2
 
 MINIO_ENDPOINT2=$(kubectl describe svc px-minio-2 | grep Endpoints | awk '{print $2}')
 
-mc config host add px http://$MINIO_ENDPOINT myaccesskey mysecretkey S3v4
+mc config host add px http://$MINIO_ENDPOINT myaccesskey mysecretkey --api S3v4
 
-mc config host add object-store-2 http://$MINIO_ENDPOINT2 AAXXBBCCDD Sup3rS3cret S3v4
+mc config host add object-store-2 http://$MINIO_ENDPOINT2 AAXXBBCCDD Sup3rS3cret --api S3v4
 
 
 ssh node01 "/opt/pwx/bin/pxctl cred create   --provider s3   \

@@ -38,7 +38,7 @@ echo $MINIO_ENDPOINT
 
 echo "setting up minio object store..."
 
-mc config host add px http://$MINIO_ENDPOINT ZZYYXXWWVVUU 0ldSup3rS3cr3t S3v4
+mc config host add px http://$MINIO_ENDPOINT ZZYYXXWWVVUU 0ldSup3rS3cr3t --api S3v4
 
 POD=`kubectl get pods -l app=mysql | grep Running | grep 1/1 | awk '{print $1}'`
 kubectl exec -it $POD -- mysql -u root -e "create database demodb"

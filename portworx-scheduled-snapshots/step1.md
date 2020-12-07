@@ -3,7 +3,7 @@ Note: All questions are mandatory. Once completed, click on the 'Check Answers' 
 
 We have created a few volumes for you to explore.
 
->>Q1: How many volumes are created in this cluster?<< 
+>>Q1: How many volumes are created in this cluster? (excluding snapshots)<< 
 === 4
 
 

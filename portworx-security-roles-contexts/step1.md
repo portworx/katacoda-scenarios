@@ -4,7 +4,7 @@ Note: All questions are mandatory. Once completed, click on the 'Check Answers' 
 A few roles have been deployed for you to explore.
 
 >> How many roles are created in this PX cluster?<< 
-=== 4
+=== 3
 
 
 >> Which one of the following is not a valid role? << 

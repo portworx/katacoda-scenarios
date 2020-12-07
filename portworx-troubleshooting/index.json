@@ -81,13 +81,13 @@
       "text": "finish.md"
     },
     "assets": {
-      "master": [
+      "host01": [
 	 {"file": "alpha-pvc.yaml", "target": "/root", "chmod": "+x"},
 	 {"file": "beta-sc.yaml", "target": "/root", "chmod": "+x"},
 	 {"file": "gamma-sc.yaml", "target": "/root", "chmod": "+x"},
 	 {"file": "*", "target": "/tmp", "chmod": "+x"}
       ],
-      "node01": [
+      "host02": [
          {"file": "admin-authconfig.yaml", "target": "/tmp", "chmod": "+x"}
       ]
     }

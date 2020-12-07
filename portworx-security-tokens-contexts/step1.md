@@ -1,7 +1,7 @@
 Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
 
 
-Important: PX-Security has not been enabled on this cluster. This lab is intended to provide hands-on experience with tokens and contexts.
+Important: PX-Security has not been enabled on this cluster. This lab is intended to provide hands-on experience with tokens and contexts. You will need to decode context tokens to find more information for the questions, these are JWT tokens.
 
 
 >> Which is the current context set ?<< 

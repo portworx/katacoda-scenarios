@@ -5,4 +5,4 @@ metadata:
 policy:
   daily:
     time: "10:00PM"
-    retain: 3
+    retain: 5

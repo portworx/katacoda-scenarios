@@ -25,7 +25,7 @@
 	"verify": "step4-verify.sh"
       },
       {
-        "title": "Update the schedulye policy",
+        "title": "Update the schedule policy",
         "text": "step5.md",
 	"verify": "step5-verify.sh"
       },

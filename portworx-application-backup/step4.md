@@ -12,3 +12,5 @@
        reclaimPolicy: Delete
 
 Once created, wait for backup to complete.
+
+(It may take a moment for the script to verify the action when clicking Continue)

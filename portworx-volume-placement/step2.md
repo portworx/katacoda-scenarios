@@ -8,3 +8,4 @@
      2. Volume should be placed next to a `data` volume, with `label type=data` and  `enforcement: preferred`.
 
 
+(You may have to click continue multiple time after creating the VolumePlacementStrategy object called `statefulset-config`)

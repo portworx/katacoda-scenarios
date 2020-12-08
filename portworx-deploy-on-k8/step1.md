@@ -7,14 +7,14 @@ This Lab has a Kubernetes and Portworx cluster pre-deployed. We have also deploy
 >> Which of the following storage classes are available in this cluster? << 
 []  portworx-storage-class 
 [*] px-sc
-[*] px-shared-sc
+[*] px-sc-shared
 [] dynamic-sc
 
 
 >> Which Storage class is of type 'Shared'?<<
 () px-sc
 () shared-storage-class
-(*) px-shared-sc
+(*) px-sc-shared
 () milti-pod-sc
 
 

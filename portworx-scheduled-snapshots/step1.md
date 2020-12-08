@@ -16,7 +16,7 @@ We have created a few volumes for you to explore.
 
 >>Q3: What are the labels used to create the snapshot(s)?<< 
 [*] env=test
-[*] color=purple
+[*] color=blue
 [] name=mysnap
 [] tier=frontend 
 

@@ -13,4 +13,7 @@
        namespaceMapping: mysql-app --> mysql-app
        replacePolicy: Delete
 
-Once created, wait for the restore to complete.
+Once created, wait for the restore to complete. 
+
+You can use the following command to check. 
+`kubectl describe applicationrestore -n mysql-app`

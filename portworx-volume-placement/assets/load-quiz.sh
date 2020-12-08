@@ -9,8 +9,8 @@ kubectl cp -n kube-system $STORK_POD:/storkctl/linux/storkctl ./storkctl
 sudo mv storkctl /usr/local/bin &&
 sudo chmod +x /usr/local/bin/storkctl
 
-kubectl delete ds kube-keepalived-vip -n kube-system
+#kubectl delete ds kube-keepalived-vip -n kube-system
 
-kubectl create -f /tmp/create-mysql.yaml
+#kubectl create -f /tmp/create-mysql.yaml
 
-kubectl create -f /tmp/sched-pol.yaml
+#kubectl create -f /tmp/sched-pol.yaml

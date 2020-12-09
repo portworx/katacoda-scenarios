@@ -18,8 +18,7 @@
       },
       {
         "title": "Provide secret to PX cluster",
-        "text": "step2-5.md",
-        "verify": "step2-5-verify.sh"
+        "text": "step2-5.md"
       },
       {
         "title": "Create a storage class",

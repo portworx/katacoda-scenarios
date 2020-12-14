@@ -5,3 +5,4 @@ ssh -o strictHostKeyChecking=no node03 "pxctl volume create ha_volume --nodes=Lo
 ssh -o strictHostKeyChecking=no node01 "pxctl volume create new_vol --aggregation_level 2"
 ssh -o strictHostKeyChecking=no node03 "docker run --name k8s.gcr.io/nginx-slim:0.8 -d --volume-driver=pxd -v name=px_vol1,size=10:/var/www/html nginx"
 ssh -o strictHostKeyChecking=no node02 "docker run --name k8s.gcr.io/redis:v1 -d --volume-driver=pxd -v name=px_vol2,size=5:/data redis"
+scp -o StrictHostKeyChecking=no /tmp/check_lighthouse.sh  node01:/tmp

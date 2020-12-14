@@ -5,4 +5,4 @@ ssh -o strictHostKeyChecking=no node02 "pxctl volume create local_volume --nodes
 ssh -o strictHostKeyChecking=no node03 "pxctl volume create ha_volume --nodes=LocalNode --repl=3"
 ssh -o strictHostKeyChecking=no node01 "pxctl volume create new_vol --aggregation_level 2"
 ssh -o strictHostKeyChecking=no node03 "docker run -d --volume-driver=pxd -v name=px_vol1,size=10:/var/www/html --name nginx4 k8s.gcr.io/nginx-slim:0.8"
-ssh -o strictHostKeyChecking=no node02 "docker run -d --volume-driver=pxd -v name=px_vol2,size=5:/data --name redis k8s.gcr.io/redis:v1 "
+ssh -o strictHostKeyChecking=no node02 "docker run -d --volume-driver=pxd -v name=px_vol2,size=5:/data --name redis redis "

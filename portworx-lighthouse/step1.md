@@ -1,6 +1,7 @@
 <p> **Portworx Lighthouse** is being installed for this cluster in the background. This can take a couple of mintutes.</p>
 
-<p> You can check the status here:</p>
+<p> You can check the status here: (Note, it may take a second for the script to be copied to this node.)</p>
+`ls /tmp/`{{execute}}
 `/tmp/check_lighthouse.sh`{{execute}}
 <p></p>
 

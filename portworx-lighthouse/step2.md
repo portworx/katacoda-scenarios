@@ -11,7 +11,7 @@ Once the cluster has been added, explore the Lighthouse UI and answer the below 
 (*) 3
 
 >>Q3: How many volumes have been created in the cluster?<<
-(*) 6
+(*) 4
 () 2
 () 3
 () 1
@@ -34,7 +34,7 @@ Once the cluster has been added, explore the Lighthouse UI and answer the below 
 >>Q6: Which volume(s) is created local on node02 exclusively?<<
 () new_vol
 () testvol,px_vol1
-(*) local_volume,px_vol2
+(*) local_volume
 () node02_vol
 
 

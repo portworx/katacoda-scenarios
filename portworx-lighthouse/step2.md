@@ -31,14 +31,7 @@ Once the cluster has been added, explore the Lighthouse UI and answer the below 
 () 30 GiB
 
 
->>Q6: Which volume(s) is created local on node02 exclusively?<<
-() new_vol
-() testvol,px_vol1
-(*) local_volume,px_vol2
-() node02_vol
-
-
->>Q7: Which volume has a replication factor of 3?<<
+>>Q6: Which volume has a replication factor of 3?<<
 () new_vol
 () testvol
 (*) ha_volume

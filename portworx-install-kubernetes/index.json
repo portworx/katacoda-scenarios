@@ -43,6 +43,6 @@
     "hideintro": true
     },
     "backend": {
-    "imageid": "kubernetes-cluster-4node-running"
+    "imageid": "portworx-kubernetes:1.13"
     }
 }

@@ -18,7 +18,6 @@
       {
         "title": "Update the Portworx DaemonSet",
         "text": "step2.md",
-	"verify": "step2-verify.sh",
 	"answer": "step2-answer.md"
       },
       {

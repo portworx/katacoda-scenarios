@@ -1,1 +1,1 @@
-ssh -o strictHostKeyChecking=no root@node01 pxctl volume inspect px_volume | grep "IO Priority" | grep -i high && ssh -o strictHostKeyChecking=no root@node01 pxctl volume inspect px_volume  | grep Size | grep "10 GiB"  && echo "done"
+ssh -o strictHostKeyChecking=no root@node01 pxctl volume inspect px_volume | grep "IO Priority" | grep -iq high && ssh -o strictHostKeyChecking=no root@node01 pxctl volume inspect px_volume  | grep Size | grep -q "10 GiB"  && echo "done"

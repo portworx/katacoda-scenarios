@@ -3,12 +3,12 @@
 ##### Update the Portworx DaemonSet called `portworx`.
 
 
-###### Run the below command to get the px-spec YAML file:
+###### Run the below command to edit the px-spec YAML file:
 
-`kubectl -n kube-system get ds portworx -o yaml > /root/px-spec.yaml`{{execute}}
+`kubectl -n kube-system edit ds portworx`{{execute}}
 
 
-Update the following parameters in the spec file located at /root/px-spec.yaml:
+Update the following parameters 
 
 ###### Args:
      
@@ -21,7 +21,9 @@ Update the following parameters in the spec file located at /root/px-spec.yaml:
        PORTWORX_AUTH_SYSTEM_KEY
        PORTWORX_AUTH_STORK_KEY
 
+###### Run the below command to edit the stork YAML file:
 
+`kubectl -n kube-system edit deployment stork`{{execute}}
 
 ###### Env Variables for the Stork Deployment:
 

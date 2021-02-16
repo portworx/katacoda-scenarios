@@ -3,14 +3,21 @@
 curl -o helm.tar.gz https://get.helm.sh/helm-v3.3.0-rc.1-linux-amd64.tar.gz
 tar -zxvf helm.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
+
+#Install PX-Backup
 helm repo add portworx http://charts.portworx.io/ && helm repo update
 kubectl create -f portworx-sc.yaml
-helm install px-backup portworx/px-backup --namespace px-backup --create-namespace --set persistentStorage.enabled=true,persistentStorage.storageClassName="portworx-sc",oidc.centralOIDC.updateAdminProfile=false
+helm install px-backup portworx/px-backup --version 1.2.2 --namespace px-backup --create-namespace --set persistentStorage.enabled=true,persistentStorage.storageClassName="portworx-sc",oidc.centralOIDC.updateAdminProfile=false
+
+#Install minio
+helm repo add minio https://helm.min.io/
+helm install --name px-minio-1 --namespace px-backup --set accessKey=ZZYYXXWWVVUU --set secretKey=0ldSup3rS3cr3t --set persistence.storageClass=portworx-sc --set resources.requests.memory=1Gi stable/minio
 
 #Install Stork 2.4 (we will connect this cluster)
 curl -fsL -o stork-spec.yaml "https://install.portworx.com/2.5?comp=stork&storkNonPx=true"
 kubectl apply -f stork-spec.yaml
 
+# Wait for px backup to come online and configure it
 until (kubectl get po --namespace px-backup -ljob-name=pxcentral-post-install-hook  -o wide | awk '{print $1, $2, $3}' |grep "Completed"); do echo "Waiting for post install hook";sleep 3; done
 
 until (kubectl get po --namespace px-backup -lapp=px-backup  -o wide | awk '{print $1, $2, $3}' | grep "Running" | grep "1/1"); do echo "Waiting for backup service";sleep 3; done
@@ -24,8 +31,22 @@ BACKUP_POD_NAME=$(kubectl get pods -n px-backup -l app=px-backup -o jsonpath='{.
 kubectl cp -n px-backup $BACKUP_POD_NAME:pxbackupctl/linux/pxbackupctl /usr/bin/pxbackupctl
 chmod +x /usr/bin/pxbackupctl
 
+BACKUP_UI_POD_IP=$(kubectl get svc -n px-backup px-backup-ui -o jsonpath='{.spec.clusterIP}' 2>/dev/null)
 BACKUP_POD_IP=$(kubectl get pods -n px-backup -l app=px-backup -o jsonpath='{.items[*].status.podIP}' 2>/dev/null)
-backupPort=$(kubectl get svc px-backup-ui -n px-backup -o=jsonpath='{.spec.ports[?(@.port==80)].nodePort}')
 client_secret=$(kubectl get secret --namespace px-backup pxc-backup-secret -o jsonpath={.data.OIDC_CLIENT_SECRET} | base64 --decode)
-pxbackupctl login -s http://$pubIP:$backupPort -u admin -p admin
-pxbackupctl create cluster --name cluster-1 -k /root/.kube/config -e $BACKUP_POD_IP:10002 --orgID default
+pxbackupctl login -s http://$BACKUP_UI_POD_IP:80 -u admin -p admin
+pxbackupctl create cluster --name katacoda-px -k /root/.kube/config -e $BACKUP_POD_IP:10002 --orgID default
+
+# Wait for minio to be ready and configure it
+echo "wait for minio server to be up..."
+until [ `kubectl get pods -n px-backup | grep px-minio | grep Running | grep 1/1 | wc -l` == 1 ]; do printf . ;sleep 1;done
+
+#wget -O /usr/bin/mc https://dl.minio.io/client/mc/release/linux-amd64/mc
+#chmod +x /usr/bin/mc
+#MINIO_ENDPOINT=$(kubectl describe svc -n px-backup px-minio-1 | grep Endpoints | awk '{print $2}')
+#echo $MINIO_ENDPOINT
+#echo "setting up minio object store..."
+#mc config host add px http://$MINIO_ENDPOINT ZZYYXXWWVVUU 0ldSup3rS3cr3t --api S3v4
+
+# Finally launch an app users can use.
+kubectl create -f web-app.yaml

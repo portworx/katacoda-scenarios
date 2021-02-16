@@ -13,6 +13,18 @@
             {
                 "title" : "Wait for PX-Backup and Use PX-Backup",
                 "text": "wait-backup.md"
+            },
+            {
+                "title" : "Configure Backup",
+                "text": "configure-backup.md"
+            },
+            {
+                "title" : "Backup an Application",
+                "text": "backup-app.md"
+            },
+            {
+                "title" : "Restore an Application",
+                "text": "restore.md"
             }
         ],
         "intro": {

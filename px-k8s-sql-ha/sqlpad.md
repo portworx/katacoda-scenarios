@@ -10,7 +10,27 @@ kubectl apply -f sqlpad.yaml
 
 Bring up SQLPad: https://[[HOST_SUBDOMAIN]]-30300-[[KATACODA_HOST]].environments.katacoda.com/queries/<br/>
 
-Click the `New Query` button.<br/>
+Login with admin@sqlpad.com/admin
+
+Click the `Choose Connection` button.<br/>
+
+Select the `Manage Connections` button.<br/>
+
+Select the `Add Connection` button.<br/>
+
+Give connection a name.<br/>
+
+Select `SQL Server` as connection Driver.<br/>
+
+Use the following info:
+* Port:  1433
+* Database: IndexInternals2008
+* Database Username: sa
+* Database Password: P@ssw0rd
+* Domain: (leave empty)
+
+Test and save the connection.
+
 In the workspace area, type `select count(*) from Employee`.<br/>
 Then click `Run`, and take note of the number of rows returned.
 If you're asked to login, the credentials are "abc@abc.com/abc"

@@ -34,8 +34,12 @@ watch kubectl get pods -o wide
 
 You will observe the state go from `ContainerCreating` to `Running`
 After you observe SQL Server rescheduled and `Running` on another node, go back and rerun the query.
+
+Note, it may take a minute or two for the Katacoda UI to connect.
 https://[[HOST_SUBDOMAIN]]-30300-[[KATACODA_HOST]].environments.katacoda.com<br/>
-Click the `Run` button and observe that the server is reachable and the expected number of rows are returned.
+
+In the workspace area, make sure to select the same connection in the top left, then type `select count(*) from Employee`.<br/>
+Then click `Run` button and observe that the server is reachable and the expected number of rows are returned.
 
 ### Step:  Conclusion
 

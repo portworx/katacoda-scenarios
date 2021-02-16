@@ -38,12 +38,10 @@ With Stork, this recovery takes no more than 2 minutes, so please be patient to 
 watch kubectl get pods -o wide
 ```{{execute T1}}
 
-```exit watch```{{execute interrupt}}
-
-You will observe the state go from `ContainerCreating` to `Running`
+You will observe the state go from `ContainerCreating` to `Running` and it will not be running on the node that is reporting `NotReady`.
 After you observe SQL Server rescheduled and `Running` on another node, go back and rerun the query.
 
-Note, it may take a minute or two for the Katacoda UI to connect.
+Note, it may take up to five minutes for the Katacoda UI to connect to the SqlPad service, refresh the WebUI before trying to run the query.
 https://[[HOST_SUBDOMAIN]]-30300-[[KATACODA_HOST]].environments.katacoda.com<br/>
 
 In the workspace area, make sure to select the same connection in the top left, then type `select count(*) from Employee`{{copy}}.<br/>

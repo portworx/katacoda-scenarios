@@ -23,14 +23,15 @@ Give connection a name.<br/>
 Select `SQL Server` as connection Driver.<br/>
 
 Use the following info:
-* Port:  1433
-* Database: IndexInternals2008
-* Database Username: sa
-* Database Password: P@ssw0rd
+* Host/Server/IP Address: `mssql`{{copy}}
+* Port: `1433`{{copy}}
+* Database: `IndexInternals2008`{{copy}}
+* Database Username: `sa`{{copy}}
+* Database Password: `P@ssw0rd`{{copy}}
 * Domain: (leave empty)
 
 Test and save the connection.
 
-In the workspace area, type `select count(*) from Employee`.<br/>
+In the workspace area, type `select count(*) from Employee`{{copy}}.<br/>
 Then click `Run`, and take note of the number of rows returned.
 If you're asked to login, the credentials are "abc@abc.com/abc"

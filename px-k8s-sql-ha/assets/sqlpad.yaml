@@ -40,6 +40,10 @@ spec:
         volumeMounts:
         - name: sqlpad-data
           mountPath: /var/lib/sqlpad
+      volumes:
+      - name: sqlpad-data
+        persistentVolumeClaim:
+          claimName: sqlpad-data
 ---
 apiVersion: v1
 kind: Service

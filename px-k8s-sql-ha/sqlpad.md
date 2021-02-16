@@ -34,4 +34,3 @@ Test and save the connection.
 
 In the workspace area, type `select count(*) from Employee`{{copy}}.<br/>
 Then click `Run`, and take note of the number of rows returned.
-If you're asked to login, the credentials are "abc@abc.com/abc"

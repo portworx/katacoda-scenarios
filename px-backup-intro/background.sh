@@ -4,14 +4,16 @@ curl -o helm.tar.gz https://get.helm.sh/helm-v3.3.0-rc.1-linux-amd64.tar.gz
 tar -zxvf helm.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
 
+#Install portworx storage class
+kubectl create -f portworx-sc.yaml
+
 #Install PX-Backup
 helm repo add portworx http://charts.portworx.io/ && helm repo update
-kubectl create -f portworx-sc.yaml
 helm install px-backup portworx/px-backup --version 1.2.2 --namespace px-backup --create-namespace --set persistentStorage.enabled=true,persistentStorage.storageClassName="portworx-sc",oidc.centralOIDC.updateAdminProfile=false
 
 #Install minio
-helm repo add minio https://helm.min.io/
-helm install --name px-minio-1 --namespace px-backup --set accessKey=ZZYYXXWWVVUU --set secretKey=0ldSup3rS3cr3t --set persistence.storageClass=portworx-sc --set resources.requests.memory=1Gi stable/minio
+helm repo add minio https://helm.min.io/  && helm repo update
+helm install px-minio-1 minio/minio --namespace px-backup --set accessKey=ZZYYXXWWVVUU --set secretKey=0ldSup3rS3cr3t --set persistence.storageClass=portworx-sc --set resources.requests.memory=1Gi
 
 #Install Stork 2.4 (we will connect this cluster)
 curl -fsL -o stork-spec.yaml "https://install.portworx.com/2.5?comp=stork&storkNonPx=true"
@@ -40,13 +42,6 @@ pxbackupctl create cluster --name katacoda-px -k /root/.kube/config -e $BACKUP_P
 # Wait for minio to be ready and configure it
 echo "wait for minio server to be up..."
 until [ `kubectl get pods -n px-backup | grep px-minio | grep Running | grep 1/1 | wc -l` == 1 ]; do printf . ;sleep 1;done
-
-#wget -O /usr/bin/mc https://dl.minio.io/client/mc/release/linux-amd64/mc
-#chmod +x /usr/bin/mc
-#MINIO_ENDPOINT=$(kubectl describe svc -n px-backup px-minio-1 | grep Endpoints | awk '{print $2}')
-#echo $MINIO_ENDPOINT
-#echo "setting up minio object store..."
-#mc config host add px http://$MINIO_ENDPOINT ZZYYXXWWVVUU 0ldSup3rS3cr3t --api S3v4
 
 # Finally launch an app users can use.
 kubectl create -f web-app.yaml

@@ -13,7 +13,7 @@ helm install px-backup portworx/px-backup --version 1.2.2 --namespace px-backup 
 
 #Install minio
 helm repo add minio https://helm.min.io/  && helm repo update
-helm install px-minio-1 minio/minio --namespace px-backup --set accessKey=ZZYYXXWWVVUU --set secretKey=0ldSup3rS3cr3t --set persistence.storageClass=portworx-sc --set resources.requests.memory=1Gi
+helm install px-minio-1 minio/minio --version 8.0.10 --namespace px-backup --set accessKey=ZZYYXXWWVVUU --set secretKey=0ldSup3rS3cr3t --set persistence.storageClass=portworx-sc --set resources.requests.memory=1Gi
 
 #Install Stork 2.4 (we will connect this cluster)
 curl -fsL -o stork-spec.yaml "https://install.portworx.com/2.5?comp=stork&storkNonPx=true"
@@ -44,4 +44,5 @@ echo "wait for minio server to be up..."
 until [ `kubectl get pods -n px-backup | grep px-minio | grep Running | grep 1/1 | wc -l` == 1 ]; do printf . ;sleep 1;done
 
 # Finally launch an app users can use.
-kubectl create -f web-app.yaml
+kubectl create -n demo
+kubectl create -f web-app.yaml -n demo

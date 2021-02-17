@@ -44,5 +44,5 @@ echo "wait for minio server to be up..."
 until (kubectl get pods -n px-backup | grep px-minio | grep Running | grep 1/1 | wc -l); do printf . ;sleep 1;done
 
 # Finally launch an app users can use.
-kubectl create -n demo
+kubectl create ns demo
 kubectl create -f web-app.yaml -n demo

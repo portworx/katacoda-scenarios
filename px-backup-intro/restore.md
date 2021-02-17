@@ -16,7 +16,7 @@ https://[[HOST2_SUBDOMAIN]]-31234-[[KATACODA_HOST]].environments.katacoda.com
 Select the backup using the right three dots and click restore.
 
 1. Give your restore a name.
-2. Select the only cluster in the list.
+2. Select the `katacoda-px` cluster in desitnation cluster list.
 3. Select `Replace existing resources`
 
 Verify your backup has completed by waiting for the application to come back online and see your data is recovered. Note, it can take up to 5 minutes for the UI to come back on Katacoda.

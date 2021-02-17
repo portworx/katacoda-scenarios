@@ -41,7 +41,7 @@ pxbackupctl create cluster --name katacoda-px -k /root/.kube/config -e $BACKUP_P
 
 # Wait for minio to be ready and configure it
 echo "wait for minio server to be up..."
-until [ `kubectl get pods -n px-backup | grep px-minio | grep Running | grep 1/1 | wc -l` == 1 ]; do printf . ;sleep 1;done
+until (kubectl get pods -n px-backup | grep px-minio | grep Running | grep 1/1 | wc -l); do printf . ;sleep 1;done
 
 # Finally launch an app users can use.
 kubectl create -n demo

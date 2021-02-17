@@ -1,3 +1,4 @@
+
 Configure Credentials and Backup Location
 
 Check to see Minio is running.
@@ -26,3 +27,5 @@ Next, create a Backup Location with the following informaiton.
 * Region: `us-west`{{copy}}
 * Endpoint: [FILL IN WITH URL FROM ABOVE]
 * Storage Class: `Default`
+
+Once both the Cloud Account and Backup Location are configured, please continue.

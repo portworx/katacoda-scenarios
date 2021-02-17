@@ -1,4 +1,5 @@
-irst we need to wait for Kubernetes and Portworx to be ready. Be patient, this is not a very high performance environment, just a place to learn something :-
+
+First, we need to wait for Kubernetes and Portworx to be ready. Be patient, this is not a very high performance environment, just a place to learn something.
 
 ### Step: Wait for Kubernetes to be ready
 
@@ -11,7 +12,7 @@ When all 4 nodes show status Running then hit ```clear```{{execute interrupt}} t
 
 ### Step: Wait for Portworx to be ready
 
-Watch the Portworx pods and wait for them to be ready on all the nodes. This can take a few minutes since it involves pulling multiple docker images. You will see 'No resources found' until all images are pulled.
+Watch the Portworx pods and wait for them to be ready on all the nodes. All nodes in the below command output should show `1/1`.
 
 ```
 watch kubectl get pods -n kube-system -l name=portworx -o wide

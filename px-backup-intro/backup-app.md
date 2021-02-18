@@ -17,5 +17,3 @@ Next, we then back it up.
 Watch the backup until it turns green and is completed. You can click on the three dots to the right of the backup and select `Show Details` for more information during the backup.
 
 Finally, Go back to the application in the browser again and click on the screen to add more data.
-
-https://[[HOST2_SUBDOMAIN]]-30123-[[KATACODA_HOST]].environments.katacoda.com

@@ -1,3 +1,3 @@
 </br>
 
-##### Create a storage policy `px-nginx-scheduled` with the newly created schedule policy `daily-schedule`
+##### Create a storage class `px-nginx-scheduled` with the newly created schedule policy `daily-schedule`

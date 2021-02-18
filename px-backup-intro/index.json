@@ -1,0 +1,55 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Intro to PX-Backup on Kubernetes",
+    "description": "Deploy and use PX-Backup on Kubernetes",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes nodes to be ready",
+                "text": "wait-k8s.md"
+            },
+            {
+                "title" : "Wait for PX-Backup and Use PX-Backup",
+                "text": "wait-backup.md"
+            },
+            {
+                "title" : "Configure Backup",
+                "text": "configure-backup.md"
+            },
+            {
+                "title" : "Backup an Application",
+                "text": "backup-app.md"
+            },
+            {
+                "title" : "Restore an Application",
+                "text": "restore.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh", 
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],            
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
+        "dashboards": [{"name": "Backup Docs", "href": "https://backup.docs.portworx.com/"}]
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

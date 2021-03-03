@@ -21,12 +21,6 @@
 	"answer": "step2-answer.md"
       },
       {
-        "title": "Apply new spec",
-        "text": "step3.md",
-        "verify": "step3-verify.sh",
-	"answer": "step3-answer.md"
-      },
-      {
         "title": "Validate the Portworx Pods",
         "text": "step5.md",
 	"verify": "step5-verify.sh"

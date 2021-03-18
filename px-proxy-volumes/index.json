@@ -1,0 +1,48 @@
+{
+  "title": "Using Proxy Volumes in Kubernetes",
+  "description": "In this lab, we will get hands on with the Portworx Proxy Volume PVC's",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Storage Class",
+        "text": "step1.md"
+      },
+      {
+        "title": "PVC",
+        "text": "step2.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Verify NFS share",
+        "text": "step3.md"
+      },
+      {
+        "title": "Quiz",
+        "text": "step4.md",
+        "answer": "step4-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "startlab.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "master": [
+         {"file": "*", "target": "/root/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

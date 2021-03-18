@@ -7,3 +7,7 @@ This Lab has a Kubernetes and Portworx cluster pre-deployed. We have also deploy
 Next, open the Proxy Volume Storage Class and add replace `<NODE01_IP>`.
 
 ```vi /root/proxyvol-sc.yaml```{{execute}}
+
+After you edit, create the Storage Class.
+
+```kubectl create -f proxyvol-sc.yaml```{{execute}}

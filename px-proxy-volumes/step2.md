@@ -4,6 +4,10 @@ Create the persistent volume claim.
 
 ```cat /root/proxy-vol-pvc.yaml```{{execute}}
 
+Create it
+
+```kubectl create -f /root/proxy-vol-pvc.yaml```{{execute}}
+
 Verify the PVC is bound
 
 ```kubectl get pvc```{{execute}}

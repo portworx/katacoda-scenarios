@@ -12,7 +12,7 @@ Next, Add some data to the NFS share on the server.
 
 ```ssh node01 "touch /mnt/nfs_share/file.txt"```{{execute}}
 
-Verify it is now available in the Pod.
+Run the same commands and verify it is now available in the Pod.
 
 ```kubectl exec $POD -- ls /usr/share/nginx/html/```{{execute}}
 

@@ -1,6 +1,6 @@
 # Persistent Volume Claim
 
-Create the persistent volume claim.
+Take a look at the persistent volume claim spec.
 
 ```cat /root/proxy-vol-pvc.yaml; echo ""```{{execute}}
 

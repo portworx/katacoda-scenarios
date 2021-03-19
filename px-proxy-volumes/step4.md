@@ -10,9 +10,9 @@ Answer a few questions about the environment
 
 >> Which mount options are being used when looking at the client-side mountpoint?<< 
 [*] rw
-[] soft
+[] nosuid
 [*] proto=tcp
-[*] realtime
+[*] relatime
 [] sec=krb5
 
 

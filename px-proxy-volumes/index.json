@@ -1,6 +1,6 @@
 {
   "title": "Using Proxy Volumes in Kubernetes",
-  "description": "In this lab, we will get hands on with the Portworx Proxy Volume PVC's",
+  "description": "Get hands on with the Portworx Proxy Volume PVC's in Kubenretes",
   "difficulty": "Beginner",
   "time": "60",
   "details": {
@@ -37,7 +37,9 @@
     }
     },
     "environment": {
+    "showdashboard": true,
     "uilayout": "terminal",
+    "dashboards": [{"name": "Proxy Volume Docs", "href": "https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/create-proxy-volume-pvcs/"}]
     "hidefinish": false,
     "hideintro": true
     },

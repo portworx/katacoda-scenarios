@@ -4,6 +4,6 @@ metadata:
   name: portworx-proxy-volume-volume
 provisioner: kubernetes.io/portworx-volume
 parameters:
-  proxy_endpoint: "nfs:<NODE01_IP>"
+  proxy_endpoint: "nfs://<NODE01_IP>"
   proxy_nfs_exportpath: "/mnt/nfs_share"
 allowVolumeExpansion: true

@@ -15,3 +15,7 @@ Verify the PVC is bound
 Create the deployment that uses the PVC
 
 ```kubectl create -f proxy-vol-deployment.yaml```{{execute}}
+
+Make sure the Pod is running.
+
+```kubectl get po -l app=nginx```{{execute}}

@@ -2,7 +2,7 @@
 
 Create the persistent volume claim.
 
-```cat /root/proxy-vol-pvc.yaml```{{execute}}
+```cat /root/proxy-vol-pvc.yaml; echo ""```{{execute}}
 
 Create it
 
@@ -16,6 +16,8 @@ Create the deployment that uses the PVC
 
 ```kubectl create -f proxy-vol-deployment.yaml```{{execute}}
 
-Make sure the Pod is running.
+Wait for the pod to be running. 
 
-```kubectl get po -l app=nginx```{{execute}}
+```watch kubectl get po -l app=nginx```{{execute}}
+
+Once the pod is `Running 1/1`, hit ```clear```{{execute interrupt}}

@@ -39,7 +39,7 @@
     "environment": {
     "showdashboard": true,
     "uilayout": "terminal",
-    "dashboards": [{"name": "Proxy Volume Docs", "href": "https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/create-proxy-volume-pvcs/"}]
+    "dashboards": [{"name": "Proxy Volume Docs", "href": "https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/create-proxy-volume-pvcs/"}],
     "hidefinish": false,
     "hideintro": true
     },

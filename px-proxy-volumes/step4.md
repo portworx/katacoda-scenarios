@@ -13,7 +13,7 @@ Answer a few questions about the environment
 [*] soft
 [*] proto=tcp
 [*] realtime
-[] sec=krb5
+[ ] sec=krb5
 
 
 >>Q3: Which volume mode is the Proxy PVC using?<<

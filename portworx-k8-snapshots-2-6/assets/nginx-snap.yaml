@@ -1,0 +1,10 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: GroupVolumeSnapshot
+metadata:
+  name: nginx-group-snap
+spec:
+  pvcSelector:
+    matchLabels:
+      app: nginx
+  restoreNamespaces:
+   - default

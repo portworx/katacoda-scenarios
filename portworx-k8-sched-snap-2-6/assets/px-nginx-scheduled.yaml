@@ -1,0 +1,12 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+    name: px-nginx-scheduled
+provisioner: kubernetes.io/portworx-volume
+parameters:
+   repl: "2"
+   io_priority: "high"
+   snapshotschedule.stork.libopenstorage.org/default-schedule: |
+     schedulePolicyName: daily-schedule
+     annotations:
+       portworx/snapshot-type: local

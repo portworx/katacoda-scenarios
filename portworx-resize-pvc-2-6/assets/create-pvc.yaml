@@ -1,0 +1,44 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+    name: px-default-sc
+provisioner: kubernetes.io/portworx-volume
+parameters:
+   repl: "2"
+   io_priority: "high"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc1
+spec:
+  storageClassName: px-default-sc
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc2
+spec:
+  storageClassName: px-default-sc
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc3
+spec:
+  storageClassName: px-default-sc
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi

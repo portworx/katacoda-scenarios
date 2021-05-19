@@ -1,0 +1,55 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+    name: px-beta-sc
+provisioner: kubernetes.io/portworx-volume
+parameters:
+   repl: "1"
+   io_priority: "high"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+   name: px-beta-pvc
+   namespace: beta
+   annotations:
+     volume.beta.kubernetes.io/storage-class: px-beta-sc
+spec:
+   accessModes:
+     - ReadWriteOnce
+   resources:
+     requests:
+       storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: beta
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      schedulerName: stork
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        imagePullPolicy: "Always"
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "1"
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mysql-data
+      volumes:
+      - name: mysql-data
+        persistentVolumeClaim:
+          claimName: px-beta-pvc

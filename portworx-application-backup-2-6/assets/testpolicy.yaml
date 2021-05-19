@@ -1,0 +1,20 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: SchedulePolicy
+metadata:
+  name: testpolicy
+  namespace: mysql-app
+policy:
+  interval:
+    intervalMinutes: 60
+    retain: 5
+  daily:
+    time: "10:14PM"
+    retain: 5
+  weekly:
+    day: "Thursday"
+    time: "10:13PM"
+    retain: 5
+  monthly:
+    date: 14
+    time: "8:05PM"
+    retain: 5

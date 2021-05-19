@@ -1,0 +1,64 @@
+{
+  "title": "Portworx Recap Practice Lab - 2.6",
+  "description": "In this lab, we will revist some of the concepts learnt in the Fudamentals course",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+     "intro": {
+      "text": "intro.md",
+      "code": "ssh-node01.sh"
+    },
+    "steps": [
+      {
+        "title": "Introduction",
+        "text": "step0.md"	
+      },
+      {
+        "title": "PXCTL Status",
+        "text": "step2.md",
+        "answer": "step2-answer.md"
+      },
+      {
+        "title": "Exploring the PXCTL Service Commands",
+        "text": "step3.md",
+        "answer": "step3-answer.md"
+      },
+      {
+        "title": "PXCTL Volume Commands",
+        "text": "step4.md",
+        "answer": "step4-answer.md"
+      },
+      {
+        "title": "PXCTL Cluster Commands",
+        "text": "step5.md",
+        "answer": "step5-answer.md"
+      },
+      {
+        "title": "Storage Pool",
+        "text": "step6.md",
+        "answer": "step6-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "ssh-node01.sh",
+      "courseData": "create-vols.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/root/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

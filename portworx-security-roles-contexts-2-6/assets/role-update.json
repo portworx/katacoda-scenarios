@@ -1,0 +1,22 @@
+{
+     "name": "test.view",
+     "rules": [
+       {
+         "services": [
+           "volumes"
+         ],
+         "apis": [
+           "*enumerate*",
+	   "create"
+         ]
+       },
+       {
+         "services": [
+           "*"
+         ],
+         "apis": [
+           "inspect*"
+         ]
+       }
+     ]
+  }

@@ -1,0 +1,5 @@
+name: Finance Admin
+sub: finance@kodekloud.com/fa
+email: finance@kodekloud.com
+roles: ["system.user"]
+groups: ["Finance"]

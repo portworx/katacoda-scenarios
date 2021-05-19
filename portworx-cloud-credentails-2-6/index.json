@@ -1,0 +1,54 @@
+{
+  "title": "Portworx Cloud Credentials Practice Lab - 2.6",
+  "description": "In this lab, we will get hands on with exploring and creating cloud credentials for our Porworx Cluster",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Object Store Set Up",
+        "text": "step1.md"
+      },
+      {
+        "title": "PX Credentials Quiz",
+        "text": "step2.md",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Create an object-store credential",
+        "text": "step3.md",
+	"verify": "step3-verify.sh",
+	"answer": "step3-answer.md"
+      },
+      {
+        "title": "Delete a credential",
+        "text": "step4.md",
+        "verify": "step4-verify.sh",
+	"answer": "step4-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+     "dashboards": [{"name": "Docs: Cloud Credentials", "href": "https://2.6.docs.portworx.com/reference/cli/credentials/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

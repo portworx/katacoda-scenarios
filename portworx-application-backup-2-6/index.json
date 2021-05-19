@@ -1,0 +1,79 @@
+{
+  "title": "Portworx Application Backup, Restore and Clone CRD lab - 2.6",
+  "description": "In this lab, we will make use of Minio Object Store and create a Portworx application backup and test restore/clone operation",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Minio setup and Portworx Credentials",
+        "text": "step1.md"
+      },
+      {
+        "title": "Create a Backup Location",
+        "text": "step2.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Application Backup for MYSQL",
+        "text": "step3.md",
+	"verify": "step3-verify.sh"
+      },
+      {
+        "title": "Verify the Backup in the Object Store",
+        "text": "step3-5.md"
+      },
+      {
+        "title": "Create a Schedule",
+        "text": "step4.md",
+        "verify": "step4-verify.sh"
+      },
+      {
+        "title": "Application Restore",
+        "text": "step5.md",
+        "verify": "step5-verify.sh"
+      },
+      {
+        "title": "Verify the Restore was successful",
+        "text": "restore.md"
+      },
+      {
+        "title": "Application Clone",
+        "text": "step6.md",
+        "verify": "step6-verify.sh"
+      },
+      {
+        "title": "Verify the Clone was successful",
+        "text": "clone.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp", "chmod": "+x"},
+	 {"file": "backup-location.yaml", "target": "/root", "chmod": "+x"},
+	 {"file": "app-backup.yaml", "target": "/root", "chmod": "+x"},
+	 {"file": "app-restore.yaml", "target": "/root", "chmod": "+x"},
+	 {"file": "app-clone.yaml", "target": "/root", "chmod": "+x"},
+	 {"file": "app-schedule.yaml", "target": "/root", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Application Backup", "href": "https://2.3.docs.portworx.com/portworx-install-with-kubernetes/storage-operations/stateful-applications/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

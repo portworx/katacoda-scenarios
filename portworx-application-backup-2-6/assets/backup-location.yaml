@@ -1,0 +1,16 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: BackupLocation
+metadata:
+  name: mysql
+  namespace: mysql-app
+  annotations:
+    stork.libopenstorage.org/skipresource: "true"
+location:
+  type: s3
+  path: "<enter details here>"
+  s3Config:
+    region: us-east-1
+    accessKeyID: <enter details here>
+    secretAccessKey: <enter details here>
+    endpoint: "http://<enter details here>"
+    disableSSL: true

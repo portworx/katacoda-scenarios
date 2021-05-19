@@ -1,0 +1,59 @@
+{
+  "title": "Portworx Cloud Snapshots and Restore Practice Lab - 2.6",
+  "description": "In this lab, we will practice cloud snapshots and restores",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Object Store setup",
+        "text": "step1.md"
+      },
+      {
+        "title": "Create a cloud credential",
+        "text": "step2.md",
+	"verify": "step2-verify.sh",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Create a cloud snapshot for the PVC",
+        "text": "step3.md",
+	"verify": "step3-verify.sh",
+	"answer": "step3-answer.md"
+      },
+      {
+        "title": "Validate the Backup",
+        "text": "step3-5.md"
+      },
+      {
+        "title": "Restore Snapshot to a new PVC",
+        "text": "step4.md",
+        "verify": "step4-verify.sh",
+	"answer": "step4-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Cloud Snapshots", "href": "https://2.6.docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-snapshots/on-demand/snaps-cloud/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Using PX-Security in K8s - 2.6",
+  "description": "This is a guided lab where we will enable PX-Security in the Kubernetes cluster",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Lab Info",
+        "text": "info.md",
+	"verify": "k8-check.sh"
+      },
+      {
+        "title": "Test PX-Security: Create a PVC",
+        "text": "step6.md",
+	"courseData": "create-tokens.sh",
+        "verify": "step6-verify.sh",
+	"answer": "step6-answer.md"
+      },
+      {
+        "title": "Create an Auth Token for Finance Admins",
+        "text": "step7.md",
+        "verify": "step7-verify.sh",
+	"answer": "step7-answer.md"
+      },
+      {
+        "title": "Create an Auth Token for the Engineering team",
+        "text": "step7-5.md",
+        "verify": "step7-5-verify.sh",
+	"answer": "step7-5-answer.md"
+      },
+      {
+        "title": "Create a multi-tenant storage class that makes use of Auth Tokens",
+        "text": "step8.md",
+        "verify": "step8-verify.sh",
+	"answer": "step8-answer.md"
+      },
+      {
+        "title": "Create PVC's for Finance and Engineering",
+        "text": "step9.md",
+        "verify": "step9-verify.sh",
+	"answer": "step9-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: PX Security - Multi-tenancy", "href": "https://2.6.docs.portworx.com/cloud-references/security/kubernetes/shared-secret-model-multitenancy/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

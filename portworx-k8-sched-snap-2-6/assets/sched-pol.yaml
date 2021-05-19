@@ -1,0 +1,8 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: SchedulePolicy
+metadata:
+  name: daily-schedule
+policy:
+  daily:
+    time: "10:00PM"
+    retain: 5

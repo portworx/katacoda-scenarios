@@ -1,0 +1,19 @@
+apiVersion: portworx.io/v1beta2
+kind: VolumePlacementStrategy
+metadata:
+  name: statefulset-data
+spec:
+  volumeAntiAffinity:
+    - matchExpressions:
+      - key: type
+        operator: In
+        values:
+        - "data"
+  volumeAffinity:
+    - matchExpressions:
+      - key: type
+        operator: In
+        values:
+        - "config"
+      # allows rules not to block eachother.
+      enforcement: "preferred"

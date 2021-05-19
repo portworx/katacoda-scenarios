@@ -1,0 +1,87 @@
+{
+  "title": "Portworx Enable Authentication in K8s - 2.6",
+  "description": "This is a guided lab where we will enable PX-Security in the Kubernetes cluster",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Lab Info",
+        "text": "info.md"
+      },
+      {
+        "title": "Create secure shared secrets",
+        "text": "step1.md",
+	"verify": "step1-verify.sh",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Update the Portworx DaemonSet",
+        "text": "step2.md",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Validate the Portworx Pods and Disable Guest Role",
+        "text": "step5.md",
+	"verify": "step5-verify.sh"
+      },
+      {
+        "title": "Test - Create a PVC",
+        "text": "step6.md",
+        "verify": "step6-verify.sh",
+	"answer": "step6-answer.md"
+      },
+      {
+        "title": "Why did PVC Fail?",
+        "text": "mcq.md",
+        "answer": "mcq-answer.md"
+      },
+      {
+        "title": "Create an Admin Token",
+        "text": "step7.md",
+        "verify": "step7-verify.sh",
+	"answer": "step7-answer.md"
+      },
+      {
+        "title": "Create a Storage Class using the Token",
+        "text": "step8.md",
+        "verify": "step8-verify.sh",
+	"answer": "step8-answer.md"
+      },
+      {
+        "title": "Recreate the PVC",
+        "text": "step9.md",
+        "verify": "step9-verify.sh",
+	"answer": "step9-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "create-tokens.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host02": [
+         {"file": "*", "target": "/tmp", "chmod": "+x"}
+      ],
+      "host01": [
+         {"file": "test-pvc.yaml", "target": "/root", "chmod": "+x"},
+      	 {"file": "px-sc.yaml", "target": "/tmp", "chmod": "+x"},
+      	 {"file": "px-secure-sc.yaml", "target": "/tmp", "chmod": "+x"},
+      	 {"file": "auth-pvc.yaml", "target": "/root", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Enable PX-Security", "href": "https://2.3.docs.portworx.com/cloud-references/security/kubernetes/shared-secret-model/"}, {"name": "Reference: PX-Security", "href": "https://portworx.com/px-security-for-kubernetes-multi-tenant-authorization-authentication-and-rbac-for-persistent-volumes/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

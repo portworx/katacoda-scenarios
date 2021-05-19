@@ -1,0 +1,8 @@
+apiVersion: volumesnapshot.external-storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: mysql-3d-snapshot
+  annotations:
+    stork.rule/pre-snapshot: mysql-presnap-rule
+spec:
+  persistentVolumeClaimName: px-mysql-pvc

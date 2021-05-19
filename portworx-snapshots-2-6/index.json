@@ -1,0 +1,68 @@
+{
+  "title": "Portworx Snapshots Practice Lab - 2.6",
+  "description": "In this lab, we will get hands on with the creating snapshots, schedules and restore operations",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Inspect Existing Volumes and Snapshots",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create a new snapshot",
+        "text": "step2.md",
+	"verify": "step2-verify.sh",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Create a snapshot schedule",
+        "text": "step3.md",
+	"verify": "step3-verify.sh",
+	"answer": "step3-answer.md"
+      },
+      {
+        "title": "Update a volume to use the schedule",
+        "text": "step4.md",
+	"verify": "step4-verify.sh",
+	"answer": "step4-answer.md"
+      },
+      {
+        "title": "Update the schedule policy",
+        "text": "step5.md",
+	"verify": "step5-verify.sh",
+	"answer": "step5-answer.md"
+      },
+      {
+        "title": "Restore volume from snapshot",
+        "text": "step6.md",
+        "verify": "step6-verify.sh",
+	"answer": "step6-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "ssh-node01.sh",
+      "courseData": "create-vols.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "create-vols.sh", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Snapshots", "href": "https://2.3.docs.portworx.com/reference/cli/snapshots/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Portworx Volume Placement Strategy Practice Lab - 2.6",
+  "description": "In this lab, we will get hands on with volume placement strategy CRD",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Lab Information",
+        "text": "info.md"
+      },
+      {
+        "title": "Multiple Choince Qustions",
+        "text": "mcq.md"
+      },
+      {
+        "title": "Create a VolumePlacementStrategy for data",
+        "text": "step1.md",
+	"answer": "step1-answer.md",
+	"verify": "step1-verify.sh"
+      },
+      {
+        "title": "Create a VolumePlacementStrategy for config",
+        "text": "step2.md",
+	"answer": "step2-answer.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Create StorageClass for data and config",
+        "text": "step3.md",
+	"answer": "step3-answer.md",
+	"verify": "step3-verify.sh"
+      },
+      {
+        "title": "Deploy a 3 node Cassandra StatefulSet",
+        "text": "step4.md",
+	"answer": "step4-answer.md",
+        "verify": "step4-verify.sh"
+      },
+      {
+        "title": "Inspect Volume Placement",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "master": [
+         {"file": "*", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Volume Placement Strategy", "href": "https://2.3.docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/volume-placement-strategies/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

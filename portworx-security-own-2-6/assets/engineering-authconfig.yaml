@@ -1,0 +1,5 @@
+name: Engineering Admins
+sub: engineering@kodekloud.com/ea
+email: engineering@kodekloud.com
+roles: ["system.user"]
+groups: ["engineering"]

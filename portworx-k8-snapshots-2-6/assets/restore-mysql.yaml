@@ -1,0 +1,9 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: VolumeSnapshotRestore
+metadata:
+  name: mysql-snap-restore
+  namespace: mysql-app
+spec:
+  groupSnapshot: false
+  sourceName: mysql-snap
+  sourceNamespace: mysql-app

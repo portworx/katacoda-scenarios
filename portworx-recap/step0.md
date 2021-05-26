@@ -1,4 +1,4 @@
-<p>In this lab, we will revisit some of the basic concepts we dsicussed in the **Portworx Fundamentals course**.</p>
+<p>In this lab, we will revisit some of the basic concepts we discussed in the **Portworx Fundamentals course**.</p>
 
 <p>This lab environment consists of a 3 node cluster. **Portworx** has already been installed and needs no additional configuration from the user.</p>
 

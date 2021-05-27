@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Minio setup and Portworx Credentials",
+        "title": "Minio Setup and Portworx Credentials",
         "text": "step1.md"
       },
       {

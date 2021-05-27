@@ -20,5 +20,5 @@ Important: PX-Security has not been enabled on this cluster. This lab is intende
 >> Which context has been created for user `Nick Pepe`?<< 
 === user-context1
 
->> What `Role` is used by the context `user-context1`<<
+>> What `Role` is used by the context `user-context1`?<<
 === system.user

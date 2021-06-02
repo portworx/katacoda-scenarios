@@ -5,9 +5,9 @@ Note: All questions are mandatory. Once completed, click on the 'Check Answers' 
 
 
 >>Q2: What is the version of Portworx installed in this environment? << 
-() 2.0 
-(*) 2.2
-() 1.1
+() 2.3 
+(*) 2.6
+() 2.5
 
 
 >>Q3: How many pools are part of node01?<< 

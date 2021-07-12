@@ -12,7 +12,7 @@
       {
         "title": "Deploy Portworx",
         "text": "step2.md",
-	      "verify": "step2-verify.sh"
+        "verify": "step2-verify.sh"
       },
       {
         "title": "Portworx on K8s Quiz",
@@ -29,7 +29,7 @@
     "assets": {
       "host01": [
          {"file": "scenarioBase.sh", "target": "/root/", "chmod": "+x"},
-	       {"file": "wipe.sh", "target": "/root/", "chmod": "+x"}
+         {"file": "wipe.sh", "target": "/root/", "chmod": "+x"}
       ]
     }
     },

@@ -3,7 +3,7 @@ We will begin with a quick tour of the lab environment. This lab consists of a m
 
 # Envionment
 
-Before we begin, wait for the Kubernetes cluster to become ready. This is a 4 node cluster is being cleaned so we can install Portworx. If you see Portworx installed using this command, you should see it become uninstalled shorts. Check status:
+Before we begin, wait for the Kubernetes cluster to become ready. This is a 4 node cluster is being cleaned so we can install Portworx. If you see Portworx installed using this command, you should see it become uninstalled shortly. Check status:
 `watch kubectl get po -n kube-system -l name=portworx`{{execute}}
 
 When you see "No resources found" you can click ```clear```{{execute interrupt}}

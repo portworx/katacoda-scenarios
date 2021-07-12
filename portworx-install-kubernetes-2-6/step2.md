@@ -12,7 +12,9 @@ Run the below command to install:
 `kubectl apply -f 'https://install.portworx.com/2.6?mc=false&kbver=1.18.0&b=true&s=%2Fdev%2Fvdb&c=my-px-cluster&stork=true&st=k8s'`{{execute}}
 
 Note: It can take a few minutes for the cluster to be Ready! Check that Portworx pods are running before you proceed to the next question.
-`kubectl get pods -o wide -n kube-system -l name=portworx`{{execute}}
+`watch kubectl get pods -o wide -n kube-system -l name=portworx`{{execute}}
+
+When you see all three Portworx nodes "1/1 Running" you can click ```clear```{{execute interrupt}}
 
 Check the installation logs:
 `PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}'); kubectl -n kube-system logs -f $PX_POD`{{execute}}

@@ -1,5 +1,5 @@
 {
-  "title": "install-portworx",
+  "title": "Install Portworx 2.6",
   "description": "Lab to set up portworx cluster on an existing K8s cluster",
   "difficulty": "Beginner",
   "time": "60",

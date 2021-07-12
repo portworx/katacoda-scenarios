@@ -1,11 +1,12 @@
 We will begin with a quick tour of the lab environment. This lab consists of a multi-node kubernetes cluster which has been deployed exclusively for you. This is a sandbox environment. Feel free to play around. The lab session will expire in 60 minutes.
 
 
-# Envionment Load
-Before we begin, wait for the kubernetes cluster to become ready. This is a 4 node cluster is being cleaned so we can install Portworx. Check status:
+# Envionment
+
+Before we begin, wait for the Kubernetes cluster to become ready. This is a 4 node cluster is being cleaned so we can install Portworx. If you see Portworx installed using this command, you should see it become uninstalled shorts. Check status:
 `watch kubectl get po -n kube-system -l name=portworx`{{execute}}
 
-When you see "No resources found" you can click `clear`{{execute}}
+When you see "No resources found" you can click ```clear```{{execute interrupt}}
 
 # Check the K8s Status
 >>Q1: How many master nodes do you see in the cluster?<< 

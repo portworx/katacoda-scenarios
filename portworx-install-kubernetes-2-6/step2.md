@@ -1,11 +1,13 @@
 Let's set up a Portworx cluster. To do this, we will make use of an installation URL from central.portworx.com
 
-# 1. Drives: The drive /dev/vdb is available on each node.
-# 2. KVDB: We will be using the Portworx Built-in KVDB.
-# 3. Create the Portworx cluster. 
+What does Portworx need to be installed?
+
+# 1. Drives: The drive /dev/vdb is available on each node which we will be using.
+# 2. Key Value Database (KVDB): Such as ETCD. We will be using the Portworx Built-in KVDB instead of deploying our own.
+# 3. Specification: Portworx is defined by a spec file, we will create the Portworx cluster using the spec URL.
 
 
-Once the YAML file is updated, run the below command to install:
+Run the below command to install:
 
 `kubectl apply -f 'https://install.portworx.com/2.6?mc=false&kbver=1.18.0&b=true&s=%2Fdev%2Fvdb&c=my-px-cluster&stork=true&st=k8s'`{{execute}}
 

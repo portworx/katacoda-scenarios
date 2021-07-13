@@ -17,7 +17,7 @@ metadata:
   name: cassandra-restored
 spec:
   serviceName: cassandra-restored
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: cassandra-restored

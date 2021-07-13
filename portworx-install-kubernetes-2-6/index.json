@@ -1,0 +1,44 @@
+{
+  "title": "Install Portworx 2.6",
+  "description": "Lab to set up portworx cluster on an existing K8s cluster",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Explore the Lab Environment",
+        "text": "step1.md"
+      },
+      {
+        "title": "Deploy Portworx",
+        "text": "step2.md",
+        "verify": "step2-verify.sh"
+      },
+      {
+        "title": "Portworx on K8s Quiz",
+        "text": "step3.md"
+      }
+    ],
+     "intro": {
+      "text": "intro.md",
+      "courseData": "scenarioBase.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "scenarioBase.sh", "target": "/root/", "chmod": "+x"},
+         {"file": "wipe.sh", "target": "/root/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

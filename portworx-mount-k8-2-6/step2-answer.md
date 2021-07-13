@@ -1,4 +1,4 @@
-```
+<pre>
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -10,4 +10,4 @@ spec:
   resources:
     requests:
       storage: 1Gi
-```
+</pre>

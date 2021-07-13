@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: cassandra-snap-data-cassandra-restored-0
   annotations:
-    snapshot.alpha.kubernetes.io/snapshot: cassandra-groupsnapshot-cassandra-data-cassandra-0-<REPLACE>
+    snapshot.alpha.kubernetes.io/snapshot: cassandra-group-snapshot-cassandra-data-cassandra-0-<REPLACE>
 spec:
   accessModes:
      - ReadWriteOnce
@@ -18,7 +18,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: cassandra-snap-data-cassandra-restored-1
   annotations:
-    snapshot.alpha.kubernetes.io/snapshot: cassandra-groupsnapshot-cassandra-data-cassandra-1-<REPLACE>
+    snapshot.alpha.kubernetes.io/snapshot: cassandra-group-snapshot-cassandra-data-cassandra-1-<REPLACE>
 spec:
   accessModes:
      - ReadWriteOnce
@@ -33,7 +33,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: cassandra-snap-data-cassandra-restored-2
   annotations:
-    snapshot.alpha.kubernetes.io/snapshot: cassandra-groupsnapshot-cassandra-data-cassandra-2-<REPLACE>
+    snapshot.alpha.kubernetes.io/snapshot: cassandra-group-snapshot-cassandra-data-cassandra-2-<REPLACE>
 spec:
   accessModes:
      - ReadWriteOnce

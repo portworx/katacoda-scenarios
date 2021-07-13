@@ -7,6 +7,7 @@ This Lab has a Kubernetes and Portworx cluster pre-deployed. We have also deploy
 [*] px-sc
 [*] px-sc-shared
 [] dynamic-sc
+[*] stork-snapshot-sc
 
 
 >>Q2: Which Storage class is of type 'Shared'?<<

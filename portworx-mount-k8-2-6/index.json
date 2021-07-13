@@ -13,16 +13,19 @@
       {
         "title": "PVC",
         "text": "step2.md",
-	       "verify": "step2-verify.sh"
+        "answer": "step2-answer.md",
+	      "verify": "step2-verify.sh"
       },
       {
         "title": "Mount Volume in a Pod",
         "text": "step3.md",
+        "answer": "step3-answer.md",
 	      "verify": "step3-verify.sh"
       },
       {
         "title": "Scale Deployment",
-        "text": "step4.md"
+        "text": "step4.md",
+        "answer": "step4-answer.md"
       },
       {
         "title": "Pod Status",
@@ -31,11 +34,13 @@
       {
         "title": "Shared PVC",
         "text": "step6.md",
+        "answer": "step6-answer.md",
 	      "verify": "step6-verify.sh"
       },
       {
         "title": "Create a deployment",
         "text": "step7.md",
+        "answer": "step7-answer.md",
         "verify": "step7-verify.sh"
       }
     ],

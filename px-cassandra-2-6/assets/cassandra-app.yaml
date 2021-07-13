@@ -1,0 +1,126 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: cassandra
+  name: cassandra
+spec:
+  clusterIP: None
+  ports:
+  -  name: intra
+    port: 7000
+    targetPort: 7000
+  - name: tls
+    port: 7001
+    targetPort: 7001
+  - name: jmx
+    port: 7199
+    targetPort: 7199
+  - name: cql
+    port: 9042
+    targetPort: 9042
+  - name: thrift
+    port: 9160
+    targetPort: 9160
+  selector:
+    app: cassandra
+---
+apiVersion: "apps/v1beta1"
+kind: StatefulSet
+metadata:
+  name: cassandra
+spec:
+  serviceName: cassandra
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: cassandra
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: px/running
+                operator: NotIn
+                values:
+                - "false"
+              - key: px/enabled
+                operator: NotIn
+                values:
+                - "false"
+      containers:
+      - name: cassandra
+        image:  gcr.io/google-samples/cassandra:v13
+        imagePullPolicy: Always
+        readinessProbe:
+          exec:
+            command: [ "/bin/sh", "-c", "nodetool status | grep -E \"^UN\\s+${POD_IP}\"" ]
+          initialDelaySeconds: 90
+          periodSeconds: 30
+        ports:
+        - containerPort: 7000
+          name: intra-node
+        - containerPort: 7001
+          name: tls-intra-node
+        - containerPort: 7199
+          name: jmx
+        - containerPort: 9042
+          name: cql
+        resources:
+          limits:
+            cpu: "500m"
+            memory: 1Gi
+          requests:
+           cpu: "500m"
+           memory: 1Gi
+        securityContext:
+          capabilities:
+            add:
+              - IPC_LOCK
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/sh", "-c", "PID=$(pidof java) && kill $PID && while ps -p $PID > /dev/null; do sleep 1; done"]
+        env:
+          - name: MAX_HEAP_SIZE
+            value: 512M
+          - name: HEAP_NEWSIZE
+            value: 100M
+          - name: CASSANDRA_SEEDS
+            value: "cassandra-0.cassandra.default.svc.cluster.local"
+          - name: CASSANDRA_CLUSTER_NAME
+            value: "K8Demo"
+          - name: CASSANDRA_DC
+            value: "DC1-K8Demo"
+          - name: CASSANDRA_RACK
+            value: "Rack1-K8Demo"
+          - name: CASSANDRA_AUTO_BOOTSTRAP
+            value: "false"
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+        # These volume mounts are persistent. They are like inline claims,
+        # but not exactly because the names need to match exactly one of
+        # the stateful pod volumes.
+        volumeMounts:
+        - name: cassandra-data
+          mountPath: /cassandra_data
+  # These are converted to volume claims by the controller
+  # and mounted at the paths mentioned above.
+  volumeClaimTemplates:
+  - metadata:
+      name: cassandra-data
+      annotations:
+        volume.beta.kubernetes.io/storage-class: px-repl2-sc
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 2Gi

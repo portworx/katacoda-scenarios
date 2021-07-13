@@ -1,0 +1,20 @@
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: Rule
+metadata:
+  name: cassandra-presnap-rule
+rules:
+  - podSelector:
+      app: cassandra
+    actions:
+    - type: command
+      value: nodetool flush
+---
+apiVersion: stork.libopenstorage.org/v1alpha1
+kind: GroupVolumeSnapshot
+metadata:
+  name: cassandra-group-snapshot
+spec:
+  preExecRule: cassandra-presnap-rule
+  pvcSelector:
+    matchLabels:
+      app: cassandra

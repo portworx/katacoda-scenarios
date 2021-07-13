@@ -1,5 +1,5 @@
 {
-  "title": "Mounting Portworx Persistent Volume on K8",
+  "title": "Mounting Portworx Persistent Volumes on K8 - 2.6",
   "description": "In this lab, we will get hands on with the Portworx Storage Class, PV and PVC's",
   "difficulty": "Beginner",
   "time": "60",

@@ -1,0 +1,56 @@
+{
+  "title": "Portworx Shared Volumes Practice Lab - 2.6",
+  "description": "In this lab, we will learn more about shared volumes",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Inspect existing Volumes",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Create a new shared volume",
+        "text": "step2.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Mount the volume on host node03",
+        "text": "step6.md",
+        "verify": "step6-verify.sh"
+      },
+      {
+        "title": "Add data to the mount",
+        "text": "step7.md",
+        "verify": "step7-verify.sh"
+      },
+      {
+        "title": "Mount on another host",
+        "text": "step8.md",
+        "verify": "step8-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "ssh-node01.sh",
+      "courseData": "create-vols.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "create-vols.sh", "target": "/tmp/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

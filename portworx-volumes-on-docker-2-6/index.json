@@ -1,5 +1,5 @@
 {
-  "title": "Portworx Volumes on Docker Practice Lab",
+  "title": "Portworx Volumes on Docker Practice Lab - 2.6",
   "description": "In this lab, we will learn more about mounting PX volumes on Docker",
   "difficulty": "Beginner",
   "time": "60",

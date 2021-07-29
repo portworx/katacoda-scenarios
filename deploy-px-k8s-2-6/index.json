@@ -1,0 +1,45 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Install Portworx 2.6 on Kubernetes",
+    "description": "Install Portworx 2.6 on Kubernetes",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Wait for Kubernetes nodes to be ready",
+                "text": "wait-k8s.md"
+            },
+            {
+                "title" : "Prepare hosts with storage",
+                "text": "storage.md"
+            },
+            {
+                "title" : "Install Portworx",
+                "text": "install-px.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+
+        "assets": {
+            "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],            
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes:1.18"
+    }
+}

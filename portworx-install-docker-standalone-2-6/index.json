@@ -1,0 +1,58 @@
+{
+  "title": "Portworx Installation Docker Standalone",
+  "description": "In this lab, we will get hands on with the Portworx installation on a single node",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Pre-Requisites",
+        "text": "step1.md"
+      },
+      {
+        "title": "Install a Single Node ETCD",
+        "text": "step2.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Install the PX OCI bundle",
+        "text": "step3.md",
+	"verify": "step3-verify.sh"
+      },
+      {
+        "title": "Configure PX under runC",
+        "text": "step4.md"
+      },
+      {
+        "title": "Start Services",
+        "text": "step5.md",
+	"verify": "step5-verify.sh"
+      },
+      {
+        "title": "Verify Installation",
+        "text": "step6.md",
+        "verify": "step6-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+	 {"file": "px-spec.yaml", "target": "/root/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "trainingid": "portworx-kubernetes-running",	    
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

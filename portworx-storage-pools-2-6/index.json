@@ -1,0 +1,48 @@
+{
+  "title": "Portworx Storage Pool Practice Lab - 2.6",
+  "description": "In this lab, we will get hands on with the Portworx Storage Pools",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Storage Pools Quiz",
+        "text": "step1.md",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Update the IO_PRIORITY",
+        "text": "step3.md",
+	"verify": "step3-verify.sh"
+
+      },
+      {
+        "title": "Add Labels to the Pool",
+        "text": "step5.md",
+	"verify": "step5-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "ssh-node01.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "px-etcd.yaml", "target": "/root/", "chmod": "+x"},
+	 {"file": "poolcheck.sh", "target": "/root/", "chmod": "+x"},
+	 {"file": "px-spec.yaml", "target": "/root/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

@@ -1,1 +1,1 @@
-base: 'kubernetes-master-ubuntu1804-1-18'
+base: 'kubernetes-master-ubuntu2004-1-20'

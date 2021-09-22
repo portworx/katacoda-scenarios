@@ -1,0 +1,67 @@
+{
+    "pathwayTitle": "Kubernetes",
+    "icon": "fa-kubernetes",
+    "title": "Cassandra Stateful Set on Portworx 2.6",
+    "description": "Deploying a stateful Cassandra database on Kubernetes using Portworx, showing HA failover scenario, expanding volume dynamically, and taking snapshots to recover from user error.",
+    "difficulty": "Intermediate",
+    "details": {
+        "steps": [
+            {
+                "title" : "Create Cassandra StorageClass",
+                "text": "2.create-vol.md"
+            },
+            {
+                "title" : "Deploy cassandra",
+                "text": "3.cassandra-app.md"
+            },
+            {
+                "title" : "Inspect the volume",
+                "text": "4.px-vol-inspect.md"
+            },
+            {
+                "title" : "Create cassandra database",
+                "text": "5.cassandra-db.md"
+            },
+            {
+                "title" : "Delete cassandra instance",
+                "text": "6.cassandra-persistence.md"
+            },
+            {
+                "title" : "Validate cassandra database",
+                "text": "7.cassandra-check-data.md"
+            },
+            {
+                "title" : "Scale the cluster",
+                "text": "8.scale.md"
+            },
+            {
+                "title" : "Snapshota and Restore Cassandra",
+                "text": "9.snapshots.md"
+            },
+            {
+                "title" : "Finish",
+                "text": "finish.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "master": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+            "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Portworx Cluster Installation on Docker - 2.6",
+  "description": "In this lab, we will get hands on with the Portworx Cluster installation on Docker",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Install a Single Node ETCD",
+        "text": "step2.md",
+	"verify": "step2-verify.sh"
+      },
+      {
+        "title": "Install the PX OCI bundle on node01",
+        "text": "step3.md",
+	"verify": "step3-verify.sh"
+      },
+      {
+        "title": "Configure PX under runC",
+        "text": "step4.md"
+      },
+      {
+        "title": "Start Services",
+        "text": "step5.md",
+	"verify": "step5-verify.sh"
+      },
+      {
+        "title": "Add Nodes node02 and node03",
+	"text": "step6.md",
+	"verify": "step6-verify.sh"
+      },
+      {
+        "title": "Verify Installation",
+        "text": "step7.md",
+        "verify":"step7-verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "install-etcd.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+	 {"file": "px-spec.yaml", "target": "/root/", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "hidefinish": false,
+    "hideintro": true
+    },
+    "backend": {
+    "trainingid": "portworx-kubernetes-running",	    
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

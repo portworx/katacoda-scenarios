@@ -4,7 +4,7 @@ A popular [Kubernetes persistent storage](https://portworx.com/use-case/kubernet
 
 
 In this tutorial, you will learn how to deploy Cassandra to Kubernetes and use Portworx Volumes to provide HA capability:
-* Use the Portworx Storage Class to create a PVC with 3 replicas of the data
+* Use the Portworx Storage Class to create a PVC with 2 replicas of the data
 * Use a simple YAML file to deploy Cassandra using this storage class
 * How to validate data persistence by deleting the Cassandra pod
 
@@ -17,7 +17,7 @@ Then, we're going to show how we can scale the cluster to 3 nodes and dynamicall
 
 ### Other things you should know
 
-To learn more about how why running Redis on Portworx is a great idea take a look at the following links:
+To learn more about how why running Cassandra on Portworx is a great idea take a look at the following links:
 * Guide to run [Cassandra in Docker] containers(https://portworx.com/use-case/cassandra-docker-container/)
 * Guide to [Kubernetes and Cassandra](https://docs.portworx.com/applications/cassandra.html)
 * [HA Cassandra on GKE](https://portworx.com/run-ha-cassandra-google-kubernetes-engine-gke/)

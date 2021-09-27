@@ -10,7 +10,7 @@ For example, the following is a Portworx StorageClass whose volumes have replica
 
 ```yaml
 kind: StorageClass
-apiVersion: storage.k8s.io/v1beta1
+apiVersion: storage.k8s.io/v1
 metadata:
     name: px-repl3-sc
 provisioner: kubernetes.io/portworx-volume

@@ -6,7 +6,7 @@ We're going to see if we can access the secure PVC directly from the host. We'll
 Start by setting the PVC name in an environment variable.
 
 ```
-PX_VOL=$(kubectl get pvc -o jsonpath='{.items[1].spec.volumeName}')
+PX_VOL=`kubectl get pvc -o jsonpath='{.items[1].spec.volumeName}'`
 
 ```{{execute T1}}
 

@@ -61,6 +61,6 @@
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
     },
     "backend": {
-        "imageid": "portworx-kubernetes-running"
+        "imageid": "portworx-kubernetes-running:1.18"
     }
 }

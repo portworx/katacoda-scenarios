@@ -1,8 +1,11 @@
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v1
 kind: Deployment
 metadata:
   name: webapp1
 spec:
+  selector:
+    matchLabels:
+      app: webapp1
   replicas: 1
   template:
     metadata:
@@ -23,11 +26,14 @@ spec:
         persistentVolumeClaim:
           claimName: px-shared-pvc
 ---
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v1
 kind: Deployment
 metadata:
   name: webapp2
 spec:
+  selector:
+    matchLabels:
+      app: webapp2
   replicas: 1
   template:
     metadata:
@@ -48,11 +54,14 @@ spec:
         persistentVolumeClaim:
           claimName: px-shared-pvc
 ---
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v1
 kind: Deployment
 metadata:
   name: webapp3
 spec:
+  selector:
+    matchLabels:
+      app: webapp3
   replicas: 1
   template:
     metadata:

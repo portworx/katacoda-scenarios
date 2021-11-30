@@ -1,0 +1,62 @@
+{
+  "title": "Portworx Ownership Practice Lab - 2.6",
+  "description": "In this lab, we will get hands on practice with ownership of resource in Portworx",
+  "difficulty": "Beginner",
+  "time": "60",
+  "details": {
+    "steps": [
+      {
+        "title": "Lab Information",
+        "text": "info.md",
+	"verify": "k8-check.sh"
+      },
+      {
+        "title": "Inspect Existing Tokens, Contexts and Ownership",
+        "text": "step1.md",
+	"courseData": "create-tokens.sh",
+	"answer": "step1-answer.md"
+      },
+      {
+        "title": "Update a volume",
+        "text": "step2.md",
+	"courseData": "set-context.sh",
+	"answer": "step2-answer.md"
+      },
+      {
+        "title": "Add a group",
+        "text": "step3.md",
+	"verify": "step3-verify.sh",
+	"answer": "step3-answer.md"
+      },
+      {
+        "title": "Attempt updating the volume again",
+        "text": "step4.md",
+        "verify": "step4-verify.sh",
+	"answer": "step4-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "init-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "*", "target": "/tmp", "chmod": "+x"}
+      ]
+    }
+    },
+    "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "hidefinish": false,
+    "hideintro": true,
+    "dashboards": [{"name": "Docs: Ownership", "href": "https://2.6.docs.portworx.com/reference/cli/volume-access/"}]
+    },
+    "backend": {
+    "imageid": "portworx-kubernetes-running:1.18"
+    }
+}

@@ -1,6 +1,6 @@
 {
   "title": "ZZZ-Portworx Ownership Practice Lab - 2.6 - Test Fix",
-  "description": "Test Scenario - Fix KVDB - In this lab, we will get hands on practice with ownership of resource in Portworx",
+  "description": "In this lab, we will get hands on practice with ownership of resource in Portworx",
   "difficulty": "Beginner",
   "time": "60",
   "details": {

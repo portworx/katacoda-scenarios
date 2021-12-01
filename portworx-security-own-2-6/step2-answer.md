@@ -10,4 +10,4 @@ To see the current context:
 `pxctl context list | grep current`{{execute}} 
 
 
-Additionally, if you want to see the roles permissions assigned to user-context2, run a jwt decode against the token:
+Additionally, if you want to see the roles permissions assigned to user-context2, use jwt.io to decode the token.

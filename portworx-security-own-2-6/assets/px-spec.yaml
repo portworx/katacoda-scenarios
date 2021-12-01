@@ -343,7 +343,7 @@ spec:
           image: portworx/oci-monitor:2.6.1
           imagePullPolicy: Always
           args:
-            ["-b", "true", "-c", "px-demo", "-s", "/dev/vdb", "-secret_type", "k8s", 
+            ["-k", "etcd:http://master:4001", "-c", "px-demo", "-s", "/dev/vdb", "-secret_type", "k8s", 
              "-x", "kubernetes", "-jwt_issuer", "example-domain.com"]
           env:
             - name: "PX_TEMPLATE_VERSION"

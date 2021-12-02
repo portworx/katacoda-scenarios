@@ -4,7 +4,7 @@ PX can be deployed with a single command in Kubernetes as a [DaemonSet](https://
 
 ```
 VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}'`
-curl -L -s -o px-spec.yaml "https://install.portworx.com/2.3?mc=false&kbver=${VER}&b=true&s=%2Fdev%2Fvdb&c=px-demo&stork=true&st=k8s"
+curl -L -s -o px-spec.yaml "https://install.portworx.com/2.6?mc=false&kbver=${VER}&b=true&s=%2Fdev%2Fvdb&c=px-demo&stork=true&st=k8s"
 ```{{execute T1}}
 
 Observe how we used [query parameters](https://docs.portworx.com/scheduler/kubernetes/install.html#generating-the-spec) in the curl command to customize our spec.

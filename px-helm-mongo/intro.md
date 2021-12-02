@@ -10,7 +10,7 @@ In this step we will show you how to deploy Helm to your Kubernetes cluster. [He
 
 ### Step: Deploy MongoDB using Helm with the Portworx Storage Class
 
-Once Helm is deployed we will use it to deploy the [MongoDB chart](https://github.com/kubernetes/charts/tree/master/stable/mongodb). In order to provide for a highly available MongoDB instance, we will configure the chart to use a Portworx volume that we will create to ensure 3 replicas of the data. Portworx will perform synchronous replication of the volume so that the MongoDB data is well protected. Once MongoDB is deployed we will use the MongoDB client to create some data.
+Once Helm is deployed we will use it to deploy the [MongoDB chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb). In order to provide for a highly available MongoDB instance, we will configure the chart to use a Portworx volume that we will create to ensure 3 replicas of the data. Portworx will perform synchronous replication of the volume so that the MongoDB data is well protected. Once MongoDB is deployed we will use the MongoDB client to create some data.
 
 This diagram illustrates the configuration:
 

@@ -6,7 +6,7 @@ Install on the node as a docker container:
 
 Container running to host port 4001:
 
-`docker run -d --net=host \
+`docker run -d --net=host -p 4001:2379 \
    --volume=/var/lib/px-etcd:/etcd-data \
    --name etcd quay.io/coreos/etcd /usr/local/bin/etcd \
    --data-dir=/etcd-data --name node1 \

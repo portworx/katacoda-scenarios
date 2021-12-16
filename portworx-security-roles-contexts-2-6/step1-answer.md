@@ -6,5 +6,6 @@ Q3: Run a role inspect:
 `pxctl role inspect --name system.view`{{execute}}  
 
 
-Q4: Run a role inspect against all available roles.
+Q4: Run a role inspect against all available roles:
+`pxctl role inspect --all`{{execute}}
   

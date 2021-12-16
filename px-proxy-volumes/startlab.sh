@@ -1,6 +1,6 @@
 
 # Start nfs server on node01
-ssh node01 "apt-get install -y nfs-kernel-server"
+#ssh node01 "apt-get install -y nfs-kernel-server"
 ssh node01 "mkdir -p /mnt/nfs_share"
 ssh node01 "chown -R nobody:nogroup /mnt/nfs_share/"
 ssh node01 "chmod 777 /mnt/nfs_share/"
